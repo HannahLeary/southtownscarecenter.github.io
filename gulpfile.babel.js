@@ -12,11 +12,13 @@ gulp.task('default', function (done) {
 	}
 });
 
+gulp.task('deploy', function (done) {
+	runSequence('build', 'deployDest', done);
+});
+
 gulp.task('clean', ['cleanDest']);
 
 gulp.task('build', ['buildMedia', 'buildMarkup', 'buildStyles', 'buildScripts']);
-
-gulp.task('deploy', ['deployDest']);
 
 gulp.task('watch', ['serveDest', 'watchMedia', 'watchMarkup', 'watchStyles', 'watchScripts', 'watchDest']);
 
