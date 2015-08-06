@@ -4,7 +4,7 @@ import gulp from 'gulp';
 import plug from './util/plug';
 
 let paths = {
-	all: 'web/**/{.*,*.*}',
+	all: 'web/**/{CNAME,.*,*.*}',
 	dest: 'web'
 };
 

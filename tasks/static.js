@@ -2,7 +2,7 @@ import fs from './util/fs';
 import gulp from 'gulp';
 
 let paths = {
-	src: ['src/assets/media/**', 'src/{.gitignore,README.md}'],
+	src: ['src/assets/media/**', 'src/{.gitignore,CNAME,README.md}'],
 	dest: 'web'
 };
 
