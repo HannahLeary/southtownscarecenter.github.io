@@ -4,6 +4,11 @@ var cli = yargs
 	.usage('Usage: gulp <task> [options]')
 	.alias('h', 'help')
 
+	.option('d', {
+		alias: 'debug',
+		default: false,
+		describe: 'Show debug information.'
+	})
 	.option('e', {
 		alias: 'env',
 		default: 'dev',

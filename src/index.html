@@ -1,3 +1,10 @@
-<!doctype html>
-<title>Southtowns Care Center</title>
-<h1>Southtowns Care Center</h1>
+---
+title: Home
+headline: Southtowns Care Center
+---
+{{#extend "layout"}}
+	{{#content "body"}}
+		<h1>{{ file.meta.headline }}</h1>
+		<p><a href="mailto:alice@southtownscarecenter.com">alice@southtownscarecenter.com</a></p>
+	{{/content}}
+{{/extend}}
