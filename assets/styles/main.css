@@ -49,3 +49,7 @@ table {
 html {
 	font: normal 16px/1.6 sans-serif;
 }
+
+body {
+	padding: 8vmin;
+}
