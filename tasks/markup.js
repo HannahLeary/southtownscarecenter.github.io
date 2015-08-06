@@ -20,6 +20,7 @@ gulp.task('buildMarkup', function () {
 			bustCache: cli.watch,
 			debug: cli.debug,
 			data: {
+				year: new Date().getFullYear(),
 				cli,
 				pkg
 			},
@@ -29,6 +30,15 @@ gulp.task('buildMarkup', function () {
 			partials: [
 				paths.partials
 			]
+		}))
+		.pipe(plug.prettify({
+			extra_liners: [],         // eslint-disable-line
+			indent_inner_html: false, // eslint-disable-line
+			indent_char: '\t',        // eslint-disable-line
+			indent_size: 1,           // eslint-disable-line
+			max_preserve_newlines: 1, // eslint-disable-line
+			preserve_newlines: true,  // eslint-disable-line
+			wrap_line_length: 999999  // eslint-disable-line
 		}))
 		.pipe(fs.dest(paths.dest));
 });
