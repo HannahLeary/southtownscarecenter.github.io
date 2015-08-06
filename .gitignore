@@ -1,6 +1,0 @@
-node_modules/
-src/assets/vendor/
-
-*.log
-.*.swp
-.DS_Store
