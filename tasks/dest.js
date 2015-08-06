@@ -14,7 +14,7 @@ gulp.task('cleanDest', function (done) {
 
 gulp.task('deployDest', function () {
 	return gulp
-		.src(paths.dest)
+		.src(paths.all)
 		.pipe(plug.ghPages({
 			branch: 'master'
 		}));
