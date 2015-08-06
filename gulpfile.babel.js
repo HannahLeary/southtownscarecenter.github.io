@@ -18,8 +18,8 @@ gulp.task('deploy', function (done) {
 
 gulp.task('clean', ['cleanDest']);
 
-gulp.task('build', ['buildMedia', 'buildMarkup', 'buildStyles', 'buildScripts']);
+gulp.task('build', ['buildStatic', 'buildMarkup', 'buildStyles', 'buildScripts']);
 
-gulp.task('watch', ['serveDest', 'watchMedia', 'watchMarkup', 'watchStyles', 'watchScripts', 'watchDest']);
+gulp.task('watch', ['serveDest', 'watchStatic', 'watchMarkup', 'watchStyles', 'watchScripts', 'watchDest']);
 
 requireGlob.sync('./tasks/*.js');
