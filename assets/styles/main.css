@@ -46,6 +46,7 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+
 html {
 	font: normal 16px/1.6 sans-serif;
 }
@@ -54,6 +55,23 @@ body {
 	padding: 8vmin;
 }
 
-p {
+.semantic h1 {
+	font-size: larger;
+}
+
+.semantic a {
+	color: magenta;
+	border-bottom: 0.5em solid hsla(30, 50%, 50%, 0);
+	text-decoration: none;
+	-webkit-transition: 250ms border-bottom-color;
+	        transition: 250ms border-bottom-color;
+}
+
+.semantic a:focus,
+.semantic a:hover {
+	border-bottom-color: hsla(180, 100%, 75%, 0.5);
+}
+
+.semantic p {
 	margin-top: 1em;
 }
