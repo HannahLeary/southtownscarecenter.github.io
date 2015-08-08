@@ -1,16 +1,23 @@
 import cli from './util/cli';
+import env from './util/env';
 import fs from './util/fs';
 import gulp from 'gulp';
 import plug from './util/plug';
-import pkg from './util/pkg';
 
-let paths = {
-	src: ['src/**/*.html', '!src/assets/**'],
-	partials: 'src/assets/partials/**/*.hbs',
-	dest: 'web'
-};
+let isWatching = false,
+	paths = {
+		src: [env.getSrcPath('**/*.html'), '!**/assets/**'],
+		partials: env.getSrcPath('assets/partials/**/*.hbs'),
+		dest: env.getDestPath()
+	};
 
 gulp.task('buildMarkup', function () {
+	if (cli.watch && !isWatching) {
+		isWatching = true;
+		gulp.watch(paths.src, ['buildMarkup']);
+		gulp.watch(paths.partials, ['buildMarkup']);
+	}
+
 	return fs
 		.src(paths.src)
 		.pipe(plug.frontMatter({
@@ -19,31 +26,26 @@ gulp.task('buildMarkup', function () {
 		.pipe(plug.hb({
 			bustCache: cli.watch,
 			debug: cli.debug,
-			data: {
-				year: new Date().getFullYear(),
-				cli,
-				pkg
-			},
+			data: [
+				env.getSrcPath('assets/data/**/*')
+			],
 			helpers: [
-				'./node_modules/handlebars-layouts/index.js'
+				env.getNpmPath('handlebars-layouts/index.js')
 			],
 			partials: [
 				paths.partials
 			]
 		}))
 		.pipe(plug.prettify({
-			extra_liners: [],         // eslint-disable-line
-			indent_inner_html: false, // eslint-disable-line
-			indent_char: '\t',        // eslint-disable-line
-			indent_size: 1,           // eslint-disable-line
-			max_preserve_newlines: 1, // eslint-disable-line
-			preserve_newlines: true,  // eslint-disable-line
-			wrap_line_length: 999999  // eslint-disable-line
+			/* eslint-disable camelcase */
+			extra_liners: [],
+			indent_inner_html: false,
+			indent_char: '\t',
+			indent_size: 1,
+			max_preserve_newlines: 1,
+			preserve_newlines: true,
+			wrap_line_length: 999999
+			/* eslint-enable camelcase */
 		}))
 		.pipe(fs.dest(paths.dest));
-});
-
-gulp.task('watchMarkup', function () {
-	gulp.watch(paths.src, ['buildMarkup']);
-	gulp.watch(paths.partials, ['buildMarkup']);
 });

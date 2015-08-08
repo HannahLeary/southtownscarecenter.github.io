@@ -8,19 +8,38 @@
 		│   │   │   │ CARE CENTER
 		└───────────┘
 
-		(c) Southtowns Care Center
+		(c) Southtowns Care Center, Inc.
 
 	-->
 
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 
-	<title>SCC{{#if file.meta.title}} | {{ file.meta.title }}{{/if}}</title>
+	<title>{{ site.title }}{{#if file.meta.title}} | {{ file.meta.title }}{{/if}}</title>
 
 	<link rel="stylesheet" href="/assets/styles/main.css?v={{ pkg.version }}" />
 </head>
 <body>
-	{{{block "body"}}}
+	<div class="site">
+		<header class="site-hd" role="banner">
+			<h1 class="logo"><a href="/">Southtowns Care Center</a></h1>
+
+			<nav role="navigation" aria-label="site navigation">
+				<a href="/about">About</a>
+				<a href="/contact">Contact</a>
+				<a href="/donate">Donate</a>
+			</nav>
+		</header>
+
+		<main class="site-bd" role="main">
+			{{{block "body"}}}
+		</main>
+
+		<footer class="site-ft" role="contentinfo">
+			<p><a href="mailto:{{ site.email }}">{{ site.email }}</a></p>
+			<small>&copy; Southtowns Care Center, Inc.</small>
+		</footer>
+	</div>
 
 	<!-- <script src="/assets/scripts/main.js?v={{ pkg.version }}"></script> -->
 </body>

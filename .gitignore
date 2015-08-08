@@ -6,3 +6,5 @@ web/
 .*.swp
 .DS_Store
 .publish/
+env-*.js
+!env-dist.js

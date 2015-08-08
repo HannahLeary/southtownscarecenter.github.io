@@ -1,15 +1,9 @@
-import cli from './tasks/util/cli';
 import gulp from 'gulp';
 import requireGlob from 'require-glob';
 import runSequence from 'run-sequence';
 
 gulp.task('default', function (done) {
-	if (cli.watch) {
-		runSequence('clean', 'build', 'watch', done);
-	}
-	else {
-		runSequence('clean', 'build', done);
-	}
+	runSequence('clean', 'build', done);
 });
 
 gulp.task('deploy', function (done) {
@@ -20,6 +14,8 @@ gulp.task('clean', ['cleanDest']);
 
 gulp.task('build', ['buildStatic', 'buildMarkup', 'buildStyles', 'buildScripts']);
 
-gulp.task('watch', ['serveDest', 'watchStatic', 'watchMarkup', 'watchStyles', 'watchScripts', 'watchDest']);
+gulp.task('serve', function (done) {
+	runSequence('default', 'serveDest', done);
+});
 
 requireGlob.sync('./tasks/*.js');

@@ -1,11 +1,13 @@
 import cli from './util/cli';
 import del from 'del';
+import env from './util/env';
 import gulp from 'gulp';
 import plug from './util/plug';
 
 let paths = {
-	all: 'web/**/{CNAME,.*,*.*}',
-	dest: 'web'
+	dest: env.getDestPath(),
+	deploy: env.getDestPath('**/{*,.*}'),
+	watch: env.getDestPath('**')
 };
 
 gulp.task('cleanDest', function (done) {
@@ -14,7 +16,7 @@ gulp.task('cleanDest', function (done) {
 
 gulp.task('deployDest', function () {
 	return gulp
-		.src(paths.all)
+		.src(paths.deploy)
 		.pipe(plug.ghPages({
 			branch: 'master'
 		}));
@@ -27,10 +29,10 @@ gulp.task('serveDest', function () {
 			port: cli.port,
 			root: paths.dest
 		});
-});
 
-gulp.task('watchDest', function () {
-	plug
-		.watch(paths.all)
-		.pipe(plug.connect.reload());
+	if (cli.watch) {
+		plug
+			.watch(paths.watch)
+			.pipe(plug.connect.reload());
+	}
 });
