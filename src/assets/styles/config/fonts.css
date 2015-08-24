@@ -1,0 +1,15 @@
+@font-face {
+	font-family: 'Gogoia';
+	font-style: normal;
+	font-weight: normal;
+	src: url(../../media/fonts/gogoia.woff2) format('woff2'),
+		url(../../media/fonts/gogoia.woff) format('woff');
+}
+
+@font-face {
+	font-family: 'Lato';
+	font-style: normal;
+	font-weight: normal;
+	src: url(../../media/fonts/lato.woff2) format('woff2'),
+		url(../../media/fonts/lato.woff) format('woff');
+}

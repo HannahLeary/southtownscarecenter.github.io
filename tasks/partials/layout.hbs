@@ -1,0 +1,67 @@
+<!doctype html>
+<html class="no-js">
+<head>
+	<!--
+
+		┌───────────┐
+		│   │   │   │ SOUTHTOWNS
+		│   │   │   │ CARE CENTER
+		└───────────┘
+
+		(c) Southtowns Care Center, Inc.
+
+	-->
+
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+	<title>{{ data.site.title }}{{#if file.meta.title}} | {{ file.meta.title }}{{/if}}</title>
+
+	{{#block "styles"}}
+		<link rel="stylesheet" href="/assets/styles/main.css?v={{ util.pkg.version }}" />
+	{{/block}}
+</head>
+<body>
+	<div class="site">
+		<header class="site-hd" role="banner">
+			<div class="sash sash_inv">
+				<div class="sash-bd">
+					<div class="spread m-spread_m">
+						<h1 class="site-logo">
+							<a class="aspect aspect_3x1" href="/">
+								<svg class="aspect-bd" aria-hidden="true">
+									<use xlink:href="/assets/media/images/icons.svg?v={{ util.pkg.version }}#logo-wide"></use>
+								</svg>
+								<span class="u-visuallyHidden">{{ data.site.title }}</span>
+							</a>
+						</h1>
+
+						<nav class="site-nav" role="navigation" aria-label="site navigation">
+							<a class="link" href="/about">About</a>
+							<a class="link" href="/contact">Contact</a>
+							<a class="link" href="/donate">Donate</a>
+						</nav>
+					</div>
+				</div>
+			</div>
+		</header>
+
+		<main class="site-bd" role="main">
+			{{{block "body"}}}
+		</main>
+
+		<footer class="site-ft" role="contentinfo">
+			<div class="sash">
+				<div class="sash-bd">
+					<small>&copy; Southtowns Care Center, Inc.</small>
+					<address>P.O. Box 892, Hamburg, NY 14075</address>
+				</div>
+			</div>
+		</footer>
+	</div>
+
+	{{#block "scripts"}}
+		<!-- <script src="/assets/scripts/main.js?v={{ util.pkg.version }}"></script> -->
+	{{/block}}
+</body>
+</html>

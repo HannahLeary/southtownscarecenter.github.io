@@ -31,7 +31,8 @@ var cli = yargs
 	})
 
 	.describe('h', 'Display this help message.')
-	.describe('tasks', 'List available tasks.');
+	.describe('tasks', 'List available tasks.')
+	.describe('version', 'Show version information');
 
 if (cli.argv.help) {
 	console.log(cli.help());

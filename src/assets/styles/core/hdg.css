@@ -1,0 +1,10 @@
+.hdg {
+	font-family: var(--FONT_ACCENT);
+	font-size: var(--FONT_SIZE_LARGE);
+	line-height: var(--LINE_HEIGHT_ACCENT);
+	color: var(--COLOR_PRIMARY);
+}
+
+.hdg {
+	font-size: var(--FONT_SIZE_DEFAULT);
+}

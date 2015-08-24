@@ -6,13 +6,14 @@ import gulp from 'gulp';
 let isWatching = false,
 	paths = {
 		main: 'scripts/main',
-		all: env.getSrcPath('assets/scripts/**'),
+		all: env.getSrcPath('assets/{elements,scripts}/**'),
 		dest: env.getDestPath('assets/scripts/main.js')
 	};
 
 gulp.task('buildScripts', function () {
-	if (cli.watch && !isWatching) {
+	if (!isWatching && cli.watch) {
 		isWatching = true;
+
 		gulp.watch(paths.all, ['buildScripts']);
 	}
 

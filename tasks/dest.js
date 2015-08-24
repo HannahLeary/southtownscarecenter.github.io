@@ -4,11 +4,13 @@ import env from './util/env';
 import gulp from 'gulp';
 import plug from './util/plug';
 
-let paths = {
-	dest: env.getDestPath(),
-	deploy: env.getDestPath('**/{*,.*}'),
-	watch: env.getDestPath('**')
-};
+let isServing = false,
+	isWatching = false,
+	paths = {
+		dest: env.getDestPath(),
+		deploy: env.getDestPath('**/{*,.*}'),
+		watch: env.getDestPath('**')
+	};
 
 gulp.task('cleanDest', function (done) {
 	del(paths.dest, done);
@@ -23,14 +25,20 @@ gulp.task('deployDest', function () {
 });
 
 gulp.task('serveDest', function () {
-	plug.connect
-		.server({
-			livereload: cli.watch,
-			port: cli.port,
-			root: paths.dest
-		});
+	if (!isServing) {
+		isServing = true;
 
-	if (cli.watch) {
+		plug.connect
+			.server({
+				livereload: cli.watch,
+				port: cli.port,
+				root: paths.dest
+			});
+	}
+
+	if (!isWatching && cli.watch) {
+		isWatching = true;
+
 		plug
 			.watch(paths.watch)
 			.pipe(plug.connect.reload());

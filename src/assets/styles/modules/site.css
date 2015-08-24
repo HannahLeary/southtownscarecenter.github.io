@@ -1,0 +1,21 @@
+.site-logo {
+	width: 200px;
+}
+
+.site-nav > * {
+	display: block;
+}
+
+.site-ft {
+	margin: 1em 0 3em;
+}
+
+@media (--BP_SMALL) {
+	.site-nav > * {
+		display: inline-block;
+	}
+
+	.site-nav > * + * {
+		margin-left: 1em;
+	}
+}

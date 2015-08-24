@@ -1,0 +1,26 @@
+.sash {
+	display: block;
+	overflow: hidden;
+	position: relative;
+}
+
+.sash_inv {
+	background-color: var(--COLOR_PRIMARY);
+	color: var(--COLOR_BACKGROUND);
+}
+
+.sash-bd {
+	padding: 1em 1em;
+	margin: 0 auto;
+	max-width: 960px;
+}
+
+.sash-bd_tight {
+	max-width: 400px;
+}
+
+@media (--BP_SMALL) {
+	.sash-bd {
+		padding: 1em 2em;
+	}
+}

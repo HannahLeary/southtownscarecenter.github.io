@@ -1,10 +1,11 @@
 import cli from './cli';
+import env from './env';
 import gulp from 'gulp';
 import plug from './plug';
 import through from 'through2';
 import duplex from 'duplexer';
 
-const base = 'src';
+const base = env.DIR_SRC;
 
 function errorHandler(err) {
 	console.log(err);
@@ -32,10 +33,6 @@ let fs = {
 
 		if (cli.maps) {
 			dest = dest.pipe(plug.sourcemaps.write());
-		}
-
-		if (cli.watch) {
-			dest = dest.pipe(plug.plumber.stop());
 		}
 
 		return duplex(src, dest.pipe(gulp.dest(dir)));

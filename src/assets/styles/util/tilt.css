@@ -1,0 +1,12 @@
+.u-tiltRight {
+	transform: rotate(var(--TILT));
+}
+
+.u-tiltLeft {
+	margin-left: -100px;
+	margin-right: -100px;
+	transform:
+		translateX(-10%)
+		translateY(-10%)
+		rotate(-var(--TILT));
+}

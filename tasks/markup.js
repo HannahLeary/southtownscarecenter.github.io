@@ -6,15 +6,26 @@ import plug from './util/plug';
 
 let isWatching = false,
 	paths = {
-		src: [env.getSrcPath('**/*.html'), '!**/assets/**'],
-		partials: env.getSrcPath('assets/partials/**/*.hbs'),
+		src: [
+			env.getSrcPath('**/*.html'),
+			'!**/assets/**'
+		],
+		data: [
+			'./tasks/data/**/*.js',
+			'./tasks/util/{cli,env,pkg}.js'
+		],
+		helpers: env.getNpmPath('handlebars-layouts/index.js'),
+		partials: './tasks/partials/**/*.hbs',
 		dest: env.getDestPath()
 	};
 
 gulp.task('buildMarkup', function () {
-	if (cli.watch && !isWatching) {
+	if (!isWatching && cli.watch) {
 		isWatching = true;
+
 		gulp.watch(paths.src, ['buildMarkup']);
+		gulp.watch(paths.data, ['buildMarkup']);
+		gulp.watch(paths.helpers, ['buildMarkup']);
 		gulp.watch(paths.partials, ['buildMarkup']);
 	}
 
@@ -26,15 +37,9 @@ gulp.task('buildMarkup', function () {
 		.pipe(plug.hb({
 			bustCache: cli.watch,
 			debug: cli.debug,
-			data: [
-				env.getSrcPath('assets/data/**/*')
-			],
-			helpers: [
-				env.getNpmPath('handlebars-layouts/index.js')
-			],
-			partials: [
-				paths.partials
-			]
+			data: paths.data,
+			helpers: paths.helpers,
+			partials: paths.partials
 		}))
 		.pipe(plug.prettify({
 			/* eslint-disable camelcase */
