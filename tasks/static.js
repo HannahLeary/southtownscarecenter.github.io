@@ -10,7 +10,8 @@ let isWatching = false,
 		src: [
 			env.getSrcPath('assets/media/{fonts,images}/*.*'),
 			env.getSrcPath('assets/scripts/config.js'),
-			env.getSrcPath('assets/vendor/{es6-module-loader,system}.js')
+			env.getSrcPath('assets/vendor/{es6-module-loader,system}.js'),
+			env.getSrcPath('CNAME')
 		],
 		svg: env.getSrcPath('assets/media/images/icons/*.svg'),
 		watch: env.getSrcPath('assets/media/**'),
