@@ -886,8 +886,16 @@ svg {
 	    -ms-transform:skewY(-3.5deg);
 	        transform:skewY(-3.5deg);
 }
+.u-txt_md {
+	font-size:24px;
+}
+
 .u-txt_lg {
-	font-size:48px;
+	font-size:36px;
+}
+
+.u-txt_xl {
+	font-size:36px;
 }
 
 .u-txt_c {
@@ -900,6 +908,13 @@ svg {
 
 .u-txt_display {
 	font-family:'Silverfake', Arial, sans-serif;
+	line-height:1;
+}
+
+@media (min-width: 960px) {
+	.u-txt_xl {
+		font-size:48px;
+	}
 }
 
 .u-vr > * + *{margin-top:20px;}
