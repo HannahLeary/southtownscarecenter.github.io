@@ -1,5 +1,13 @@
+.u-txt_md {
+	font-size: var(--FONT_SIZE_MEDIUM);
+}
+
 .u-txt_lg {
-	font-size: var(--FONT_SIZE_XLARGE);
+	font-size: var(--FONT_SIZE_LARGE);
+}
+
+.u-txt_xl {
+	font-size: var(--FONT_SIZE_LARGE);
 }
 
 .u-txt_c {
@@ -12,4 +20,11 @@
 
 .u-txt_display {
 	font-family: var(--FONT_DISPLAY);
+	line-height: var(--LINE_HEIGHT_ACCENT);
+}
+
+@media (--BP_MEDIUM) {
+	.u-txt_xl {
+		font-size: var(--FONT_SIZE_XLARGE);
+	}
 }

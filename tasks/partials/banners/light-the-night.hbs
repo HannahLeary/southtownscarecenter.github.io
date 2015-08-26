@@ -1,21 +1,37 @@
 <div class="sash m-sash_primary u-tiltLeft">
 	<div class="sash-bd m-sash_left-bd">
 
-		<div class="bpSm-grid bpSm-m-grid_c bpSm-m-grid_m u-vr">
+		<div class="bpSm-grid bpSm-m-grid_c bpSm-m-grid_m u-vr" itemscope itemtype="http://schema.org/Event">
 			<div class="bpSm-grid-col_1of2 u-tiltRight">
+
 				<div class="aspect">
 					<svg class="aspect-bd" aria-hidden="true">
 						<use xlink:href="/assets/media/images/icons.svg?v={{ util.pkg.version }}#light-the-night"></use>
 					</svg>
+					<span class="u-visuallyHidden" itemprop="name">Light the Night</span>
 				</div> <!-- /aspect -->
-			</div> <!-- /grid-col -->
 
+			</div> <!-- /grid-col -->
 			<div class="bpSm-grid-col_1of3">
+
 				<div class="u-vrSm">
-					<p class="box u-txt_display">Candle Lighting Benefit</p>
-					<p class="box u-txt_accent u-txt_lg">Sep13@6:30pm</p>
-					<p class="box u-txt_display">Woodlawn Beach, Blasdell, NY</p>
+					<div class="box u-txt_display" itemprop="description">Candle Lighting Benefit</div>
+
+					<div class="box u-txt_accent u-txt_xl">
+						<time itemprop="startDate" datetime="2015-09-13 18:30">
+							<span>Sep13</span><span>@6:30pm</span>
+						</time>
+					</div>
+
+					<div class="box" itemprop="location" itemscope itemtype="http://schema.org/Place">
+						<div class="u-txt_accent u-txt_lg" itemprop="name">Woodlawn Beach,</div>
+						<div class="u-txt_display">
+							<span itemprop="addressLocality">Blasdell</span>,
+							<span itemprop="addressRegion">NY</span>
+						</div>
+					</div>
 				</div>
+
 			</div> <!-- /grid-col -->
 		</div> <!-- /grid -->
 
@@ -25,7 +41,7 @@
 <div class="sash m-sash_accent u-tiltRightSm">
 	<div class="sash-bd">
 
-		<p class="u-txt_c u-txt_display">Food Trucks &amp; Free Live Music</p>
+		<p class="u-txt_c u-txt_display u-txt_md">Food&nbsp;Trucks &amp; Free&nbsp;Live&nbsp;Music</p>
 
 	</div> <!-- /sash-bd -->
 </div> <!-- /sash -->
