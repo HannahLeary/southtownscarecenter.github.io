@@ -20,6 +20,7 @@ System.config({
     "core-js": "npm:core-js@0.9.18",
     "document-register-element": "npm:document-register-element@0.4.5",
     "shannonmoeller/reset-css": "github:shannonmoeller/reset-css@2.0.2011012602",
+    "svg4everybody": "npm:svg4everybody@2.0.0",
     "whatwg-fetch": "npm:whatwg-fetch@0.9.0",
     "github:jspm/nodelibs-process@0.1.1": {
       "process": "npm:process@0.10.1"

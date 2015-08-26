@@ -1,12 +1,15 @@
 .u-tiltRight {
-	transform: rotate(var(--TILT));
+	transform: skewY(var(--TILT));
+}
+
+.u-tiltRightSm {
+	transform: skewY(calc(var(--TILT) / 2));
 }
 
 .u-tiltLeft {
-	margin-left: -100px;
-	margin-right: -100px;
-	transform:
-		translateX(-10%)
-		translateY(-10%)
-		rotate(-var(--TILT));
+	transform: skewY(-var(--TILT));
+}
+
+.u-tiltLeftSm {
+	transform: skewY(-calc(var(--TILT) / 2));
 }

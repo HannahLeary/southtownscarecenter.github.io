@@ -1,21 +1,25 @@
-.site-logo {
-	width: 200px;
+.site {
+	display: flex;
+	position: relative;
+	flex-direction: column;
+	height: 1px;
+	min-height: 100vh; /* IE hack */
 }
 
-.site-nav > * {
-	display: block;
+.site-hd {
+	flex: 0 0 auto;
+}
+
+.site-bd {
+	flex: 1 0 auto;
 }
 
 .site-ft {
-	margin: 1em 0 3em;
+	flex: 0 0 auto;
+	color: var(--COLOR_GRAY);
+	font-size: var(--FONT_SIZE_SMALL);
 }
 
-@media (--BP_SMALL) {
-	.site-nav > * {
-		display: inline-block;
-	}
-
-	.site-nav > * + * {
-		margin-left: 1em;
-	}
+.site-logo {
+	width: 200px;
 }

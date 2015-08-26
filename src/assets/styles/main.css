@@ -12,6 +12,8 @@
 
 /* Core */
 @import './core/aspect.css';
+@import './core/box.css';
+@import './core/grid.css';
 @import './core/hdg.css';
 @import './core/link.css';
 @import './core/sash.css';
@@ -24,4 +26,5 @@
 /* Util */
 @import './util/hidden.css';
 @import './util/tilt.css';
+@import './util/txt.css';
 @import './util/vr.css';

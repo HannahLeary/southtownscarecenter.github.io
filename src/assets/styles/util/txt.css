@@ -1,0 +1,15 @@
+.u-txt_lg {
+	font-size: var(--FONT_SIZE_LARGE);
+}
+
+.u-txt_c {
+	text-align: center;
+}
+
+.u-txt_accent {
+	color: var(--COLOR_ACCENT);
+}
+
+.u-txt_display {
+	font-family: var(--FONT_DISPLAY);
+}

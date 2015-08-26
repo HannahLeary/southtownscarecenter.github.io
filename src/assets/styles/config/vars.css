@@ -14,6 +14,7 @@
 
 	--FONT_PRIMARY: 'Lato', Arial, sans-serif;
 	--FONT_ACCENT: 'Gogoia', Arial, sans-serif;
+	--FONT_DISPLAY: 'Silverfake', Arial, sans-serif;
 
 	--FONT_SIZE_SMALL: 12px;
 	--FONT_SIZE_DEFAULT: 16px;
@@ -28,7 +29,7 @@
 	--GUTTER_MEDIUM: 20px;
 	--GUTTER_LARGE: 40px;
 
-	--TILT: 3deg;
+	--TILT: 7deg;
 
 	--ASPECT_TEXT_MODIFIER: 1.8;
 }

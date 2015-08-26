@@ -13,3 +13,11 @@
 	src: url(../../media/fonts/lato.woff2) format('woff2'),
 		url(../../media/fonts/lato.woff) format('woff');
 }
+
+@font-face {
+	font-family: 'Silverfake';
+	font-style: normal;
+	font-weight: normal;
+	src: url(../../media/fonts/silverfake.woff2) format('woff2'),
+		url(../../media/fonts/silverfake.woff) format('woff');
+}

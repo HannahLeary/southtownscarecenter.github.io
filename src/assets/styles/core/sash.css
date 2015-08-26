@@ -1,26 +1,20 @@
 .sash {
-	display: block;
-	overflow: hidden;
 	position: relative;
 }
 
-.sash_inv {
-	background-color: var(--COLOR_PRIMARY);
+.sash-bd {
+	margin: 0 auto;
+	max-width: 960px;
+	padding: var(--GUTTER_MEDIUM);
+}
+
+.m-sash_primary {
+	background: var(--COLOR_PRIMARY) url(../../media/images/background-pink.jpg) no-repeat center center;
+	background-size: cover;
 	color: var(--COLOR_BACKGROUND);
 }
 
-.sash-bd {
-	padding: 1em 1em;
-	margin: 0 auto;
-	max-width: 960px;
-}
-
-.sash-bd_tight {
-	max-width: 400px;
-}
-
-@media (--BP_SMALL) {
-	.sash-bd {
-		padding: 1em 2em;
-	}
+.m-sash_accent {
+	background: var(--COLOR_ACCENT);
+	color: var(--COLOR_BACKGROUND);
 }

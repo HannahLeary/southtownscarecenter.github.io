@@ -23,45 +23,48 @@
 </head>
 <body>
 	<div class="site">
-		<header class="site-hd" role="banner">
-			<div class="sash sash_inv">
-				<div class="sash-bd">
-					<div class="spread m-spread_m">
-						<h1 class="site-logo">
-							<a class="aspect aspect_3x1" href="/">
-								<svg class="aspect-bd" aria-hidden="true">
-									<use xlink:href="/assets/media/images/icons.svg?v={{ util.pkg.version }}#logo-wide"></use>
-								</svg>
-								<span class="u-visuallyHidden">{{ data.site.title }}</span>
-							</a>
-						</h1>
-
-						<nav class="site-nav" role="navigation" aria-label="site navigation">
-							<a class="link" href="/about">About</a>
-							<a class="link" href="/contact">Contact</a>
-							<a class="link" href="/donate">Donate</a>
-						</nav>
-					</div>
+		<header class="site-hd">
+			<div class="sash">
+				<div class="sash-bd m-sash-bd_flushB">
+					<h1 class="site-logo">
+						<a class="aspect aspect_3x1" href="/">
+							<svg class="aspect-bd" aria-hidden="true">
+								<use xlink:href="/assets/media/images/icons.svg?v={{ util.pkg.version }}#logo-wide"></use>
+							</svg>
+							<span class="u-visuallyHidden">{{ data.site.title }}</span>
+						</a>
+					</h1>
 				</div>
 			</div>
 		</header>
 
-		<main class="site-bd" role="main">
+		<main class="site-bd">
 			{{{block "body"}}}
 		</main>
 
-		<footer class="site-ft" role="contentinfo">
+		<footer class="site-ft">
 			<div class="sash">
 				<div class="sash-bd">
 					<small>&copy; Southtowns Care Center, Inc.</small>
-					<address>P.O. Box 892, Hamburg, NY 14075</address>
+
+					<div itemscope itemtype="http://schema.org/Organization">
+						<div itemprop="name">Southtowns Care Center, Inc. (SCC)</div>
+						<address itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+							<span itemprop="postOfficeBoxNumber">P.O. Box 892</span><br />
+							<span itemprop="addressLocality">Hamburg</span>,
+							<span itemprop="addressRegion">NY</span>
+							<span itemprop="postalCode">14075</span>
+						</address>
+						<div itemprop="telephone">(716) 261-5000</div>
+						<div itemprop="email"><a href="mailto:info@southtownscarecenter.org">info@southtownscarecenter.org</a></div>
+					</div>
 				</div>
 			</div>
 		</footer>
 	</div>
 
 	{{#block "scripts"}}
-		<!-- <script src="/assets/scripts/main.js?v={{ util.pkg.version }}"></script> -->
+		<script src="/assets/scripts/main.js?v={{ util.pkg.version }}"></script>
 	{{/block}}
 </body>
 </html>

@@ -1,0 +1,9 @@
+.box {
+	font-family: var(--FONT_ACCENT);
+	font-size: larger;
+	line-height: var(--LINE_HEIGHT_ACCENT);
+	letter-spacing: -1px;
+	background-color: var(--COLOR_BACKGROUND);
+	color: var(--COLOR_FOREGROUND);
+	padding: 1em;
+}
