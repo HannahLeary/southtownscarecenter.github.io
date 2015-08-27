@@ -346,6 +346,13 @@ svg {
 	line-height:1;
 	color:hsl(336, 91%, 55%);
 }
+.hList {
+	overflow: hidden;
+}
+
+.hList > * {
+	float: left;
+}
 .link:focus,.link:hover {
 	text-decoration: underline;
 }
@@ -798,6 +805,9 @@ svg {
 }
 
 /* Modules */
+.addthis_horizontal_follow_toolbox p {
+	display: none;
+}
 .site {
 	display: -webkit-box;
 	display: -webkit-flex;
