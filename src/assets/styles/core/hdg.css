@@ -1,5 +1,5 @@
 .hdg {
-	font-family: var(--FONT_ACCENT);
+	font-family: var(--FONT_FAMILY_ACCENT);
 	font-size: var(--FONT_SIZE_DEFAULT);
 	line-height: var(--LINE_HEIGHT_ACCENT);
 	color: var(--COLOR_PRIMARY);

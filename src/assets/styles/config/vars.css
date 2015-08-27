@@ -12,9 +12,9 @@
 	--COLOR_BACKGROUND: var(--COLOR_WHITE);
 	--COLOR_FOREGROUND: var(--COLOR_BLACK);
 
-	--FONT_PRIMARY: 'Lato', Arial, sans-serif;
-	--FONT_ACCENT: 'Gogoia', Arial, sans-serif;
-	--FONT_DISPLAY: 'Silverfake', Arial, sans-serif;
+	--FONT_FAMILY_PRIMARY: 'Lato', Arial, sans-serif;
+	--FONT_FAMILY_ACCENT: 'Gogoia', Arial, sans-serif;
+	--FONT_FAMILY_DISPLAY: 'Silverfake', Arial, sans-serif;
 
 	--FONT_SIZE_SMALL: 12px;
 	--FONT_SIZE_DEFAULT: 16px;
@@ -31,7 +31,7 @@
 	--GUTTER_MEDIUM: 20px;
 	--GUTTER_LARGE: 40px;
 
-	--TILT: 7deg;
+	--TILT: 7.5deg;
 
 	--ASPECT_TEXT_MODIFIER: 1.8;
 }

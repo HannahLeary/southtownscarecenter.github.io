@@ -68,9 +68,11 @@
 							</div>
 
 						</div> <!-- /grid-col -->
-						<div class="bpSm-grid-col_1of4">
+						<div class="bpSm-grid-col_1of4 u-vr">
 
 							<p><small>&copy; Southtowns Care Center, Inc.</small></p>
+
+							<div class="addthis_sharing_toolbox"></div>
 
 						</div> <!-- /grid-col -->
 					</div> <!-- /grid -->
@@ -83,7 +85,6 @@
 
 	{{#block "scripts"}}
 		<script src="/assets/scripts/main.js?v={{ util.pkg.version }}"></script>
-
 		<script>
 			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 			 (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -93,6 +94,7 @@
 			ga('create', '{{ util.env.GOOGLE_TRACKING_ID }}', 'auto');
 			ga('send', 'pageview');
 		</script>
+		<script src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-55de798ed2afb72f"></script>
 	{{/block}}
 </body>
 </html>

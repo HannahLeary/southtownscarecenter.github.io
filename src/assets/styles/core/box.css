@@ -1,5 +1,5 @@
 .box {
-	font-family: var(--FONT_ACCENT);
+	font-family: var(--FONT_FAMILY_ACCENT);
 	font-size: larger;
 	line-height: var(--LINE_HEIGHT_ACCENT);
 	letter-spacing: -1px;

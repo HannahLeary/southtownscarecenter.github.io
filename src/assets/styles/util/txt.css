@@ -19,7 +19,7 @@
 }
 
 .u-txt_display {
-	font-family: var(--FONT_DISPLAY);
+	font-family: var(--FONT_FAMILY_DISPLAY);
 	line-height: var(--LINE_HEIGHT_ACCENT);
 }
 

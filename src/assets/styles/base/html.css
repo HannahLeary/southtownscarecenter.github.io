@@ -7,7 +7,7 @@
 html {
 	overflow-x: hidden;
 	overflow-y: scroll;
-	font-family: var(--FONT_PRIMARY);
+	font-family: var(--FONT_FAMILY_PRIMARY);
 	font-size: var(--FONT_SIZE_DEFAULT);
 	line-height: var(--LINE_HEIGHT_DEFAULT);
 	-webkit-font-smoothing: antialiased;
