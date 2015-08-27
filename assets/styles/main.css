@@ -864,27 +864,27 @@ svg {
 	.bpLg-u-visible { display:none !important; }
 }
 .u-tiltRight {
-	-webkit-transform:skewY(7deg);
-	    -ms-transform:skewY(7deg);
-	        transform:skewY(7deg);
+	-webkit-transform:skewY(7.5deg);
+	    -ms-transform:skewY(7.5deg);
+	        transform:skewY(7.5deg);
 }
 
 .u-tiltRightSm {
-	-webkit-transform:skewY(3.5deg);
-	    -ms-transform:skewY(3.5deg);
-	        transform:skewY(3.5deg);
+	-webkit-transform:skewY(3.75deg);
+	    -ms-transform:skewY(3.75deg);
+	        transform:skewY(3.75deg);
 }
 
 .u-tiltLeft {
-	-webkit-transform:skewY(-7deg);
-	    -ms-transform:skewY(-7deg);
-	        transform:skewY(-7deg);
+	-webkit-transform:skewY(-7.5deg);
+	    -ms-transform:skewY(-7.5deg);
+	        transform:skewY(-7.5deg);
 }
 
 .u-tiltLeftSm {
-	-webkit-transform:skewY(-3.5deg);
-	    -ms-transform:skewY(-3.5deg);
-	        transform:skewY(-3.5deg);
+	-webkit-transform:skewY(-3.75deg);
+	    -ms-transform:skewY(-3.75deg);
+	        transform:skewY(-3.75deg);
 }
 .u-txt_md {
 	font-size:24px;
