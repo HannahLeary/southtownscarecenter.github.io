@@ -367,7 +367,7 @@ svg {
 }
 
 .m-sash_primary {
-	background:hsl(336, 91%, 55%) url(../media/images/background-pink.jpg) no-repeat center center;
+	background:hsl(336, 91%, 55%) url(../media/images/patterns/pink.jpg) no-repeat center center;
 	background-size: cover;
 	color:hsl(0, 0%, 100%);
 }
