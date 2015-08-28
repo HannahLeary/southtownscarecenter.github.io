@@ -1,1 +1,443 @@
-!function(e){function t(e){for(var t=[],r=0,n=e.length;n>r;r++)-1==c.call(t,e[r])&&t.push(e[r]);return t}function r(e,r,n,o){if("string"!=typeof e)throw"System.register provided no module name";var i;i="boolean"==typeof n?{declarative:!1,deps:r,execute:o,executingRequire:n}:{declarative:!0,deps:r,declare:n},i.name=e,e in p||(p[e]=i),i.deps=t(i.deps),i.normalizedDeps=i.deps}function n(e,t){if(t[e.groupIndex]=t[e.groupIndex]||[],-1==c.call(t[e.groupIndex],e)){t[e.groupIndex].push(e);for(var r=0,o=e.normalizedDeps.length;o>r;r++){var i=e.normalizedDeps[r],a=p[i];if(a&&!a.evaluated){var d=e.groupIndex+(a.declarative!=e.declarative);if(void 0===a.groupIndex||a.groupIndex<d){if(void 0!==a.groupIndex&&(t[a.groupIndex].splice(c.call(t[a.groupIndex],a),1),0==t[a.groupIndex].length))throw new TypeError("Mixed dependency cycle detected");a.groupIndex=d}n(a,t)}}}}function o(e){var t=p[e];t.groupIndex=0;var r=[];n(t,r);for(var o=!!t.declarative==r.length%2,i=r.length-1;i>=0;i--){for(var d=r[i],l=0;l<d.length;l++){var s=d[l];o?a(s):u(s)}o=!o}}function i(e){return f[e]||(f[e]={name:e,dependencies:[],exports:{},importers:[]})}function a(t){if(!t.module){var r=t.module=i(t.name),n=t.module.exports,o=t.declare.call(e,function(e,t){r.locked=!0,n[e]=t;for(var o=0,i=r.importers.length;i>o;o++){var a=r.importers[o];if(!a.locked){var d=c.call(a.dependencies,r);a.setters[d](n)}}return r.locked=!1,t});if(r.setters=o.setters,r.execute=o.execute,!r.setters||!r.execute)throw new TypeError("Invalid System.register form for "+t.name);for(var d=0,u=t.normalizedDeps.length;u>d;d++){var l,v=t.normalizedDeps[d],g=p[v],m=f[v];m?l=m.exports:g&&!g.declarative?l=g.module.exports&&g.module.exports.__esModule?g.module.exports:{"default":g.module.exports,__useDefault:!0}:g?(a(g),m=g.module,l=m.exports):l=s(v),m&&m.importers?(m.importers.push(r),r.dependencies.push(m)):r.dependencies.push(null),r.setters[d]&&r.setters[d](l)}}}function d(e){var t,r=p[e];if(r)r.declarative?l(e,[]):r.evaluated||u(r),t=r.module.exports;else if(t=s(e),!t)throw new Error("Unable to load dependency "+e+".");return(!r||r.declarative)&&t&&t.__useDefault?t["default"]:t}function u(t){if(!t.module){var r={},n=t.module={exports:r,id:t.name};if(!t.executingRequire)for(var o=0,i=t.normalizedDeps.length;i>o;o++){var a=t.normalizedDeps[o],l=p[a];l&&u(l)}t.evaluated=!0;var s=t.execute.call(e,function(e){for(var r=0,n=t.deps.length;n>r;r++)if(t.deps[r]==e)return d(t.normalizedDeps[r]);throw new TypeError("Module "+e+" not declared as a dependency.")},r,n);s&&(n.exports=s)}}function l(t,r){var n=p[t];if(n&&!n.evaluated&&n.declarative){r.push(t);for(var o=0,i=n.normalizedDeps.length;i>o;o++){var a=n.normalizedDeps[o];-1==c.call(r,a)&&(p[a]?l(a,r):s(a))}n.evaluated||(n.evaluated=!0,n.module.execute.call(e))}}function s(e){if(v[e])return v[e];var t=p[e];if(!t)throw"Module "+e+" not present.";o(e),l(e,[]),p[e]=void 0;var r=t.module.exports;return(!r||!t.declarative&&r.__esModule!==!0)&&(r={"default":r,__useDefault:!0}),v[e]=r}var p={},c=Array.prototype.indexOf||function(e){for(var t=0,r=this.length;r>t;t++)if(this[t]===e)return t;return-1},f={},v={};return function(t,n){var o,o={register:r,get:s,set:function(e,t){v[e]=t},newModule:function(e){return e},global:e};o.set("@empty",{}),n(o);for(var i=0;i<t.length;i++)s(t[i])}}("undefined"!=typeof window?window:global)(["scripts/main"],function(e){e.register("npm:svg4everybody@2.0.0/dist/svg4everybody",[],!0,function(require,t,r){var n=e.global,o=n.define;return n.define=void 0,!function(e,n){"function"==typeof define&&define.amd?define([],function(){return e.svg4everybody=n()}):"object"==typeof t?r.exports=n():e.svg4everybody=n()}(this,function(){function e(e,t){if(t){var r=!e.getAttribute("viewBox")&&t.getAttribute("viewBox"),n=document.createDocumentFragment(),o=t.cloneNode(!0);for(r&&e.setAttribute("viewBox",r);o.childNodes.length;)n.appendChild(o.firstChild);e.appendChild(n)}}function t(t){t.onreadystatechange=function(){if(4===t.readyState){var r=document.createElement("x");r.innerHTML=t.responseText,t.s.splice(0).map(function(t){e(t[0],r.querySelector("#"+t[1].replace(/(\W)/g,"\\$1")))})}},t.onreadystatechange()}function r(r){function n(){for(var r;r=o[0];){var l=r.parentNode;if(l&&/svg/i.test(l.nodeName)){var s=r.getAttribute("xlink:href");if(i&&(!a||a(s,l,r))){var p=s.split("#"),c=p[0],f=p[1];if(l.removeChild(r),c.length){var v=u[c]=u[c]||new XMLHttpRequest;v.s||(v.s=[],v.open("GET",c),v.send()),v.s.push([l,f]),t(v)}else e(l,document.getElementById(f))}}}d(n,17)}r=r||{};var o=document.getElementsByTagName("use"),i="polyfill"in r?r.polyfill:/\bEdge\/12\b|\bTrident\/[567]\b|\bVersion\/7.0 Safari\b/.test(navigator.userAgent)||(navigator.userAgent.match(/AppleWebKit\/(\d+)/)||[])[1]<537,a=r.validate,d=window.requestAnimationFrame||setTimeout,u={};i&&n()}return r}),n.define=o,r.exports}),e.register("scripts/main",["npm:svg4everybody@2.0.0/dist/svg4everybody"],function(e){"use strict";var t;return{setters:[function(e){t=e["default"]}],execute:function(){t()}}})});
+(function(global) {
+
+  var defined = {};
+
+  // indexOf polyfill for IE8
+  var indexOf = Array.prototype.indexOf || function(item) {
+    for (var i = 0, l = this.length; i < l; i++)
+      if (this[i] === item)
+        return i;
+    return -1;
+  }
+
+  function dedupe(deps) {
+    var newDeps = [];
+    for (var i = 0, l = deps.length; i < l; i++)
+      if (indexOf.call(newDeps, deps[i]) == -1)
+        newDeps.push(deps[i])
+    return newDeps;
+  }
+
+  function register(name, deps, declare, execute) {
+    if (typeof name != 'string')
+      throw "System.register provided no module name";
+
+    var entry;
+
+    // dynamic
+    if (typeof declare == 'boolean') {
+      entry = {
+        declarative: false,
+        deps: deps,
+        execute: execute,
+        executingRequire: declare
+      };
+    }
+    else {
+      // ES6 declarative
+      entry = {
+        declarative: true,
+        deps: deps,
+        declare: declare
+      };
+    }
+
+    entry.name = name;
+
+    // we never overwrite an existing define
+    if (!(name in defined))
+      defined[name] = entry; 
+
+    entry.deps = dedupe(entry.deps);
+
+    // we have to normalize dependencies
+    // (assume dependencies are normalized for now)
+    // entry.normalizedDeps = entry.deps.map(normalize);
+    entry.normalizedDeps = entry.deps;
+  }
+
+  function buildGroups(entry, groups) {
+    groups[entry.groupIndex] = groups[entry.groupIndex] || [];
+
+    if (indexOf.call(groups[entry.groupIndex], entry) != -1)
+      return;
+
+    groups[entry.groupIndex].push(entry);
+
+    for (var i = 0, l = entry.normalizedDeps.length; i < l; i++) {
+      var depName = entry.normalizedDeps[i];
+      var depEntry = defined[depName];
+
+      // not in the registry means already linked / ES6
+      if (!depEntry || depEntry.evaluated)
+        continue;
+
+      // now we know the entry is in our unlinked linkage group
+      var depGroupIndex = entry.groupIndex + (depEntry.declarative != entry.declarative);
+
+      // the group index of an entry is always the maximum
+      if (depEntry.groupIndex === undefined || depEntry.groupIndex < depGroupIndex) {
+
+        // if already in a group, remove from the old group
+        if (depEntry.groupIndex !== undefined) {
+          groups[depEntry.groupIndex].splice(indexOf.call(groups[depEntry.groupIndex], depEntry), 1);
+
+          // if the old group is empty, then we have a mixed depndency cycle
+          if (groups[depEntry.groupIndex].length == 0)
+            throw new TypeError("Mixed dependency cycle detected");
+        }
+
+        depEntry.groupIndex = depGroupIndex;
+      }
+
+      buildGroups(depEntry, groups);
+    }
+  }
+
+  function link(name) {
+    var startEntry = defined[name];
+
+    startEntry.groupIndex = 0;
+
+    var groups = [];
+
+    buildGroups(startEntry, groups);
+
+    var curGroupDeclarative = !!startEntry.declarative == groups.length % 2;
+    for (var i = groups.length - 1; i >= 0; i--) {
+      var group = groups[i];
+      for (var j = 0; j < group.length; j++) {
+        var entry = group[j];
+
+        // link each group
+        if (curGroupDeclarative)
+          linkDeclarativeModule(entry);
+        else
+          linkDynamicModule(entry);
+      }
+      curGroupDeclarative = !curGroupDeclarative; 
+    }
+  }
+
+  // module binding records
+  var moduleRecords = {};
+  function getOrCreateModuleRecord(name) {
+    return moduleRecords[name] || (moduleRecords[name] = {
+      name: name,
+      dependencies: [],
+      exports: {}, // start from an empty module and extend
+      importers: []
+    })
+  }
+
+  function linkDeclarativeModule(entry) {
+    // only link if already not already started linking (stops at circular)
+    if (entry.module)
+      return;
+
+    var module = entry.module = getOrCreateModuleRecord(entry.name);
+    var exports = entry.module.exports;
+
+    var declaration = entry.declare.call(global, function(name, value) {
+      module.locked = true;
+      exports[name] = value;
+
+      for (var i = 0, l = module.importers.length; i < l; i++) {
+        var importerModule = module.importers[i];
+        if (!importerModule.locked) {
+          var importerIndex = indexOf.call(importerModule.dependencies, module);
+          importerModule.setters[importerIndex](exports);
+        }
+      }
+
+      module.locked = false;
+      return value;
+    });
+
+    module.setters = declaration.setters;
+    module.execute = declaration.execute;
+
+    if (!module.setters || !module.execute)
+      throw new TypeError("Invalid System.register form for " + entry.name);
+
+    // now link all the module dependencies
+    for (var i = 0, l = entry.normalizedDeps.length; i < l; i++) {
+      var depName = entry.normalizedDeps[i];
+      var depEntry = defined[depName];
+      var depModule = moduleRecords[depName];
+
+      // work out how to set depExports based on scenarios...
+      var depExports;
+
+      if (depModule) {
+        depExports = depModule.exports;
+      }
+      else if (depEntry && !depEntry.declarative) {
+        if (depEntry.module.exports && depEntry.module.exports.__esModule)
+          depExports = depEntry.module.exports;
+        else
+          depExports = { 'default': depEntry.module.exports, __useDefault: true };
+      }
+      // in the module registry
+      else if (!depEntry) {
+        depExports = load(depName);
+      }
+      // we have an entry -> link
+      else {
+        linkDeclarativeModule(depEntry);
+        depModule = depEntry.module;
+        depExports = depModule.exports;
+      }
+
+      // only declarative modules have dynamic bindings
+      if (depModule && depModule.importers) {
+        depModule.importers.push(module);
+        module.dependencies.push(depModule);
+      }
+      else
+        module.dependencies.push(null);
+
+      // run the setter for this dependency
+      if (module.setters[i])
+        module.setters[i](depExports);
+    }
+  }
+
+  // An analog to loader.get covering execution of all three layers (real declarative, simulated declarative, simulated dynamic)
+  function getModule(name) {
+    var exports;
+    var entry = defined[name];
+
+    if (!entry) {
+      exports = load(name);
+      if (!exports)
+        throw new Error("Unable to load dependency " + name + ".");
+    }
+
+    else {
+      if (entry.declarative)
+        ensureEvaluated(name, []);
+
+      else if (!entry.evaluated)
+        linkDynamicModule(entry);
+
+      exports = entry.module.exports;
+    }
+
+    if ((!entry || entry.declarative) && exports && exports.__useDefault)
+      return exports['default'];
+
+    return exports;
+  }
+
+  function linkDynamicModule(entry) {
+    if (entry.module)
+      return;
+
+    var exports = {};
+
+    var module = entry.module = { exports: exports, id: entry.name };
+
+    // AMD requires execute the tree first
+    if (!entry.executingRequire) {
+      for (var i = 0, l = entry.normalizedDeps.length; i < l; i++) {
+        var depName = entry.normalizedDeps[i];
+        var depEntry = defined[depName];
+        if (depEntry)
+          linkDynamicModule(depEntry);
+      }
+    }
+
+    // now execute
+    entry.evaluated = true;
+    var output = entry.execute.call(global, function(name) {
+      for (var i = 0, l = entry.deps.length; i < l; i++) {
+        if (entry.deps[i] != name)
+          continue;
+        return getModule(entry.normalizedDeps[i]);
+      }
+      throw new TypeError('Module ' + name + ' not declared as a dependency.');
+    }, exports, module);
+
+    if (output)
+      module.exports = output;
+  }
+
+  /*
+   * Given a module, and the list of modules for this current branch,
+   *  ensure that each of the dependencies of this module is evaluated
+   *  (unless one is a circular dependency already in the list of seen
+   *  modules, in which case we execute it)
+   *
+   * Then we evaluate the module itself depth-first left to right 
+   * execution to match ES6 modules
+   */
+  function ensureEvaluated(moduleName, seen) {
+    var entry = defined[moduleName];
+
+    // if already seen, that means it's an already-evaluated non circular dependency
+    if (!entry || entry.evaluated || !entry.declarative)
+      return;
+
+    // this only applies to declarative modules which late-execute
+
+    seen.push(moduleName);
+
+    for (var i = 0, l = entry.normalizedDeps.length; i < l; i++) {
+      var depName = entry.normalizedDeps[i];
+      if (indexOf.call(seen, depName) == -1) {
+        if (!defined[depName])
+          load(depName);
+        else
+          ensureEvaluated(depName, seen);
+      }
+    }
+
+    if (entry.evaluated)
+      return;
+
+    entry.evaluated = true;
+    entry.module.execute.call(global);
+  }
+
+  // magical execution function
+  var modules = {};
+  function load(name) {
+    if (modules[name])
+      return modules[name];
+
+    var entry = defined[name];
+
+    // first we check if this module has already been defined in the registry
+    if (!entry)
+      throw "Module " + name + " not present.";
+
+    // recursively ensure that the module and all its 
+    // dependencies are linked (with dependency group handling)
+    link(name);
+
+    // now handle dependency execution in correct order
+    ensureEvaluated(name, []);
+
+    // remove from the registry
+    defined[name] = undefined;
+
+    var module = entry.module.exports;
+
+    if (!module || !entry.declarative && module.__esModule !== true)
+      module = { 'default': module, __useDefault: true };
+
+    // return the defined module object
+    return modules[name] = module;
+  };
+
+  return function(mains, declare) {
+
+    var System;
+    var System = {
+      register: register, 
+      get: load, 
+      set: function(name, module) {
+        modules[name] = module; 
+      },
+      newModule: function(module) {
+        return module;
+      },
+      global: global 
+    };
+    System.set('@empty', {});
+
+    declare(System);
+
+    for (var i = 0; i < mains.length; i++)
+      load(mains[i]);
+  }
+
+})(typeof window != 'undefined' ? window : global)
+/* (['mainModule'], function(System) {
+  System.register(...);
+}); */
+
+(['scripts/main'], function(System) {
+
+System.register("npm:svg4everybody@2.0.0/dist/svg4everybody", [], true, function(require, exports, module) {
+  var global = System.global,
+      __define = global.define;
+  global.define = undefined;
+  "format cjs";
+  !function(root, factory) {
+    "function" == typeof define && define.amd ? define([], function() {
+      return root.svg4everybody = factory();
+    }) : "object" == typeof exports ? module.exports = factory() : root.svg4everybody = factory();
+  }(this, function() {
+    function embed(svg, g) {
+      if (g) {
+        var viewBox = !svg.getAttribute("viewBox") && g.getAttribute("viewBox"),
+            fragment = document.createDocumentFragment(),
+            clone = g.cloneNode(!0);
+        for (viewBox && svg.setAttribute("viewBox", viewBox); clone.childNodes.length; ) {
+          fragment.appendChild(clone.firstChild);
+        }
+        svg.appendChild(fragment);
+      }
+    }
+    function loadreadystatechange(xhr) {
+      xhr.onreadystatechange = function() {
+        if (4 === xhr.readyState) {
+          var x = document.createElement("x");
+          x.innerHTML = xhr.responseText, xhr.s.splice(0).map(function(array) {
+            embed(array[0], x.querySelector("#" + array[1].replace(/(\W)/g, "\\$1")));
+          });
+        }
+      }, xhr.onreadystatechange();
+    }
+    function svg4everybody(opts) {
+      function oninterval() {
+        for (var use; use = uses[0]; ) {
+          var svg = use.parentNode;
+          if (svg && /svg/i.test(svg.nodeName)) {
+            var src = use.getAttribute("xlink:href");
+            if (polyfill && (!validate || validate(src, svg, use))) {
+              var url = src.split("#"),
+                  url_root = url[0],
+                  url_hash = url[1];
+              if (svg.removeChild(use), url_root.length) {
+                var xhr = svgCache[url_root] = svgCache[url_root] || new XMLHttpRequest();
+                xhr.s || (xhr.s = [], xhr.open("GET", url_root), xhr.send()), xhr.s.push([svg, url_hash]), loadreadystatechange(xhr);
+              } else {
+                embed(svg, document.getElementById(url_hash));
+              }
+            }
+          }
+        }
+        requestAnimationFrame(oninterval, 17);
+      }
+      opts = opts || {};
+      var uses = document.getElementsByTagName("use"),
+          polyfill = "polyfill" in opts ? opts.polyfill : /\bEdge\/12\b|\bTrident\/[567]\b|\bVersion\/7.0 Safari\b/.test(navigator.userAgent) || (navigator.userAgent.match(/AppleWebKit\/(\d+)/) || [])[1] < 537,
+          validate = opts.validate,
+          requestAnimationFrame = window.requestAnimationFrame || setTimeout,
+          svgCache = {};
+      polyfill && oninterval();
+    }
+    return svg4everybody;
+  });
+  global.define = __define;
+  return module.exports;
+});
+
+System.register('scripts/main', ['npm:svg4everybody@2.0.0/dist/svg4everybody'], function (_export) {
+  'use strict';
+
+  var svg4everybody;
+  return {
+    setters: [function (_npmSvg4everybody200DistSvg4everybody) {
+      svg4everybody = _npmSvg4everybody200DistSvg4everybody['default'];
+    }],
+    execute: function () {
+
+      svg4everybody();
+    }
+  };
+});
+});
