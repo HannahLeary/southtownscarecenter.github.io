@@ -15,7 +15,7 @@ let isWatching = false,
 			'./tasks/util/{cli,env,pkg}.js'
 		],
 		helpers: env.getNpmPath('handlebars-layouts/index.js'),
-		partials: './tasks/partials/**/*.hbs',
+		partials: './src/assets/partials/**/*.hbs',
 		dest: env.getDestPath()
 	};
 

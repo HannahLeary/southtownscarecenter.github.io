@@ -7,7 +7,7 @@ gulp.task('default', function (done) {
 });
 
 gulp.task('deploy', function (done) {
-	runSequence('build', 'deployDest', done);
+	runSequence('default', 'deployDest', done);
 });
 
 gulp.task('clean', ['cleanDest']);

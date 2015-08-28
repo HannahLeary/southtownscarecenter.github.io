@@ -8,10 +8,12 @@ import path from 'path';
 let isWatching = false,
 	paths = {
 		src: [
-			env.getSrcPath('assets/media/{fonts,images}/*.*'),
+			env.getSrcPath('*.txt'),
+			env.getSrcPath('CNAME'),
+			env.getSrcPath('assets/media/fonts/**/*.*'),
+			env.getSrcPath('assets/media/images/**/*.{jpg,png}'),
 			env.getSrcPath('assets/scripts/config.js'),
-			env.getSrcPath('assets/vendor/{es6-module-loader,system}.js'),
-			env.getSrcPath('CNAME')
+			env.getSrcPath('assets/vendor/{es6-module-loader,system}.js')
 		],
 		svg: env.getSrcPath('assets/media/images/icons/*.svg'),
 		watch: env.getSrcPath('assets/media/**'),

@@ -9,7 +9,7 @@
 }
 
 .m-sash_primary {
-	background: var(--COLOR_PRIMARY) url(../../media/images/background-pink.jpg) no-repeat center center;
+	background: var(--COLOR_PRIMARY) url(../../media/images/patterns/pink.jpg) no-repeat center center;
 	background-size: cover;
 	color: var(--COLOR_BACKGROUND);
 }
