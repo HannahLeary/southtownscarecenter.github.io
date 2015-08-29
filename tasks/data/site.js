@@ -1,5 +1,5 @@
 export default {
-	title: 'SCC',
+	title: 'Southtowns Care Center',
 	canonical: 'http://www.southtownscarecenter.org',
 	email: 'alice@southtownscarecenter.org'
 };

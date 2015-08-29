@@ -15,7 +15,7 @@
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 
-	<title>{{ data.site.title }}{{#if file.meta.title}} | {{ file.meta.title }}{{/if}}</title>
+	<title>{{#if file.meta.title}}{{ file.meta.title }} | {{/if}}{{ data.site.title }}</title>
 
 	<link rel="author" href="http://www.southtownscarecenter.org/humans.txt" />
 	<link rel="canonical" href="{{ data.site.canonical }}{{ file.meta.canonical }}" />

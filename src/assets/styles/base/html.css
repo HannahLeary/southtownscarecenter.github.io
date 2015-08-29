@@ -45,3 +45,14 @@ button {
 img {
 	max-width: 100%;
 }
+
+input {
+	color: inherit;
+	font-size: 100%;
+	font-weight: inherit;
+	font-style: inherit;
+	font-family: inherit;
+	letter-spacing: inherit;
+	line-height: inherit;
+	vertical-align: baseline;
+}

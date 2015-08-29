@@ -62,7 +62,7 @@
   },
   "scripts": {
     "postinstall": "jspm install",
-    "dev": "gulp serve -wmde dev",
-    "prod": "gulp deploy -e prod"
+    "serve": "gulp serve -wmde dev",
+    "deploy": "gulp deploy -e prod"
   }
 }
