@@ -7,10 +7,11 @@ System.config({
     ]
   },
   "paths": {
-    "*": "*.js",
     "github:*": "vendor/github/*.js",
-    "npm:*": "vendor/npm/*.js"
-  }
+    "npm:*": "vendor/npm/*.js",
+    "*": "*.js"
+  },
+  "defaultJSExtensions": true
 });
 
 System.config({

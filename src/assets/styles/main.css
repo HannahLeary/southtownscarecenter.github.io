@@ -13,6 +13,7 @@
 /* Core */
 @import './core/aspect.css';
 @import './core/box.css';
+@import './core/btn.css';
 @import './core/grid.css';
 @import './core/hdg.css';
 @import './core/hList.css';
