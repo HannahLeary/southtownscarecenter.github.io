@@ -13,10 +13,7 @@ let isServing = false,
 	};
 
 gulp.task('cleanDest', function (done) {
-	del(paths.dest, function (err) {
-		console.log(err);
-		done();
-	});
+	del(paths.dest, done);
 });
 
 gulp.task('deployDest', function () {
