@@ -12,6 +12,7 @@ let isWatching = false,
 			env.getSrcPath('CNAME'),
 			env.getSrcPath('assets/media/fonts/**/*.*'),
 			env.getSrcPath('assets/media/images/**/*.{jpg,png}'),
+			env.getSrcPath('assets/media/videos/**/*.mp4'),
 			env.getSrcPath('assets/scripts/config.js'),
 			env.getSrcPath('assets/vendor/{es6-module-loader,system}.js')
 		],
