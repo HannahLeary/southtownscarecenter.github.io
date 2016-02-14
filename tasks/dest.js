@@ -17,11 +17,21 @@ gulp.task('cleanDest', function (done) {
 });
 
 gulp.task('deployDest', function () {
+	let ftp = require('vinyl-ftp'),
+		transmit = ftp.create({
+			host: env.FTP_HOST,
+			user: env.FTP_USERNAME,
+			password: env.FTP_PASSWORD
+		});
+
+	if (!env.FTP_HOST) {
+		return;
+	}
+
 	return gulp
-		.src(paths.deploy)
-		.pipe(plug.ghPages({
-			branch: 'master'
-		}));
+		.src(paths.deploy, { base: paths.dest, buffer: false })
+		.pipe(transmit.newer('/html'))
+		.pipe(transmit.dest('/html'));
 });
 
 gulp.task('serveDest', function () {
