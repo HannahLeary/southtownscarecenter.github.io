@@ -1,3 +1,7 @@
 .addthis_horizontal_follow_toolbox p {
 	display: none;
 }
+
+.addthis_toolbox .at-follow-btn {
+	padding-top: 2px !important;
+}
