@@ -28,6 +28,11 @@
 	color: var(--COLOR_BACKGROUND);
 }
 
+.m-sash_inv {
+	background: var(--COLOR_FOREGROUND);
+	color: var(--COLOR_BACKGROUND);
+}
+
 .m-sash_accent {
 	background: var(--COLOR_ACCENT);
 	color: var(--COLOR_BACKGROUND);
