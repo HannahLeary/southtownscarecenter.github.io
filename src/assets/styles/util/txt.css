@@ -10,6 +10,10 @@
 	font-size: var(--FONT_SIZE_LARGE);
 }
 
+.u-txt_xxl {
+	font-size: var(--FONT_SIZE_XXLARGE);
+}
+
 .u-txt_c {
 	text-align: center;
 }
