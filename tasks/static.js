@@ -10,6 +10,7 @@ let isWatching = false,
 		src: [
 			env.getSrcPath('*.txt'),
 			env.getSrcPath('CNAME'),
+			env.getSrcPath('.htaccess'),
 			env.getSrcPath('assets/media/fonts/**/*.*'),
 			env.getSrcPath('assets/media/images/**/*.{jpg,png}'),
 			env.getSrcPath('assets/media/videos/**/*.mp4'),

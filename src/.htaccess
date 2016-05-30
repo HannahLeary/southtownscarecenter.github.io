@@ -1,0 +1,4 @@
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+	RewriteRule ^donate(/|/index.html)?$ https://southtownscarecenter.givingfuel.com/donate [R=302]
+</IfModule>
