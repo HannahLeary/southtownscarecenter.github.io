@@ -1,24 +1,48 @@
-import cli from './util/cli';
-import env from './util/env';
-import jspm from 'jspm';
-import gulp from 'gulp';
+/**
+ * # Scripts
+ *
+ *     foo.js ━┓
+ *     bar.js ━┫
+ *             ┗━ browserify-incremental
+ *                ┗━ babelify
+ *                   ┗━ errorify ━┓
+ *                                ┣━ foo.js
+ *                                ┣━ foo.js.map
+ *                                ┣━ bar.js
+ *                                ┗━ bar.js.map
+ */
 
-let isWatching = false,
-	paths = {
-		main: 'scripts/main',
-		all: env.getSrcPath('assets/{elements,scripts}/**'),
-		dest: env.getDestPath('assets/scripts/main.js')
-	};
+import { read, write } from 'spiff';
 
-gulp.task('buildScripts', function () {
-	if (!isWatching && cli.watch) {
-		isWatching = true;
+import browserify from 'browserify-incremental';
+import babelify from 'babelify';
+import errorify from 'errorify';
 
-		gulp.watch(paths.all, ['buildScripts']);
+export async function scripts(options = {}) {
+	async function transpile(fileObj) {
+		const chunks = [];
+		const bundler = browserify(fileObj.path, {
+			transform: [babelify],
+			plugin: [errorify],
+			debug: options.maps,
+		});
+
+		await new Promise((resolve, reject) => {
+			bundler
+				.bundle()
+				.on('data', chunk => chunks.push(chunk))
+				.on('finish', resolve)
+				.on('error', reject);
+		});
+
+		fileObj.contents = Buffer.concat(chunks)
+
+		return fileObj;
 	}
 
-	return jspm.bundleSFX(paths.main, paths.dest, {
-		minify: cli.env === 'prod',
-		sourceMaps: cli.maps && 'inline'
-	});
-});
+	return read('src/asset*/scripts/*.js')
+		.map(transpile)
+		.map(write('dist', {
+			map: options.maps
+		}));
+}
