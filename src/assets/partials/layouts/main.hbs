@@ -15,12 +15,14 @@
 	<meta http-equiv="x-ua-compatible" content="ie=edge" />
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 
-	<title>Southtowns Care Center</title>
+	<title>{{#if title}}{{title}} | {{/if}}{{site.title}}</title>
 
-	<link rel="author" href="http://southtownscarecenter.org/humans.txt" />
-	<link rel="canonical" href="http://southtownscarecenter.org/" />
+	<link rel="author" href="{{site.canonical}}/humans.txt" />
+	<link rel="canonical" href="{{site.canonical}}{{canonical}}" />
 
-		<link rel="stylesheet" href="/assets/css/index.css?v=1.0.0" />
+	{{#block "styles"}}
+		<link rel="stylesheet" href="/assets/css/index.css?v={{package.version}}" />
+	{{/block}}
 
 </head>
 <body>
@@ -28,15 +30,16 @@
 	<div class="site">
 		<header class="site-hd">
 			<h1 itemscope itemtype="http://schema.org/Organization">
-				<a href="http://southtownscarecenter.org" itemprop="url">
-					<svg><use xlink:href="/assets/svg/sprites.svg?v=1.0.0#logo-wide"></use></svg>
-					<span class="u-visuallyHidden" itemprop="name">Southtowns Care Center</span>
+				<a href="{{site.canonical}}" itemprop="url">
+					<svg><use xlink:href="/assets/svg/sprites.svg?v={{package.version}}#logo-wide"></use></svg>
+					<span class="u-visuallyHidden" itemprop="name">{{site.title}}</span>
 				</a>
 			</h1>
 		</header>
 
 		<main class="site-bd">
-		Home
+			{{#block "body"}}
+			{{/block}}
 		</main>
 
 		<footer class="site-ft">
@@ -66,15 +69,17 @@
 
 			<div class="addthis_horizontal_follow_toolbox"></div>
 			<div class="addthis_sharing_toolbox"></div>
-			<script src="https://s7.addthis.com/js/300/addthis_widget.js#pubid=ra-55de798ed2afb72f" async defer></script>
+			<script src="https://s7.addthis.com/js/300/addthis_widget.js#pubid={{site.socialId}}" async defer></script>
 		</footer>
 	</div>
 
-		<script src="/assets/js/index.js?v=1.0.0"></script>
+	{{#block "scripts"}}
+		<script src="/assets/js/index.js?v={{package.version}}"></script>
+	{{/block}}
 
 	<script>
 		window.ga=function(){ga.q.push(arguments)};ga.q=[];ga.l=+new Date;
-		ga('create','UA-66801390-1','auto');ga('send','pageview');
+		ga('create','{{site.analyticsId}}','auto');ga('send','pageview');
 	</script>
 	<script src="https://www.google-analytics.com/analytics.js" async defer></script>
 
