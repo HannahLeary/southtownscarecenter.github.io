@@ -16,7 +16,7 @@
     "svg4everybody": "^2.0.3"
   },
   "devDependencies": {
-    "whim": "^3.0.7"
+    "whim": "^4.0.0"
   },
   "scripts": {
     "make": "whim make",

@@ -29,7 +29,7 @@
 
 	<div class="site">
 		<header class="site-hd">
-			<h1 itemscope itemtype="http://schema.org/Organization">
+			<h1 itemscope itemtype="https://schema.org/Organization">
 				<a href="{{site.canonical}}" itemprop="url">
 					<svg><use xlink:href="/assets/svg/sprites.svg?v={{package.version}}#logo-wide"></use></svg>
 					<span class="u-visuallyHidden" itemprop="name">{{site.title}}</span>
@@ -38,38 +38,25 @@
 		</header>
 
 		<main class="site-bd">
-			{{#block "body"}}
-			{{/block}}
+			{{#block "body"}}{{/block}}
 		</main>
 
 		<footer class="site-ft">
-			<link href="http://cdn-images.mailchimp.com/embedcode/slim-081711.css" rel="stylesheet" type="text/css">
-			<div id="mc_embed_signup">
-				<form action="http://southtownscarecenter.us11.list-manage.com/subscribe/post?u=8be344fbab5e57293149465af&amp;id=5b0bf161ed" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-					<div id="mc_embed_signup_scroll">
-						<input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required>
-						<!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-						<div style="position: absolute; left: -5000px;"><input type="text" name="b_8be344fbab5e57293149465af_5b0bf161ed" tabindex="-1" value=""></div>
-						<div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
-					</div>
-				</form>
-			</div>
-
-			<div itemscope itemtype="http://schema.org/Organization">
-				<div itemprop="name">Southtowns Care Center, Inc. (SCC)</div>
-				<address itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+			<!-- Organization -->
+			<div itemscope itemtype="https://schema.org/Organization">
+				<div itemprop="name">Southtowns Care Center, Inc.</div>
+				<address itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
 					<span itemprop="postOfficeBoxNumber">P.O. Box 892</span><br />
 					<span itemprop="addressLocality">Hamburg</span>,
 					<span itemprop="addressRegion">NY</span>
 					<span itemprop="postalCode">14075</span>
 				</address>
-				<div itemprop="telephone">(716) 261-5000</div>
-				<div itemprop="email"><a href="mailto:alice@southtownscarecenter.org">alice@southtownscarecenter.org</a></div>
+				<div itemprop="telephone">(716) 508-0660</div>
+				<div itemprop="email"><a href="mailto:info@southtownscarecenter.org">info@southtownscarecenter.org</a></div>
 			</div>
 
-			<div class="addthis_horizontal_follow_toolbox"></div>
-			<div class="addthis_sharing_toolbox"></div>
-			<script src="https://s7.addthis.com/js/300/addthis_widget.js#pubid={{site.socialId}}" async defer></script>
+			{{#embed "vendor/newsletter"}}{{/embed}}
+			{{#embed "vendor/sharing"}}{{/embed}}
 		</footer>
 	</div>
 
@@ -77,11 +64,7 @@
 		<script src="/assets/js/index.js?v={{package.version}}"></script>
 	{{/block}}
 
-	<script>
-		window.ga=function(){ga.q.push(arguments)};ga.q=[];ga.l=+new Date;
-		ga('create','{{site.analyticsId}}','auto');ga('send','pageview');
-	</script>
-	<script src="https://www.google-analytics.com/analytics.js" async defer></script>
+	{{#embed "vendor/analytics"}}{{/embed}}
 
 </body>
 </html>
