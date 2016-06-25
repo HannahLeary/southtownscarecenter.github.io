@@ -1,0 +1,50 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+
+	<meta charset="utf-8" />
+	<meta http-equiv="x-ua-compatible" content="ie=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+	<title>{{#if title}}{{title}} | {{/if}}{{site.title}}</title>
+
+	<link rel="author" href="{{site.canonical}}/humans.txt" />
+	<link rel="canonical" href="{{site.canonical}}{{canonical}}" />
+
+	{{#block "styles"}}
+		<link rel="stylesheet" href="/assets/css/index.css?v={{package.version}}" />
+	{{/block}}
+
+</head>
+<body>
+
+	<div class="site">
+		<header class="site-hd">
+			<h1>
+				<a href="{{site.canonical}}" itemprop="url">
+					<svg><use xlink:href="/assets/svg/sprites.svg?v={{package.version}}#logo-wide"></use></svg>
+					<span class="u-visuallyHidden" itemprop="name">{{site.title}}</span>
+				</a>
+			</h1>
+		</header>
+
+		<main class="site-bd">
+			{{{block "body"}}}
+		</main>
+
+		<footer class="site-ft">
+			{{{embed "microdata/scc/org"}}}
+
+			{{{embed "vendor/newsletter"}}}
+			{{{embed "vendor/sharing"}}}
+		</footer>
+	</div>
+
+	{{#block "scripts"}}
+		<script src="/assets/js/index.js?v={{package.version}}"></script>
+	{{/block}}
+
+	{{{embed "vendor/analytics"}}}
+
+</body>
+</html>

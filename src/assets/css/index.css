@@ -1,7 +1,34 @@
-@import 'reset-css/reset.css';
+/**
+ * # Southtowns Care Center Styles
+ *
+ * This file is the primary entry point for all styles and should only
+ * contain `@import` statements. All other styles should be written as
+ * separate modules in their own files.
+ */
+
+/**
+ * ## Vendor
+ */
+@import 'reset-css';
+
+/**
+ * ## Config
+ */
 
 @import './config/media.css';
 @import './config/vars.css';
 
+/**
+ * ## Base
+ */
+
 @import './base/html.css';
 @import './base/svg.css';
+
+/**
+ * ## Objects
+ */
+
+/**
+ * ## Modules
+ */

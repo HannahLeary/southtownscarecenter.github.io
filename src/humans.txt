@@ -1,15 +1,28 @@
-/* SITE */
+
+
+    ┌────────┐
+    │  │  │  │ SOUTHTOWNS
+    │  │  │  │ CARE CENTER
+    └────────┘
+
+    (c) Southtowns Care Center, Inc.
+
+
+# Site
+
 Email: info@southtownscarecenter.org
 Facebook: http://facebook.com/southtownscarecenter
 Twitter: http://twitter.com/southtownscc
 Location: Hamburg, NY, USA
 
-/* TEAM */
+# Team
+
 Developer: Shannon Moeller
 Site: http://shannonmoeller.com
 Twitter: http://twitter.com/shannonmoeller
 
-/* COLOPHON */
+# Attribution
+
 Font: Lato (http://www.latofonts.com/lato-free-fonts/)
 Font: Gogoia (http://www.fontfabric.com/gogoia-free-font/)
 Stock: Pexels (http://www.pexels.com/)
