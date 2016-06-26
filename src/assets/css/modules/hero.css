@@ -1,0 +1,47 @@
+/**
+ * # Hero Module
+ */
+
+.hero {
+	display: block;
+	height: 50rem;
+	transform: skewY(calc(var(--tilt) * -1deg));
+	transform-origin: left top;
+}
+
+.hero-bd {
+	display: block;
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	z-index: 1;
+	font-family: var(--font-accent);
+}
+
+.hero-bg {
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	height: 100%;
+	width: 100vw;
+	overflow: hidden;
+	transform: translateX(-50%);
+}
+
+.hero-bg::after {
+	content: '';
+	position: absolute;
+	right: 0;
+	top: 0;
+	height: calc(100% + calc(var(--tilt) * 1.8vw));
+	width: 100%;
+	background: inherit;
+	background-size: cover;
+	background-position: center center;
+	transform: skewY(calc(var(--tilt) * 1deg));
+	transform-origin: right top;
+}
+
+.hero-bg_top {
+	height: calc(100% + calc(var(--tilt) * 1.8%));
+}

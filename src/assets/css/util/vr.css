@@ -1,0 +1,25 @@
+/**
+ * # Vertical Rhythm Utilties
+ */
+
+:root {
+	--vr: {
+		& > * + * {
+			margin-top: 1.3rem;
+		}
+	};
+}
+
+.u-vr { @apply --vr; }
+
+@media (--small) {
+	.bpSm-u-vr { @apply --vr; }
+}
+
+@media (--medium) {
+	.bpMd-u-vr { @apply --vr; }
+}
+
+@media (--large) {
+	.bpLg-u-vr { @apply --vr; }
+}

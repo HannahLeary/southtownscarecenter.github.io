@@ -1,2 +1,51 @@
+/**
+ * # Site Module
+ */
+
 .site {
+	margin: 0 auto;
+	width: 90%;
+}
+
+.site-skip {
+	position: absolute;
+	bottom: 100%;
+	left: 0;
+	z-index: 2;
+}
+
+.site-skip:hover,
+.site-skip:focus {
+	bottom: auto;
+	top: 0;
+}
+
+.site-hd {
+	position: relative;
+}
+
+.site-hd > * {
+	position: absolute;
+	top: 0;
+	z-index: 1;
+}
+
+.site-hd-lft {
+	left: 0;
+}
+
+.site-hd-rgt {
+	right: 0;
+}
+
+.site-bd,
+.site-ft {
+	margin-top: calc(var(--gutter) / 2);
+}
+
+@media (--medium), (--large) {
+	.site {
+		max-width: 120rem;
+		width: 80%;
+	}
 }

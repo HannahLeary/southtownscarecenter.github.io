@@ -1,7 +1,16 @@
 /**
  * # Variables
  */
+
 :root {
 	--color-background: hsl(0, 0%, 100%);
 	--color-foreground: hsl(0, 0%, 0%);
+	--color-primary: hsl(333, 83%, 55%);
+	--color-accent: hsl(124, 100%, 90%);
+	--color-accent-muted: hsl(46, 48%, 69%);
+
+	--font-primary: 'lato-web', helvetica, arial, sans-serif;
+	--font-accent: 'gogoia-web', helvetica, arial, sans-serif;
+
+	--tilt: 9;
 }

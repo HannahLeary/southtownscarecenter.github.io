@@ -33,6 +33,6 @@
  *
  */
 
-@custom-media --small (width < 640px);
-@custom-media --medium (width >= 640px) and (width <= 960px);
-@custom-media --large (width > 960px);
+@custom-media --small (width < 768px);
+@custom-media --medium (width >= 768px) and (width <= 1200px);
+@custom-media --large (width > 1200px);
