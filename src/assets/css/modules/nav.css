@@ -1,4 +1,13 @@
+/**
+ * # Navigation Module
+ */
+
 .nav {
 	display: inline-block;
 	padding: 1rem;
+	line-height: 1rem;
+}
+
+.nav_btn {
+	border: 1px solid;
 }

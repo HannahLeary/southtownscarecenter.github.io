@@ -4,9 +4,29 @@
 
 .hero {
 	display: block;
-	height: 50rem;
+	height: 13rem;
 	transform: skewY(calc(var(--tilt) * -1deg));
 	transform-origin: left top;
+}
+
+.hero_sm {
+	height: 13rem;
+}
+
+.hero_md {
+	height: 16rem;
+}
+
+.hero_lg {
+	height: 32rem;
+}
+
+.hero_xl {
+	height: 42rem;
+}
+
+* + .hero {
+	margin-top: 1.6rem;
 }
 
 .hero-bd {
@@ -16,6 +36,7 @@
 	bottom: 0;
 	z-index: 1;
 	font-family: var(--font-accent);
+	font-size: 6rem;
 }
 
 .hero-bg {
@@ -25,6 +46,7 @@
 	height: 100%;
 	width: 100vw;
 	overflow: hidden;
+	background-color: var(--color-secondary);
 	transform: translateX(-50%);
 }
 
@@ -44,4 +66,16 @@
 
 .hero-bg_top {
 	height: calc(100% + calc(var(--tilt) * 1.8%));
+}
+
+.m-hero_bg_primary {
+	background-color: var(--color-primary);
+}
+
+.m-hero_bg_secondary {
+	background-color: var(--color-secondary);
+}
+
+.m-hero_bg_tertiary {
+	background-color: var(--color-tertiary);
 }

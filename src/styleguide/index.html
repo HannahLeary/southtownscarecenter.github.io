@@ -1,109 +1,36 @@
 ---
-title:
+title: Styleguide
 canonical: /styleguide/
 ---
 {{#extend "layout/main"}}
+	{{#content "styles" mode="append"}}
+		<link rel="stylesheet" href="/assets/css/guide.css?v={{package.version}}" />
+	{{/content}}
+
 	{{#content "body"}}
-		<a href="#yo"class="hero">
-			<div class="hero-bd">
-				Hero
-			</div>
-			<div class="hero-bg hero-bg_top"
-				style="background-image: url(http://placehold.it/4096/ccffcf?text=hello);">
-			</div>
-		</a>
-
-		<div class="hero">
-			<div class="hero-bd">
-				Hero
-			</div>
-			<div class="hero-bg"
-				style="background-image: url(http://placehold.it/4096?text=hello);">
-			</div>
-		</div>
-
-		<div class="grid u-tilt">
-			<div class="grid-col_2of3 u-tilt-bd">
-				<p>derpy</p>
-				<p>derp</p>
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec lorem diam, posuere at porta sit amet, tincidunt interdum nibh. Fusce tristique risus est. Pellentesque porttitor, libero efficitur gravida dignissim, magna metus hendrerit velit, quis volutpat felis nunc sed elit. Proin id tincidunt ligula, sed dictum ipsum.</p>
-				<p>derp</p>
-				<p>derpy</p>
-				<p>derp</p>
-				<p>derpy</p>
-				<p>derp</p>
-				<p>derpy</p>
-				<p>derp</p>
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec lorem diam, posuere at porta sit amet, tincidunt interdum nibh. Fusce tristique risus est. Pellentesque porttitor, libero efficitur gravida dignissim, magna metus hendrerit velit, quis volutpat felis nunc sed elit. Proin id tincidunt ligula, sed dictum ipsum.</p>
-			</div>
-			<div class="grid-col_1of3 u-tilt-bd">
-				<p>derpy</p>
-				<p>derp</p>
-			</div>
-		</div>
-
-		<div class="grid u-tilt">
-			<div class="grid-col_2of3 u-tilt-bd">
-				<p>derpy</p>
-				<p>derp</p>
-			</div>
-			<div class="grid-col_1of3 u-tilt-bd">
-				<p>derpy</p>
-				<p>derp</p>
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec lorem diam, posuere at porta sit amet, tincidunt interdum nibh. Fusce tristique risus est. Pellentesque porttitor, libero efficitur gravida dignissim, magna metus hendrerit velit, quis volutpat felis nunc sed elit. Proin id tincidunt ligula, sed dictum ipsum.</p>
-				<p>derp</p>
-				<p>derpy</p>
-				<p>derp</p>
-				<p>derpy</p>
-				<p>derp</p>
-				<p>derpy</p>
-				<p>derp</p>
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec lorem diam, posuere at porta sit amet, tincidunt interdum nibh. Fusce tristique risus est. Pellentesque porttitor, libero efficitur gravida dignissim, magna metus hendrerit velit, quis volutpat felis nunc sed elit. Proin id tincidunt ligula, sed dictum ipsum.</p>
-			</div>
+		<div class="hero hero_lg">
+			<h2 class="hero-bd">Styleguide</h2>
+			<div class="hero-bg hero-bg_top"></div>
 		</div>
 
 		<div class="hero">
-			<div class="hero-bd">
-				Hero
-			</div>
-			<div class="hero-bg"
-				style="background-image:url(http://placehold.it/4096?text=hello)">
-			</div>
-		</div>
-
-		<div class="grid">
-			<div class="grid-col_2of3">
-				<p>derpy</p>
-				<p>derp</p>
-			</div>
-			<div class="grid-col_1of3">
-				<p>derpy</p>
-				<p>derp</p>
-			</div>
+			<h3 class="hero-bd">Color</h3>
+			<div class="hero-bg m-hero_bg_tertiary"></div>
 		</div>
 
 		<div class="hero">
-			<div class="hero-bd">
-				Hero
-			</div>
-			<div class="hero-bg"></div>
-		</div>
-
-		<div class="grid">
-			<div class="grid-col_2of3">
-				<p>derpy</p>
-				<p>derp</p>
-			</div>
-			<div class="grid-col_1of3">
-				<p>derpy</p>
-				<p>derp</p>
-			</div>
+			<h3 class="hero-bd">Typography</h3>
+			<div class="hero-bg m-hero_bg_tertiary"></div>
 		</div>
 
 		<div class="hero">
-			<div class="hero-bd">
-				Hero
-			</div>
+			<h3 class="hero-bd">Grid</h3>
+			<div class="hero-bg m-hero_bg_tertiary"></div>
+		</div>
+
+		<div class="hero">
+			<h3 class="hero-bd">Aspect</h3>
+			<div class="hero-bg m-hero_bg_tertiary"></div>
 		</div>
 	{{/content}}
 {{/extend}}
