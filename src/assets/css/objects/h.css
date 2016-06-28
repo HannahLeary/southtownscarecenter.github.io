@@ -1,0 +1,21 @@
+/**
+ * # Headings
+ */
+
+.h1 {
+	font-family: var(--font-accent);
+	font-size: 12rem;
+	line-height: 1;
+}
+
+.h1-sub {
+	font-family: var(--font-accent);
+	font-size: 4rem;
+	line-height: 1;
+}
+
+.h2 {
+	font-family: var(--font-accent);
+	font-size: 6rem;
+	line-height: 1;
+}
