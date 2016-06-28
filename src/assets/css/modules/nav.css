@@ -4,10 +4,20 @@
 
 .nav {
 	display: inline-block;
-	padding: 1rem;
 	line-height: 1rem;
+	vertical-align: baseline;
+}
+
+.nav + .nav {
+	margin-left: 1.6rem;
 }
 
 .nav_btn {
-	border: 1px solid;
+	background-color: var(--color-primary);
+	color: var(--color-background);
+	padding: 1rem;
+}
+
+.m-nav_inv {
+	color: var(--color-background);
 }

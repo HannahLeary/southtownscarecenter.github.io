@@ -5,6 +5,9 @@
 .hero {
 	display: block;
 	height: 13rem;
+	font-family: var(--font-accent);
+	font-size: 6rem;
+	line-height: 1;
 	transform: skewY(calc(var(--tilt) * -1deg));
 	transform-origin: left top;
 }
@@ -23,6 +26,7 @@
 
 .hero_xl {
 	height: 42rem;
+	font-size: 12rem;
 }
 
 * + .hero {
@@ -33,10 +37,8 @@
 	display: block;
 	position: absolute;
 	left: 0;
-	bottom: 0;
+	bottom: 1rem;
 	z-index: 1;
-	font-family: var(--font-accent);
-	font-size: 6rem;
 }
 
 .hero-bg {
