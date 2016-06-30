@@ -34,7 +34,7 @@
 	color: var(--color-foreground);
 }
 
-@media (--medium), (--large) {
+@media (--gt-small) {
 	.site {
 		padding: 0 3.2rem;
 		max-width: 120rem;

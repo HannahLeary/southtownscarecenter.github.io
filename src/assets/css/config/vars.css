@@ -1,9 +1,9 @@
 :root {
 	--color-background: hsl(0, 0%, 100%);
-	--color-foreground: hsl(120, 9%, 9%);
+	--color-foreground: hsl(53, 9%, 9%);
 	--color-pink: hsl(333, 83%, 53%);
 	--color-green: hsl(120, 91%, 91%);
-	--color-brown: hsl(46, 33%, 83%);
+	--color-brown: hsl(53, 33%, 83%);
 
 	--font-body: 'lato-web', helvetica, arial, sans-serif;
 	--font-heading: 'gogoia-web', helvetica, arial, sans-serif;

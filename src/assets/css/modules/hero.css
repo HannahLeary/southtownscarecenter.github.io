@@ -7,33 +7,29 @@
 	transform-origin: left top;
 }
 
-.m-hero_inv {
-	background-color: var(--color-foreground);
+.hero_inv {
 	color: var(--color-background);
 }
 
 .hero-hd {
 	position: relative;
 	z-index: 1;
-	padding-top: 25.6rem;
-}
+	padding-top: 19.2rem;
 
-.hero-bd {
-	position: relative;
-	z-index: 1;
-	padding: 2rem;
-
-	background-color: var(--color-pink);
-	color: var(--color-background);
+	font-family: var(--font-heading);
+	font-size: 8rem;
+	line-height: 1;
 }
 
 .hero-bg {
 	position: absolute;
-	bottom: 0;
 	left: 50%;
+	bottom: 0;
 	height: 100%;
 	width: 100vw;
 	overflow: hidden;
+
+	background: var(--color-green);
 
 	transform: translateX(-50%);
 }
@@ -41,7 +37,7 @@
 .hero-bg::after {
 	content: '';
 	position: absolute;
-	right: 0;
+	left: 0;
 	top: 0;
 	height: calc(100% + calc(var(--tilt) * 1.8vw));
 	width: 100%;
@@ -58,27 +54,10 @@
 	height: calc(100% + calc(var(--tilt) * 1.8%));
 }
 
-.m-hero-bg_inv {
-	background-color: var(--color-foreground);
-	color: var(--color-background);
-}
+@media (--gt-small) {
+	.hero-hd {
+		padding-top: 25.6rem;
 
-.m-hero-bg_primary {
-	background-color: var(--color-pink);
-	color: var(--color-background);
-}
-
-.m-hero-bg_secondary {
-	background-color: var(--color-green);
-}
-
-.m-hero-bg_tertiary {
-	background-color: var(--color-brown);
-}
-
-@media (--medium), (--large) {
-	.hero {
-		align-items: flex-end;
-		flex-flow: row;
+		font-size: 12rem;
 	}
 }

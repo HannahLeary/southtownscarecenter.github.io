@@ -16,7 +16,7 @@
 	line-height: 1;
 }
 
-@media (--medium), (--large) {
+@media (--gt-small) {
 	.hdg1 {
 		font-size: 12rem;
 	}
