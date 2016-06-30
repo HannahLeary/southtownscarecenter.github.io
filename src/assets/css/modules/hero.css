@@ -1,40 +1,30 @@
-/**
- * # Hero Module
- */
-
 .hero {
-	display: block;
-	height: 13rem;
+	display: flex;
+	justify-content: space-between;
+	flex-flow: column;
+
 	transform: skewY(calc(var(--tilt) * -1deg));
 	transform-origin: left top;
 }
 
-.hero_sm {
-	height: 13rem;
+.m-hero_inv {
+	background-color: var(--color-foreground);
+	color: var(--color-background);
 }
 
-.hero_md {
-	height: 16rem;
-}
-
-.hero_lg {
-	height: 32rem;
-}
-
-.hero_xl {
-	height: 42rem;
-}
-
-* + .hero {
-	margin-top: 1.6rem;
+.hero-hd {
+	position: relative;
+	z-index: 1;
+	padding-top: 25.6rem;
 }
 
 .hero-bd {
-	display: block;
-	position: absolute;
-	left: 0;
-	bottom: 1rem;
+	position: relative;
 	z-index: 1;
+	padding: 2rem;
+
+	background-color: var(--color-pink);
+	color: var(--color-background);
 }
 
 .hero-bg {
@@ -44,7 +34,7 @@
 	height: 100%;
 	width: 100vw;
 	overflow: hidden;
-	background-color: var(--color-secondary);
+
 	transform: translateX(-50%);
 }
 
@@ -55,9 +45,11 @@
 	top: 0;
 	height: calc(100% + calc(var(--tilt) * 1.8vw));
 	width: 100%;
+
 	background: inherit;
 	background-size: cover;
 	background-position: center center;
+
 	transform: skewY(calc(var(--tilt) * 1deg));
 	transform-origin: right top;
 }
@@ -66,14 +58,27 @@
 	height: calc(100% + calc(var(--tilt) * 1.8%));
 }
 
-.m-hero_bg_primary {
-	background-color: var(--color-primary);
+.m-hero-bg_inv {
+	background-color: var(--color-foreground);
+	color: var(--color-background);
 }
 
-.m-hero_bg_secondary {
-	background-color: var(--color-secondary);
+.m-hero-bg_primary {
+	background-color: var(--color-pink);
+	color: var(--color-background);
 }
 
-.m-hero_bg_tertiary {
-	background-color: var(--color-tertiary);
+.m-hero-bg_secondary {
+	background-color: var(--color-green);
+}
+
+.m-hero-bg_tertiary {
+	background-color: var(--color-brown);
+}
+
+@media (--medium), (--large) {
+	.hero {
+		align-items: flex-end;
+		flex-flow: row;
+	}
 }

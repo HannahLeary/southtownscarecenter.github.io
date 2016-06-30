@@ -48,6 +48,10 @@
 	};
 
 	--m-grid: {
+		&_rev {
+			flex-flow: row-reverse;
+		}
+
 		&_top {
 			align-items: flex-start;
 		}
@@ -72,6 +76,11 @@
 		&_flush > * {
 			padding-left: 0;
 			padding-right: 0;
+		}
+
+		&-col_primary {
+			background-color: var(--color-pink);
+			color: var(--color-background);
 		}
 	};
 }

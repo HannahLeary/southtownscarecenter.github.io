@@ -1,10 +1,7 @@
-/**
- * # Site Module
- */
-
 .site {
+	position: relative;
 	margin: 0 auto;
-	width: calc(100% - 6.4rem);
+	padding: 0 1.6rem;
 }
 
 .site-skip {
@@ -20,33 +17,38 @@
 	top: 0;
 }
 
-.site-hd {
-	position: relative;
-}
-
-.site-hd > * {
+.site-logo {
 	position: absolute;
+	left: 0;
+	top: 3.2rem;
 	z-index: 1;
 }
 
-.site-hd-lft {
-	top: 0;
-	left: 0;
-}
-
-.site-hd-rgt {
-	top: 3.2rem;
+.site-nav {
+	position: absolute;
 	right: 0;
-}
-
-.site-bd,
-.site-ft {
-	margin-top: calc(var(--gutter) / 2);
+	top: 0;
+	z-index: 1;
+	width: 100%;
+	background-color: var(--color-background);
+	color: var(--color-foreground);
 }
 
 @media (--medium), (--large) {
 	.site {
+		padding: 0 3.2rem;
 		max-width: 120rem;
-		width: 80%;
+	}
+
+	.site-logo {
+		left: 3.2rem;
+		top: 0;
+	}
+
+	.site-nav {
+		right: 3.2rem;
+		top: 3rem;
+		width: auto;
+		background-color: transparent;
 	}
 }

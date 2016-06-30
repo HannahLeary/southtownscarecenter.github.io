@@ -1,0 +1,31 @@
+.hdg1 {
+	font-family: var(--font-heading);
+	font-size: 8rem;
+	line-height: 1;
+}
+
+.hdg1-sub {
+	font-family: var(--font-heading);
+	font-size: 4rem;
+	line-height: 1;
+}
+
+.hdg2 {
+	font-family: var(--font-heading);
+	font-size: 6rem;
+	line-height: 1;
+}
+
+@media (--medium), (--large) {
+	.hdg1 {
+		font-size: 12rem;
+	}
+
+	.hdg1-sub {
+		font-size: 4rem;
+	}
+
+	.hdg2 {
+		font-size: 6rem;
+	}
+}

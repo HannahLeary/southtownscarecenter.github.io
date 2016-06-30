@@ -1,23 +1,46 @@
-/**
- * # Navigation Module
- */
-
 .nav {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding-left: 4%;
+
+	font-size: 1.3rem;
+}
+
+.nav > * {
 	display: inline-block;
-	line-height: 1rem;
-	vertical-align: baseline;
 }
 
-.nav + .nav {
-	margin-left: 1.6rem;
-}
+.nav-btn {
+	order: 1;
+	padding: 1rem 1.6rem;
 
-.nav_btn {
-	background-color: var(--color-primary);
+	background-color: var(--color-pink);
 	color: var(--color-background);
-	padding: 1rem;
+	line-height: 1;
 }
 
-.m-nav_inv {
-	color: var(--color-background);
+.nav-icn {
+	font-size: 3.2rem;
+	line-height: 0.5;
+}
+
+@media (--medium), (--large) {
+	.nav {
+		justify-content: flex-end;
+
+		font-size: inherit;
+	}
+
+	.nav > * + * {
+		margin-left: 2.4rem;
+	}
+
+	.nav_inv {
+		color: var(--color-background);
+	}
+
+	.nav-btn {
+		border-radius: 0.3rem;
+	}
 }

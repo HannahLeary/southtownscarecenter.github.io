@@ -1,13 +1,10 @@
-/**
- * # Logo Module
- */
-
 .logo {
 	display: block;
-	background-color: var(--color-primary);
+
+	background-color: var(--color-pink);
 	color: var(--color-background);
-	padding: 3.2rem 1.3rem 2rem;
-	width: 13rem;
+	padding: 2rem 1rem 1.6rem;
+	width: 9rem;
 
 	transform: skewY(calc(var(--tilt) * -1deg));
 	transform-origin: left top;
@@ -19,4 +16,11 @@
 
 	transform: skewY(calc(var(--tilt) * 1deg));
 	transform-origin: left top;
+}
+
+@media (--medium), (--large) {
+	.logo {
+		padding: 3.2rem 1.3rem 2rem;
+		width: 13rem;
+	}
 }

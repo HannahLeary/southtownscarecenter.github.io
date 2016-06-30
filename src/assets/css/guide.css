@@ -1,3 +1,63 @@
+@import 'highlight.js/styles/vs.css';
+@import './config/media.css';
+@import './config/vars.css';
+
+.guide > * + * {
+	margin-top: 0.6em;
+}
+
+[class*=guide] {
+	& > h2 {
+		font-size: 3.2em;
+	}
+
+	& > h3 {
+		font-size: 2.4em;
+	}
+
+	& > h4 {
+		font-size: 1.6em;
+	}
+}
+
+.guide-fill {
+	background-color: color(var(--color-background) lightness(-6%));
+}
+
+.guide-fill_alt {
+	background-color: color(var(--color-background) lightness(-12%));
+}
+
 .guide-swatch {
-	display: inline-block;
+	padding: 1rem 2rem;
+	background-color: color(var(--color-background) lightness(-6%));
+}
+
+.toc li {
+	margin-top: 0.6em;
+}
+
+.toc ul ul {
+	padding-left: 1.6em;
+	font-size: 0.9em;
+}
+
+.toc ul + ul {
+	display: none;
+}
+
+@media (--medium), (--large) {
+	.guide {
+		width: 66%;
+	}
+
+	.guide > .toc {
+		position: absolute;
+		right: 0;
+		width: 30%;
+	}
+
+	.toc + * {
+		margin-top: 0;
+	}
 }

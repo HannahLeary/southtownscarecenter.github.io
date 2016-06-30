@@ -23,16 +23,16 @@
 			width: 100%;
 		}
 
-		&_block_3x1:after {
-			padding-top: 30%;
-		}
-
 		&_block_4x3:after {
 			padding-top: 75%;
 		}
 
 		&_block_16x9:after {
 			padding-top: 56.25%;
+		}
+
+		&_block_3x1:after {
+			padding-top: 33.33%;
 		}
 
 		&_inline {
@@ -47,16 +47,16 @@
 			width: 1em;
 		}
 
-		&_inline_3x1:after {
-			width: 3em;
-		}
-
 		&_inline_4x3:after {
-			width: 2.4em;
+			width: 1.333em;
 		}
 
 		&_inline_16x9:after {
-			width: 3.2em;
+			width: 1.778em;
+		}
+
+		&_inline_3x1:after {
+			width: 3em;
 		}
 
 		&-bd {

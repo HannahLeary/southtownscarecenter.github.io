@@ -16,6 +16,7 @@
 		 * Tilt down.
 		 */
 		&-bd {
+			padding-bottom: calc(var(--tilt) * 2%);
 			transform: skewY(calc(var(--tilt) * 1deg));
 			transform-origin: left top;
 		}

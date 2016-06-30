@@ -1,7 +1,14 @@
 ---
 title: Styleguide
-canonical: /styleguide/
-invertNav: true
+canonical: /styleguide
+sections:
+- css/config/vars
+- css/objects/aspect
+- css/objects/grid
+- css/objects/spread
+- css/objects/hdg
+- css/objects/semantic
+- css/modules/hero
 ---
 {{#extend "layout/main"}}
 	{{#content "styles" mode="append"}}
@@ -9,40 +16,19 @@ invertNav: true
 	{{/content}}
 
 	{{#content "body"}}
-		<div class="hero hero_xl">
-			<div class="hero-bd u-txt_inv">
-				<h2 class="h1">Light the Night</h2>
-				<!-- <p class="h1&#45;sub">August 11</p> -->
-			</div>
-			<div class="hero-bg hero-bg_top"
-				style="background-image: url(/assets/media/images/2016-06-27-light-the-night/hero.jpg);"
-				role="presentation">
-			</div>
-		</div>
-
-		<div class="hero hero_lg">
-			<h2 class="hero-bd h2">Styleguide</h2>
-			<div class="hero-bg" role="presentation"></div>
-		</div>
-
 		<div class="hero">
-			<h3 class="hero-bd h2">Color</h3>
-			<div class="hero-bg m-hero_bg_tertiary" role="presentation"></div>
+			<h2 class="hero-hd">Styleguide</h2>
 		</div>
 
-		<div class="hero">
-			<h3 class="hero-bd h2">Typography</h3>
-			<div class="hero-bg m-hero_bg_tertiary" role="presentation"></div>
-		</div>
+		<div class="guide">
+			{{#markdown}}
+<!-- toc -->
+{{#each sections}}
 
-		<div class="hero">
-			<h3 class="hero-bd h2">Grid</h3>
-			<div class="hero-bg m-hero_bg_tertiary" role="presentation"></div>
-		</div>
+{{{embed .}}}
 
-		<div class="hero">
-			<h3 class="hero-bd h2">Aspect</h3>
-			<div class="hero-bg m-hero_bg_tertiary" role="presentation"></div>
+{{/each}}
+			{{/markdown}}
 		</div>
 	{{/content}}
 {{/extend}}

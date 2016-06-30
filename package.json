@@ -16,6 +16,7 @@
     "svg4everybody": "^2.0.3"
   },
   "devDependencies": {
+    "highlight.js": "^9.5.0",
     "whim": "^4.0.0"
   },
   "scripts": {
