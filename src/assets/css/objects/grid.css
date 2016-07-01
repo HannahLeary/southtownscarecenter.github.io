@@ -1,19 +1,15 @@
-/**
- * # Grid Object
- */
-
 :root {
 	--grid: {
 		& {
 			display: flex;
-			margin-left: calc(var(--GUTTER) / -2);
-			margin-right: calc(var(--GUTTER) / -2);
+			margin-left: calc(var(--gutter) / -2);
+			margin-right: calc(var(--gutter) / -2);
 		}
 
 		& > * {
 			flex: 1 1 auto;
-			padding-left: calc(var(--GUTTER) / 2);
-			padding-right: calc(var(--GUTTER) / 2);
+			padding-left: calc(var(--gutter) / 2);
+			padding-right: calc(var(--gutter) / 2);
 		}
 
 		&-col_1of1 {

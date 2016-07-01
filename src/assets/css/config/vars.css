@@ -5,11 +5,12 @@
 	--color-green: hsl(120, 91%, 91%);
 	--color-brown: hsl(53, 33%, 83%);
 
-	--font-body: 'lato-web', helvetica, arial, sans-serif;
+	--font-body: 'Helvetica Neue', helvetica, arial, sans-serif;
 	--font-heading: 'gogoia-web', helvetica, arial, sans-serif;
 
+	--gutter: 3.2rem;
 	--tilt: 9;
 
 	--vertical-rhythm: 1rem;
-	--vertical-rhythm-loose: 1.6rem;
+	--vertical-rhythm-loose: 2.4rem;
 }

@@ -1,73 +1,185 @@
-### Block
+<h3 class="hdg hdg_1">Aspect</h3>
 
-Something about blocks here.
+The aspect object contrains an element to a specific aspect ratio based on the width of the container (`block`) or the current font size (`inline`). Background images will scale. May also be used to wrap responsive iframe, svg, or video elements.
 
-### Aspect
-
-The aspect object contrains an element to maintain a specific aspect ratio based on the width of the container (`block`) or the current font size (`inline`).
-
-#### Block
+<h4 class="hdg hdg_2">Block</h4>
 
 <div class="grid">
 	<div class="grid-col_1of4">
 		<div class="aspect aspect_block">
-			<div class="aspect-bd guide-fill">
-				Block (1x1)
-			</div>
+			<svg class="aspect-bd">
+				<use xlink:href="/assets/svg/sprites.svg?v={{package.version}}#logo-tall"></use>
+			</svg>
 		</div>
+		1x1
 	</div>
 	<div class="grid-col_1of4">
 		<div class="aspect aspect_block aspect_block_4x3">
-			<div class="aspect-bd guide-fill">
-				Block (4x3)
-			</div>
+			<svg class="aspect-bd">
+				<use xlink:href="/assets/svg/sprites.svg?v={{package.version}}#logo-tall"></use>
+			</svg>
 		</div>
+		4x3
 	</div>
 	<div class="grid-col_1of4">
 		<div class="aspect aspect_block aspect_block_16x9">
-			<div class="aspect-bd guide-fill">
-				Block (16x9)
-			</div>
+			<svg class="aspect-bd">
+				<use xlink:href="/assets/svg/sprites.svg?v={{package.version}}#logo-tall"></use>
+			</svg>
 		</div>
+		16x9
 	</div>
 	<div class="grid-col_1of4">
 		<div class="aspect aspect_block aspect_block_3x1">
-			<div class="aspect-bd guide-fill">
-				Block (3x1)
-			</div>
+			<svg class="aspect-bd">
+				<use xlink:href="/assets/svg/sprites.svg?v={{package.version}}#logo-tall"></use>
+			</svg>
 		</div>
+		3x1
 	</div>
 </div>
 
-#### Inline
+<div class="grid">
+	<div class="grid-col_1of4">
+		<div class="aspect aspect_block"
+			style="background-image: url(/assets/media/images/2016/hero/hero-beach.jpg);">
+		</div>
+		1x1
+	</div>
+	<div class="grid-col_1of4">
+		<div class="aspect aspect_block aspect_block_4x3"
+			style="background-image: url(/assets/media/images/2016/hero/hero-beach.jpg);">
+		</div>
+		4x3
+	</div>
+	<div class="grid-col_1of4">
+		<div class="aspect aspect_block aspect_block_16x9"
+			style="background-image: url(/assets/media/images/2016/hero/hero-beach.jpg);">
+		</div>
+		16x9
+	</div>
+	<div class="grid-col_1of4">
+		<div class="aspect aspect_block aspect_block_3x1"
+			style="background-image: url(/assets/media/images/2016/hero/hero-beach.jpg);">
+		</div>
+		3x1
+	</div>
+</div>
 
-<div class="grid" style="font-size: 3em;">
+<div class="grid">
+	<div class="grid-col_1of4">
+		<div class="aspect aspect_block m-aspect_lb guide-fill"
+			style="background-image: url(/assets/media/images/2016/hero/hero-beach.jpg);">
+		</div>
+		1x1, letterbox
+	</div>
+	<div class="grid-col_1of4">
+		<div class="aspect aspect_block aspect_block_4x3 m-aspect_lb guide-fill"
+			style="background-image: url(/assets/media/images/2016/hero/hero-beach.jpg);">
+		</div>
+		4x3, letterbox
+	</div>
+	<div class="grid-col_1of4">
+		<div class="aspect aspect_block aspect_block_16x9 m-aspect_lb guide-fill"
+			style="background-image: url(/assets/media/images/2016/hero/hero-beach.jpg);">
+		</div>
+		16x9, letterbox
+	</div>
+	<div class="grid-col_1of4">
+		<div class="aspect aspect_block aspect_block_3x1 m-aspect_lb guide-fill"
+			style="background-image: url(/assets/media/images/2016/hero/hero-beach.jpg);">
+		</div>
+		3x1, letterbox
+	</div>
+</div>
+
+<h4 class="hdg hdg_2">Inline</h4>
+
+<div class="grid">
 	<div class="grid-col_1of4">
 		<div class="aspect aspect_inline">
-			<div class="aspect-bd guide-fill">
-				Inline (1x1)
-			</div>
+			<svg class="aspect-bd">
+				<use xlink:href="/assets/svg/sprites.svg?v={{package.version}}#logo-tall"></use>
+			</svg>
 		</div>
+		1x1
 	</div>
 	<div class="grid-col_1of4">
 		<div class="aspect aspect_inline aspect_inline_4x3">
-			<div class="aspect-bd guide-fill">
-				Inline (4x3)
-			</div>
+			<svg class="aspect-bd">
+				<use xlink:href="/assets/svg/sprites.svg?v={{package.version}}#logo-tall"></use>
+			</svg>
 		</div>
+		4x3
 	</div>
 	<div class="grid-col_1of4">
 		<div class="aspect aspect_inline aspect_inline_16x9">
-			<div class="aspect-bd guide-fill">
-				Inline (16x9)
-			</div>
+			<svg class="aspect-bd">
+				<use xlink:href="/assets/svg/sprites.svg?v={{package.version}}#logo-tall"></use>
+			</svg>
 		</div>
+		16x9
 	</div>
 	<div class="grid-col_1of4">
 		<div class="aspect aspect_inline aspect_inline_3x1">
-			<div class="aspect-bd guide-fill">
-				Inline (3x1)
-			</div>
+			<svg class="aspect-bd">
+				<use xlink:href="/assets/svg/sprites.svg?v={{package.version}}#logo-tall"></use>
+			</svg>
 		</div>
+		3x1
+	</div>
+</div>
+
+<div class="grid">
+	<div class="grid-col_1of4">
+		<div class="aspect aspect_inline"
+			style="background-image: url(/assets/media/images/2016/hero/hero-beach.jpg);">
+		</div>
+		1x1
+	</div>
+	<div class="grid-col_1of4">
+		<div class="aspect aspect_inline aspect_inline_4x3"
+			style="background-image: url(/assets/media/images/2016/hero/hero-beach.jpg);">
+		</div>
+		4x3
+	</div>
+	<div class="grid-col_1of4">
+		<div class="aspect aspect_inline aspect_inline_16x9"
+			style="background-image: url(/assets/media/images/2016/hero/hero-beach.jpg);">
+		</div>
+		16x9
+	</div>
+	<div class="grid-col_1of4">
+		<div class="aspect aspect_inline aspect_inline_3x1"
+			style="background-image: url(/assets/media/images/2016/hero/hero-beach.jpg);">
+		</div>
+		3x1
+	</div>
+</div>
+
+<div class="grid">
+	<div class="grid-col_1of4">
+		<div class="aspect aspect_inline m-aspect_lb guide-fill"
+			style="background-image: url(/assets/media/images/2016/hero/hero-beach.jpg);">
+		</div>
+		1x1, letterbox
+	</div>
+	<div class="grid-col_1of4">
+		<div class="aspect aspect_inline aspect_inline_4x3 m-aspect_lb guide-fill"
+			style="background-image: url(/assets/media/images/2016/hero/hero-beach.jpg);">
+		</div>
+		4x3, letterbox
+	</div>
+	<div class="grid-col_1of4">
+		<div class="aspect aspect_inline aspect_inline_16x9 m-aspect_lb guide-fill"
+			style="background-image: url(/assets/media/images/2016/hero/hero-beach.jpg);">
+		</div>
+		16x9, letterbox
+	</div>
+	<div class="grid-col_1of4">
+		<div class="aspect aspect_inline aspect_inline_3x1 m-aspect_lb guide-fill"
+			style="background-image: url(/assets/media/images/2016/hero/hero-beach.jpg);">
+		</div>
+		3x1, letterbox
 	</div>
 </div>

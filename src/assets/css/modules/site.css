@@ -1,54 +1,23 @@
 .site {
-	position: relative;
-	margin: 0 auto;
-	padding: 0 1.6rem;
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	overflow-x: hidden;
 }
 
-.site-skip {
-	position: absolute;
-	bottom: 100%;
-	left: 0;
-	z-index: 2;
+.site-hd {
+	flex: none;
 }
 
-.site-skip:hover,
-.site-skip:focus {
-	bottom: auto;
-	top: 0;
+.site-bd {
+	flex: 1 0 auto;
 }
 
-.site-logo {
-	position: absolute;
-	left: 0;
-	top: 3.2rem;
-	z-index: 1;
-}
+.site-ft {
+	flex: none;
+	padding: var(--gutter) 0;
 
-.site-nav {
-	position: absolute;
-	right: 0;
-	top: 0;
-	z-index: 1;
-	width: 100%;
-	background-color: var(--color-background);
-	color: var(--color-foreground);
-}
-
-@media (--gt-small) {
-	.site {
-		padding: 0 3.2rem;
-		max-width: 120rem;
-	}
-
-	.site-logo {
-		left: 3.2rem;
-		top: 0;
-	}
-
-	.site-nav {
-		right: 3.2rem;
-		top: 3rem;
-		width: auto;
-		background-color: transparent;
-	}
+	background-color: var(--color-foreground);
+	color: color(var(--color-background) lightness(-50%));
+	font-size: 1.3rem;
 }

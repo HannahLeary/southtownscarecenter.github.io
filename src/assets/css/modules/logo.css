@@ -1,5 +1,8 @@
 .logo {
 	display: block;
+	position: absolute;
+	top: var(--gutter);
+	z-index: 1;
 
 	background-color: var(--color-pink);
 	color: var(--color-background);
@@ -20,7 +23,8 @@
 
 @media (--gt-small) {
 	.logo {
-		padding: 3.2rem 1.3rem 2rem;
+		top: 0;
+		padding: var(--gutter) 1.3rem 2rem;
 		width: 13rem;
 	}
 }

@@ -5,15 +5,16 @@
 }
 
 html {
-	overflow-x: hidden;
-	overflow-y: scroll;
+	height: 100%;
 	font-size: 62.5%;
+	text-rendering: optimizeLegibility;
 	text-size-adjust: 100%;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 }
 
 body {
+	overflow-x: hidden;
 	font: 400 1.6rem/1.6 var(--font-body);
 }
 

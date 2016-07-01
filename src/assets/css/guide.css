@@ -1,10 +1,5 @@
-@import 'highlight.js/styles/vs.css';
 @import './config/media.css';
 @import './config/vars.css';
-
-.guide > * + * {
-	margin-top: 0.6em;
-}
 
 .guide-fill {
 	background-color: color(var(--color-background) lightness(-6%));
@@ -14,23 +9,18 @@
 	background-color: color(var(--color-background) lightness(-12%));
 }
 
+.guide-section,
+.guide-section > * + * {
+	margin-top: 1em;
+}
+
 .guide-swatch {
-	padding: 1rem 2rem;
+	padding: 2rem;
 	background-color: color(var(--color-background) lightness(-6%));
 }
 
-[class*=guide] {
-	& > h2 {
-		font-size: 3.2em;
-	}
-
-	& > h3 {
-		font-size: 2.4em;
-	}
-
-	& > h4 {
-		font-size: 1.6em;
-	}
+.guide-swatch_alt {
+	background-color: color(var(--color-background) lightness(-12%));
 }
 
 .toc li {
@@ -44,16 +34,4 @@
 
 .toc > ul ~ ul {
 	display: none;
-}
-
-@media (--gt-small) {
-	.guide {
-		width: 66%;
-	}
-
-	.guide > .toc {
-		position: absolute;
-		right: 0;
-		width: 30%;
-	}
 }

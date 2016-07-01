@@ -4,7 +4,7 @@
 
 	<meta charset="utf-8" />
 	<meta http-equiv="x-ua-compatible" content="ie=edge" />
-	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1" />
 
 	<title>{{#if title}}{{title}} | {{/if}}{{site.title}}</title>
 
@@ -12,21 +12,21 @@
 	<link rel="canonical" href="{{site.canonical}}{{canonical}}" />
 
 	{{#block "styles"}}
-		<link rel="stylesheet" href="/assets/css/index.css?v={{package.version}}" />
+		<link rel="stylesheet" href="/assets/css/index.css?v={{package.version}}" lazyload />
 	{{/block}}
 
 </head>
-<body>
+<body class="site">
 
-	<div class="site">
-		<a class="site-skip" href="#main">Skip to Content</a>
+	<a class="skip" href="#main">Skip to Content</a>
 
-		<header>
-			<h1 class="site-logo">
+	<header class="site-hd">
+		<div class="container">
+			<h1>
 				<a class="logo" href="/" itemprop="url">
 					<span class="logo-bd">
 						<span class="aspect aspect_block">
-							<svg class="aspect-bd">
+							<svg class="aspect-bd" lazyload>
 								<use xlink:href="/assets/svg/sprites.svg?v={{package.version}}#logo-tall"></use>
 							</svg>
 						</span>
@@ -35,53 +35,78 @@
 				</a>
 			</h1>
 
-			<div class="site-nav">
-				<nav class="nav {{#if invertNav}}nav_inv{{/if}}" aria-label="primary">
-					<a href="/about">About</a>
-					<a href="/events">Events</a>
-					<a class="nav-btn" href="/donate">Donate</a>
-					<a class="nav-icn" href="https://instagram.com/southtownscc" rel="external">
-						<span class="aspect aspect_inline">
-							<svg class="aspect-bd">
-								<use xlink:href="/assets/svg/sprites.svg?v={{package.version}}#social-instagram"></use>
-							</svg>
-						</span>
-						<span class="u-visuallyHidden">Instagram</span>
-					</a>
-					<a class="nav-icn" href="https://twitter.com/southtownscc" rel="external">
-						<span class="aspect aspect_inline">
-							<svg class="aspect-bd">
-								<use xlink:href="/assets/svg/sprites.svg?v={{package.version}}#social-twitter"></use>
-							</svg>
-						</span>
-						<span class="u-visuallyHidden">Twitter</span>
-					</a>
-					<a class="nav-icn" href="https://facebook.com/southtownscarecenter" rel="external">
-						<span class="aspect aspect_inline">
-							<svg class="aspect-bd">
-								<use xlink:href="/assets/svg/sprites.svg?v={{package.version}}#social-facebook"></use>
-							</svg>
-						</span>
-						<span class="u-visuallyHidden">Facebook</span>
-					</a>
-				</nav>
-			</div>
-		</header>
+			<nav class="nav {{#if invertNav}}nav_inv{{/if}}" aria-label="primary">
+				<a href="/about">About</a>
+				<a href="/events">Events</a>
+				<a class="nav-btn" href="/donate">Donate</a>
+				<a class="nav-icn" href="https://instagram.com/southtownscc" rel="external">
+					<span class="aspect aspect_inline">
+						<svg class="aspect-bd" lazyload>
+							<use xlink:href="/assets/svg/sprites.svg?v={{package.version}}#social-instagram"></use>
+						</svg>
+					</span>
+					<span class="u-visuallyHidden">Instagram</span>
+				</a>
+				<a class="nav-icn" href="https://twitter.com/southtownscc" rel="external">
+					<span class="aspect aspect_inline">
+						<svg class="aspect-bd" lazyload>
+							<use xlink:href="/assets/svg/sprites.svg?v={{package.version}}#social-twitter"></use>
+						</svg>
+					</span>
+					<span class="u-visuallyHidden">Twitter</span>
+				</a>
+				<a class="nav-icn" href="https://facebook.com/southtownscarecenter" rel="external">
+					<span class="aspect aspect_inline">
+						<svg class="aspect-bd" lazyload>
+							<use xlink:href="/assets/svg/sprites.svg?v={{package.version}}#social-facebook"></use>
+						</svg>
+					</span>
+					<span class="u-visuallyHidden">Facebook</span>
+				</a>
+			</nav>
+		</div>
+	</header>
 
-		<main id="main">
+	<main id="main" class="site-bd">
+		<div class="container">
 			{{{block "body"}}}
-		</main>
+		</div>
+	</main>
 
-		<footer class="site-ft">
-			{{{embed "microdata/scc/org"}}}
+	<footer class="site-ft">
+		<div class="container">
+			<div class="bpSm-u-vr bpMd-grid bpMd-m-grid_rev bpLg-grid bpLg-m-grid_rev">
+				<section class="bpMd-grid-col_1of3 bpLg-grid-col_1of3">
+					<h2 class="hdg hdg_4">Subscribe</h2>
 
-			{{{embed "vendor/newsletter"}}}
-			{{{embed "vendor/sharing"}}}
-		</footer>
-	</div>
+					<h2 class="hdg hdg_4">Share</h2>
+				</section>
+
+				<section class="bpMd-grid-col_1of3 bpLg-grid-col_1of3">
+					<h2 class="hdg hdg_4">Around SCC</h2>
+
+					<nav aria-label="appendix">
+						<a href="/about">About</a>
+						<a href="/events">Events</a>
+						<a href="/donate">Donate</a>
+						<a href="/legal">Legal</a>
+						<a href="/media">Media</a>
+						<a href="/styleguide">Styleguide</a>
+					</nav>
+				</section>
+
+				<section class="bpMd-grid-col_1of3 bpLg-grid-col_1of3">
+					<h2 class="hdg hdg_4">Contact Information</h2>
+
+					{{{embed "microdata/scc/org"}}}
+				</section>
+
+			</div>
+		</div>
+	</footer>
 
 	{{#block "scripts"}}
-		<script src="/assets/js/index.js?v={{package.version}}"></script>
+		<script src="/assets/js/index.js?v={{package.version}}" async defer></script>
 	{{/block}}
 
 	{{{embed "vendor/analytics"}}}

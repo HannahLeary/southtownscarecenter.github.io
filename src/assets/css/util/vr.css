@@ -5,7 +5,7 @@
 :root {
 	--vr: {
 		& > * + * {
-			margin-top: 1.3rem;
+			margin-top: var(--gutter);
 		}
 	};
 }
