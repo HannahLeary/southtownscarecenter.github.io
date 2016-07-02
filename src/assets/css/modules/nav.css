@@ -55,6 +55,6 @@
 	}
 
 	.nav-btn {
-		border-radius: 0.3rem;
+		border-radius: calc(var(--gutter) / 10);;
 	}
 }

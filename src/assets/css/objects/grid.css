@@ -85,8 +85,18 @@
 .m-grid { @apply --m-grid; }
 
 @media (--small) {
-	.bpSm-grid { @apply --grid; }
-	.bpSm-m-grid { @apply --m-grid; }
+	.grid {
+		flex-flow: column;
+	}
+
+	.grid > * {
+		flex-basis: 100%;
+		max-width: 100%;
+	}
+
+	.grid > * + * {
+		margin-top: var(--gutter);
+	}
 }
 
 @media (--medium) {

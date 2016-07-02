@@ -11,11 +11,12 @@
 
 .site-bd {
 	flex: 1 0 auto;
+	padding-bottom: var(--gutter);
 }
 
 .site-ft {
 	flex: none;
-	padding: var(--gutter) 0;
+	padding: var(--gutter) 0 calc(var(--gutter) * 3.2);
 
 	background-color: var(--color-foreground);
 	color: color(var(--color-background) lightness(-50%));
