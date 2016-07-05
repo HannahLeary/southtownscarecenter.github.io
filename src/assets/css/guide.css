@@ -1,28 +1,6 @@
 @import './config/media.css';
 @import './config/vars.css';
 
-.guide-fill {
-	background-color: color(var(--color-background) lightness(-6%));
-}
-
-.guide-fill_alt {
-	background-color: color(var(--color-background) lightness(-12%));
-}
-
-.guide-section,
-.guide-section > * + * {
-	margin-top: 1em;
-}
-
-.guide-swatch {
-	padding: 2rem;
-	background-color: color(var(--color-background) lightness(-6%));
-}
-
-.guide-swatch_alt {
-	background-color: color(var(--color-background) lightness(-12%));
-}
-
 .toc li {
 	margin-top: 0.6em;
 }

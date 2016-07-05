@@ -1,0 +1,19 @@
+:root {
+	--lift: {
+		margin-top: -8rem;
+	};
+}
+
+.u-lift { @apply --lift; }
+
+@media (--small) {
+	.bpSm-u-lift { @apply --lift; }
+}
+
+@media (--medium) {
+	.bpMd-u-lift { @apply --lift; }
+}
+
+@media (--large) {
+	.bpLg-u-lift { @apply --lift; }
+}

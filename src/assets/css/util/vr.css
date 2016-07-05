@@ -5,7 +5,19 @@
 :root {
 	--vr: {
 		& > * + * {
-			margin-top: var(--gutter);
+			margin-top: calc(var(--gutter) / 2);
+		}
+
+		&Sm > * + * {
+			margin-top: calc(var(--gutter) / 9);
+		}
+
+		&Md > * + * {
+			margin-top: calc(var(--gutter) / 2);
+		}
+
+		&Lg > * + * {
+			margin-top: calc(var(--gutter) * 1.6);
 		}
 	};
 }

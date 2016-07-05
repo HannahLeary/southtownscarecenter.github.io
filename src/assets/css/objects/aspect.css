@@ -23,6 +23,14 @@
 			width: 100%;
 		}
 
+		&_block_9x16:after {
+			padding-top: 177.78%;
+		}
+
+		&_block_3x4:after {
+			padding-top: 133.33%;
+		}
+
 		&_block_4x3:after {
 			padding-top: 75%;
 		}
@@ -69,6 +77,10 @@
 	};
 
 	--m-aspect: {
+		&_drop {
+			background-position: 50% 15%;
+		}
+
 		&_lb {
 			background-size: contain;
 		}

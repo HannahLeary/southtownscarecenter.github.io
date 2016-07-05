@@ -8,9 +8,36 @@
 	--font-body: 'Helvetica Neue', helvetica, arial, sans-serif;
 	--font-heading: 'gogoia-web', helvetica, arial, sans-serif;
 
-	--gutter: 3.2rem;
+	--gutter: 3.236rem;
 	--tilt: 9;
 
-	--vertical-rhythm: 1rem;
-	--vertical-rhythm-loose: 2.4rem;
+	--vr-sm-base: 1.4;
+	--vr-sm-ratio: 1.25;
+	--vr-sm-1: calc(var(--vr-sm-base) * 1rem);
+	--vr-sm-2: calc(var(--vr-sm-1) * var(--vr-sm-ratio));
+	--vr-sm-3: calc(var(--vr-sm-2) * var(--vr-sm-ratio));
+	--vr-sm-4: calc(var(--vr-sm-3) * var(--vr-sm-ratio));
+	--vr-sm-5: calc(var(--vr-sm-4) * var(--vr-sm-ratio));
+	--vr-sm-6: calc(var(--vr-sm-5) * var(--vr-sm-ratio));
+	--vr-sm-7: calc(var(--vr-sm-6) * var(--vr-sm-ratio));
+
+	--vr-md-base: 1.6;
+	--vr-md-ratio: 1.38;
+	--vr-md-1: calc(var(--vr-md-base) * 1rem);
+	--vr-md-2: calc(var(--vr-md-1) * var(--vr-md-ratio));
+	--vr-md-3: calc(var(--vr-md-2) * var(--vr-md-ratio));
+	--vr-md-4: calc(var(--vr-md-3) * var(--vr-md-ratio));
+	--vr-md-5: calc(var(--vr-md-4) * var(--vr-md-ratio));
+	--vr-md-6: calc(var(--vr-md-5) * var(--vr-md-ratio));
+	--vr-md-7: calc(var(--vr-md-6) * var(--vr-md-ratio));
+
+	--vr-lg-base: 1.6;
+	--vr-lg-ratio: 1.44;
+	--vr-lg-1: calc(var(--vr-lg-base) * 1rem);
+	--vr-lg-2: calc(var(--vr-lg-1) * var(--vr-lg-ratio));
+	--vr-lg-3: calc(var(--vr-lg-2) * var(--vr-lg-ratio));
+	--vr-lg-4: calc(var(--vr-lg-3) * var(--vr-lg-ratio));
+	--vr-lg-5: calc(var(--vr-lg-4) * var(--vr-lg-ratio));
+	--vr-lg-6: calc(var(--vr-lg-5) * var(--vr-lg-ratio));
+	--vr-lg-7: calc(var(--vr-lg-6) * var(--vr-lg-ratio));
 }

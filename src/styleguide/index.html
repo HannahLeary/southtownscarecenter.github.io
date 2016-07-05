@@ -1,13 +1,14 @@
 ---
 title: Styleguide
 canonical: /styleguide
-invertNav: true
 sections:
 - css/config/vars
-- css/objects/aspect
+- css/objects/btn
+- css/objects/field
 - css/objects/grid
 - css/objects/spread
-- css/objects/hdg
+- css/objects/box
+- css/objects/aspect
 - css/modules/hero
 - css/objects/semantic
 ---
@@ -18,7 +19,9 @@ sections:
 
 	{{#content "body"}}
 		<div class="hero">
-			<h2 class="hero-hd hero-hd_inv">Styleguide</h2>
+			<div class="hero-hd">
+				<h1 class="hdg hdg_1 m-hdg_inv">{{title}}</h1>
+			</div>
 			<div class="hero-bg hero-bg_top"
 				style="background-image: url(/assets/media/images/2016/hero/hero-beach.jpg); opacity: 0.8;"
 				role="presentation">
@@ -28,15 +31,15 @@ sections:
 		<div class="guide">
 			{{#toc}}
 				<div class="bpMd-grid bpLg-grid">
-					<div class="bpMd-grid-col_3of4 bpLg-grid-col_2of3">
+					<div class="bpMd-grid-col_3of4 bpLg-grid-col_3of4 u-vr">
 						{{#each sections}}
-							<section class="guide-section">
+							<section class="u-vr">
 								{{#markdown}}{{{embed this ..}}}{{/markdown}}
 							</section>
 						{{/each}}
 					</div>
 
-					<div class="bpMd-grid-col_1of4 bpLg-grid-col_1of3">
+					<div class="bpMd-grid-col_1of4 bpLg-grid-col_1of4">
 						<!-- toc -->
 					</div>
 				</div>

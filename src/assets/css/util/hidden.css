@@ -33,6 +33,11 @@
 .u-hidden { @apply --hidden; }
 .u-visuallyHidden { @apply --visuallyHidden; }
 
+@media (--x-small) {
+	.bpXs-u-hidden { @apply --hidden; }
+	.bpXs-u-visuallyHidden { @apply --visuallyHidden; }
+}
+
 @media (--small) {
 	.bpSm-u-hidden { @apply --hidden; }
 	.bpSm-u-visuallyHidden { @apply --visuallyHidden; }
@@ -46,4 +51,9 @@
 @media (--large) {
 	.bpLg-u-hidden { @apply --hidden; }
 	.bpLg-u-visuallyHidden { @apply --visuallyHidden; }
+}
+
+@media print {
+	.bpPr-u-hidden { @apply --hidden; }
+	.bpPr-u-visuallyHidden { @apply --hidden; }
 }

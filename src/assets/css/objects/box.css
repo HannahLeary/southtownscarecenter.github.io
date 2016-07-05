@@ -1,0 +1,33 @@
+:root {
+	--box: {
+		& {
+			display: block;
+			padding: var(--gutter);
+			width: 100%;
+		}
+
+		&_inv {
+			background-color: var(--color-pink);
+			color: var(--color-background);
+		}
+
+		&_light {
+			background-color: color(var(--color-background) l(-6.4%));
+			color: var(--color-foreground);
+		}
+	};
+}
+
+.box { @apply --box; }
+
+@media (--small) {
+	.bpSm-box { @apply --box; }
+}
+
+@media (--medium) {
+	.bpMd-box { @apply --box; }
+}
+
+@media (--large) {
+	.bpLg-box { @apply --box; }
+}

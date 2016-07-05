@@ -1,0 +1,32 @@
+---
+title: Playground
+canonical: /playground
+sections:
+- css/objects/box
+- css/objects/grid
+---
+{{#extend "layout/main"}}
+	{{#content "styles" mode="append"}}
+		<link rel="stylesheet" href="/assets/css/guide.css?v={{package.version}}" />
+	{{/content}}
+
+	{{#content "body"}}
+		<div class="hero">
+			<div class="hero-hd">
+				<h1 class="hdg hdg_1 m-hdg_inv">Styleguide</h1>
+			</div>
+			<div class="hero-bg hero-bg_top"
+				style="background-image: url(/assets/media/images/2016/hero/hero-beach.jpg);"
+				role="presentation">
+			</div>
+		</div>
+
+		<div class="guide">
+			{{#each sections}}
+				<section class="u-vr">
+					{{#markdown}}{{{embed this ..}}}{{/markdown}}
+				</section>
+			{{/each}}
+		</div>
+	{{/content}}
+{{/extend}}

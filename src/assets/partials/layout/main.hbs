@@ -12,7 +12,7 @@
 	<link rel="canonical" href="{{site.canonical}}{{canonical}}" />
 
 	{{#block "styles"}}
-		<link rel="stylesheet" href="/assets/css/index.css?v={{package.version}}" lazyload />
+		<link rel="stylesheet" href="/assets/css/index.css?v={{package.version}}" />
 	{{/block}}
 
 </head>
@@ -23,33 +23,33 @@
 	<header class="site-hd">
 		<div class="container">
 			<h1>
-				<a class="logo" href="/" itemprop="url">
+				<a class="logo" href="/">
 					<span class="logo-bd">
 						<span class="aspect aspect_block">
-							<svg class="aspect-bd" lazyload>
+							<svg class="aspect-bd">
 								<use xlink:href="/assets/svg/sprites.svg?v={{package.version}}#logo-tall"></use>
 							</svg>
 						</span>
 					</span>
-					<span class="u-visuallyHidden" itemprop="name">{{site.title}}</span>
+					<span class="u-visuallyHidden">{{site.title}}</span>
 				</a>
 			</h1>
 
-			<nav class="nav {{#if invertNav}}nav_inv{{/if}}" aria-label="primary">
-				<a href="/about">About</a>
-				<a href="/events">Events</a>
-				<a class="nav-btn" href="/donate">Donate</a>
-				<a class="nav-icn" href="https://instagram.com/southtownscc" rel="external">
+			<nav class="nav bpPr-u-hidden" aria-label="primary">
+				<a class="nav-link" href="/about">About</a>
+				<a class="nav-link" href="/services">Services</a>
+				<a class="nav-link" href="/events">Events</a>
+				<a class="nav-icn bpXs-u-hidden" href="https://instagram.com/southtownscc" rel="external">
 					<span class="aspect aspect_inline">
-						<svg class="aspect-bd" lazyload>
+						<svg class="aspect-bd">
 							<use xlink:href="/assets/svg/sprites.svg?v={{package.version}}#social-instagram"></use>
 						</svg>
 					</span>
 					<span class="u-visuallyHidden">Instagram</span>
 				</a>
-				<a class="nav-icn" href="https://twitter.com/southtownscc" rel="external">
+				<a class="nav-icn bpXs-u-hidden" href="https://twitter.com/southtownscc" rel="external">
 					<span class="aspect aspect_inline">
-						<svg class="aspect-bd" lazyload>
+						<svg class="aspect-bd">
 							<use xlink:href="/assets/svg/sprites.svg?v={{package.version}}#social-twitter"></use>
 						</svg>
 					</span>
@@ -57,12 +57,13 @@
 				</a>
 				<a class="nav-icn" href="https://facebook.com/southtownscarecenter" rel="external">
 					<span class="aspect aspect_inline">
-						<svg class="aspect-bd" lazyload>
+						<svg class="aspect-bd">
 							<use xlink:href="/assets/svg/sprites.svg?v={{package.version}}#social-facebook"></use>
 						</svg>
 					</span>
 					<span class="u-visuallyHidden">Facebook</span>
 				</a>
+				<a class="btn" href="/support">Donate</a>
 			</nav>
 		</div>
 	</header>
@@ -74,33 +75,47 @@
 	</main>
 
 	<footer class="site-ft">
-		<div class="container">
-			<div class="bpSm-u-vr bpMd-grid bpMd-m-grid_rev bpLg-grid bpLg-m-grid_rev">
-				<section class="bpMd-grid-col_1of3 bpLg-grid-col_1of3">
-					<h2 class="hdg hdg_4">Newsletter</h2>
-					{{{embed "vendor/mailchimp"}}}
+		<div class="container u-vr">
+			<h1 class="u-visuallyHidden">SCC Footer</h1>
 
-					<h2 class="hdg hdg_4">Share</h2>
-					{{{embed "vendor/addthis"}}}
-				</section>
+			<div class="grid m-grid_rev">
+				<div class="grid_col bpPr-u-hidden u-vr">
+					<div class="u-vrSm">
+						<h2 class="hdg hdg_5">Newsletter</h2>
+						{{{embed "vendor/mailchimp"}}}
+					</div>
 
-				<section class="bpMd-grid-col_1of3 bpLg-grid-col_1of3">
-					<h2 class="hdg hdg_4">Around SCC</h2>
+					<div class="u-vrSm">
+						<h2 class="hdg hdg_5">Share</h2>
+						{{{embed "vendor/addthis"}}}
+					</div>
+				</div>
 
+				<div class="grid_col bpPr-u-hidden u-vrSm">
+					<h2 class="hdg hdg_5">Menu</h2>
 					<nav class="vList" aria-label="appendix">
-						<a href="/about">About</a>
-						<a href="/events">Events</a>
-						<a href="/donate">Donate</a>
-						<a href="/styleguide">Styleguide</a>
+						<a class="link" href="/">Home</a>
+						<a class="link" href="/about">About</a>
+						<a class="link" href="/services">Services</a>
+						<a class="link" href="/events">Events</a>
+						<a class="link" href="/support">Donate</a>
+						<a class="link" href="/support">Volunteer</a>
+						<a class="link" href="/styleguide">Styleguide</a>
 					</nav>
-				</section>
+				</div>
 
-				<section class="bpMd-grid-col_1of3 bpLg-grid-col_1of3">
-					<h2 class="hdg hdg_4">Contact Information</h2>
+				<div class="grid_col u-vrSm">
+					<h2 class="hdg hdg_4">
+						<span class="aspect aspect_inline aspect_inline_3x1">
+							<svg class="aspect-bd">
+								<use xlink:href="/assets/svg/sprites.svg?v={{package.version}}#logo-wide"></use>
+							</svg>
+						</span>
+						<span class="u-visuallyHidden">Contact Information</span>
+					</h2>
 
 					{{{embed "microdata/scc-org"}}}
-				</section>
-
+				</div>
 			</div>
 		</div>
 	</footer>

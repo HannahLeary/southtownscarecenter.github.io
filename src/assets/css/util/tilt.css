@@ -16,9 +16,50 @@
 		 * Tilt down.
 		 */
 		&-bd {
-			padding-bottom: calc(var(--tilt) * 2%);
+			padding-bottom: calc(var(--tilt) * 1.8%);
+
 			transform: skewY(calc(var(--tilt) * 1deg));
 			transform-origin: left top;
+		}
+
+		&-bd_block {
+			display: block;
+		}
+
+		/**
+		 * Untilted background.
+		 */
+		&-bg {
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			height: 100%;
+			width: 100%;
+			overflow: hidden;
+			z-index: -1;
+
+			background-size: cover;
+			background-position: center center;
+
+			transform: translate(-50%, -50%);
+		}
+
+		&-bg::after {
+			content: '';
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			height: 130%;
+			width: 100%;
+
+			background: inherit;
+
+			transform: skewY(calc(var(--tilt) * 1deg)) translate(-50%, -50%);
+			transform-origin: left top;
+		}
+
+		&-bg_top {
+			height: calc(100% + calc(var(--tilt) * 1.8%));
 		}
 	};
 }

@@ -16,9 +16,15 @@
 
 .site-ft {
 	flex: none;
-	padding: var(--gutter) 0 calc(var(--gutter) * 3.2);
+	padding: var(--gutter) 0 calc(var(--gutter) * 2);
 
 	background-color: var(--color-foreground);
-	color: color(var(--color-background) lightness(-50%));
+	color: color(var(--color-background) l(-50%));
 	font-size: 1.3rem;
+}
+
+@media print {
+	.site-ft {
+		padding-bottom: 0;
+	}
 }

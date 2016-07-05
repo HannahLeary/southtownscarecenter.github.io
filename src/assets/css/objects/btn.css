@@ -1,0 +1,21 @@
+.btn {
+	display: inline-block;
+	padding: 1rem 1.6rem;
+
+	background-color: var(--color-pink);
+	color: var(--color-background);
+	cursor: pointer;
+
+	transition: background-color 0.25s;
+	will-change: background-color;
+}
+
+.btn_block {
+	display: block;
+	width: 100%;
+}
+
+.btn:focus,
+.btn:hover {
+	background-color: color(var(--color-pink) l(-9%));
+}

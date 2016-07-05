@@ -1,0 +1,13 @@
+.txt-accent {
+	font-family: var(--font-heading);
+	font-size: 2em;
+	line-height: 1;
+}
+
+.txt-bold {
+	font-weight: 600;
+}
+
+.txt-nobr {
+	white-space: nowrap;
+}

@@ -15,12 +15,18 @@ html {
 
 body {
 	overflow-x: hidden;
-	font: 400 1.6rem/1.6 var(--font-body);
+	font: 400 var(--vr-sm-1)/var(--vr-sm-base) var(--font-body);
 }
 
 a {
 	color: inherit;
 	text-decoration: none;
+}
+
+button {
+	border: 0;
+	font: inherit;
+	text-align: left;
 }
 
 code,
@@ -31,4 +37,18 @@ pre {
 
 main {
 	display: block;
+}
+
+@media (--medium) {
+	body {
+		font-size: var(--vr-md-1);
+		line-height: var(--vr-md-base);
+	}
+}
+
+@media (--large) {
+	body {
+		font-size: var(--vr-lg-1);
+		line-height: var(--vr-lg-base);
+	}
 }

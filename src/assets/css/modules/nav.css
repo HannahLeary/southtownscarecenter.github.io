@@ -19,18 +19,18 @@
 	display: inline-block;
 }
 
-.nav-btn {
-	order: 1;
-	padding: 1rem 1.6rem;
-
-	background-color: var(--color-pink);
-	color: var(--color-background);
-	line-height: 1;
-}
-
 .nav-icn {
 	font-size: 3.2rem;
 	line-height: 0.5;
+}
+
+.nav-link {
+	padding: 1rem 0;
+}
+
+.nav-link:focus,
+.nav-link:hover {
+	text-decoration: underline;
 }
 
 @media (--gt-small) {
@@ -42,12 +42,9 @@
 		width: auto;
 
 		background-color: transparent;
+		color: var(--color-background);
 
 		transform: none;
-	}
-
-	.nav_inv {
-		color: var(--color-background);
 	}
 
 	.nav > * + * {

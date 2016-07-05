@@ -1,0 +1,12 @@
+.link {
+	cursor: pointer;
+	text-decoration: underline;
+}
+
+.link:hover {
+	color: var(--color-pink);
+}
+
+a[href^="tel:"]::before {
+	content: "\260e";
+}

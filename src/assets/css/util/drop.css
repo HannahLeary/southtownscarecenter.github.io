@@ -1,0 +1,19 @@
+:root {
+	--drop: {
+		margin-bottom: -8rem;
+	};
+}
+
+.u-drop { @apply --drop; }
+
+@media (--small) {
+	.bpSm-u-drop { @apply --drop; }
+}
+
+@media (--medium) {
+	.bpMd-u-drop { @apply --drop; }
+}
+
+@media (--large) {
+	.bpLg-u-drop { @apply --drop; }
+}

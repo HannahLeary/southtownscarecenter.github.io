@@ -1,3 +1,21 @@
-.vList > * {
-	display: block;
+:root {
+	--vList: {
+		& > * {
+			display: block;
+		}
+	}
+}
+
+.vList { @apply --vList; }
+
+@media (--small) {
+	.bpSm-vList { @apply --vList; }
+}
+
+@media (--medium) {
+	.bpMd-vList { @apply --vList; }
+}
+
+@media (--large) {
+	.bpLg-vList { @apply --vList; }
 }
