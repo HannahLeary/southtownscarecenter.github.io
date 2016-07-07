@@ -2,48 +2,48 @@
 title: Styleguide
 canonical: /styleguide
 sections:
-- css/config/vars
-- css/objects/btn
-- css/objects/field
-- css/objects/grid
-- css/objects/spread
-- css/objects/box
-- css/objects/aspect
-- css/modules/hero
-- css/objects/semantic
+- css/generics/aspect
+- css/generics/belt
+- css/generics/box
+- css/generics/grid
+- css/generics/spread
+- css/generics/tilt
+- css/utils/hidden
+- css/utils/rhythm
+- css/utils/theme
 ---
-{{#extend "layout/main"}}
+{{#extend "layouts/main"}}
 	{{#content "styles" mode="append"}}
 		<link rel="stylesheet" href="/assets/css/guide.css?v={{package.version}}" />
 	{{/content}}
 
 	{{#content "body"}}
-		<div class="hero">
-			<div class="hero-hd">
-				<h1 class="hdg hdg_1 m-hdg_inv">{{title}}</h1>
-			</div>
-			<div class="hero-bg hero-bg_top"
-				style="background-image: url(/assets/media/images/2016/hero/hero-beach.jpg); opacity: 0.8;"
-				role="presentation">
-			</div>
-		</div>
-
-		<div class="guide">
-			{{#toc}}
-				<div class="bpMd-grid bpLg-grid">
-					<div class="bpMd-grid-col_3of4 bpLg-grid-col_3of4 u-vr">
-						{{#each sections}}
-							<section class="u-vr">
-								{{#markdown}}{{{embed this ..}}}{{/markdown}}
-							</section>
-						{{/each}}
+		<article class="belt">
+			<header class="tilt tilt_top">
+				<div class="bpMd-spread bpMd-spread_btm bpLg-spread bpLg-spread_btm">
+					<div class="bpMd-u-rhythmR bpLg-u-rhythmR">
+						<h1 class="hdg hdg_1 hdg_inv">{{title}}</h1>
 					</div>
-
-					<div class="bpMd-grid-col_1of4 bpLg-grid-col_1of4">
-						<!-- toc -->
+					<div class="u-rhythmA u-rhythmDrop u-themeLight">
+						<p>Standards for the writing and design of this site.</p>
 					</div>
 				</div>
+				<div class="tilt-bg tilt-bg_top"
+					style="background-image: url('/assets/media/images/2016/hero/hero-beach.jpg');">
+				</div>
+			</header>
+
+			{{#toc}}
+				{{#each sections}}
+					<section>
+						{{#markdown}}{{{embed this ..}}}{{/markdown}}
+					</section>
+				{{/each}}
+
+				<nav>
+					<!-- toc -->
+				</nav>
 			{{/toc}}
-		</div>
+		</article>
 	{{/content}}
 {{/extend}}

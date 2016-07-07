@@ -1,0 +1,34 @@
+.site {
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	overflow-x: hidden;
+
+	background-color: var(--color-background);
+	color: var(--color-foreground);
+	font: 400 var(--rhythm-base)/var(--rhythm-ratio) var(--font-body);
+}
+
+.site-hd {
+	flex: none;
+}
+
+.site-bd {
+	flex: 1 0 auto;
+}
+
+.site-ft {
+	@apply --theme-dark;
+
+	flex: none;
+	font-size: var(--text-sm-1);
+	margin-top: var(--gutter-xl);
+	padding-top: var(--gutter-lg);
+	padding-bottom: var(--gutter-xl);
+}
+
+@media print {
+	.site-ft {
+		padding-bottom: 0;
+	}
+}

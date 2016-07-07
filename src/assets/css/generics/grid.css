@@ -1,0 +1,83 @@
+:root {
+	--grid: {
+		& {
+			display: flex;
+		}
+
+		& > * {
+			flex: 1 1 auto;
+		}
+
+		&_gutter {
+			margin-left: calc(var(--gutter-lg) * -1);
+			margin-top: calc(var(--gutter-lg) * -1);
+		}
+
+		&_gutter > * {
+			padding-left: var(--gutter-lg);
+			padding-top: var(--gutter-lg);
+		}
+
+		&_btm {
+			align-items: flex-end;
+		}
+
+		&_rev {
+			flex-flow: row-reverse;
+		}
+
+		&-col1of1 {
+			flex-basis: 100%;
+			max-width: 100%;
+		}
+
+		&-col1of2 {
+			flex-basis: 50%;
+			max-width: 50%;
+		}
+
+		&-col1of3 {
+			flex-basis: 33.333%;
+			max-width: 33.333%;
+		}
+
+		&-col1of4 {
+			flex-basis: 25%;
+			max-width: 25%;
+		}
+
+		&-col2of3 {
+			flex-basis: 66.666%;
+			max-width: 66.666%;
+		}
+
+		&-col2of5 {
+			flex-basis: 40%;
+			max-width: 40%;
+		}
+
+		&-col3of4 {
+			flex-basis: 75%;
+			max-width: 75%;
+		}
+
+		&-col3of5 {
+			flex-basis: 60%;
+			max-width: 60%;
+		}
+	};
+}
+
+.grid { @apply --grid; }
+
+@media (--small) {
+	.bpSm-grid { @apply --grid; }
+}
+
+@media (--medium) {
+	.bpMd-grid { @apply --grid; }
+}
+
+@media (--large) {
+	.bpLg-grid { @apply --grid; }
+}

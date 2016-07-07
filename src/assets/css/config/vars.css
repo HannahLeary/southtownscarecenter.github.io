@@ -1,43 +1,70 @@
 :root {
 	--color-background: hsl(0, 0%, 100%);
-	--color-foreground: hsl(53, 9%, 9%);
-	--color-pink: hsl(333, 83%, 53%);
-	--color-green: hsl(120, 91%, 91%);
-	--color-brown: hsl(53, 33%, 83%);
+	--color-foreground: hsl(0, 10%, 10%);
+	--color-primary: hsl(333, 83%, 53%);
+	--color-secondary: hsl(123, 90%, 90%);
 
 	--font-body: 'Helvetica Neue', helvetica, arial, sans-serif;
-	--font-heading: 'gogoia-web', helvetica, arial, sans-serif;
+	--font-heading: gogoia-web, helvetica, arial, sans-serif;
 
-	--gutter: 3.236rem;
-	--tilt: 9;
+	--rhythm-angle: 9;
+	--rhythm-base: 1.6rem;
+	--rhythm-ratio: 1.6;
 
-	--vr-sm-base: 1.4;
-	--vr-sm-ratio: 1.25;
-	--vr-sm-1: calc(var(--vr-sm-base) * 1rem);
-	--vr-sm-2: calc(var(--vr-sm-1) * var(--vr-sm-ratio));
-	--vr-sm-3: calc(var(--vr-sm-2) * var(--vr-sm-ratio));
-	--vr-sm-4: calc(var(--vr-sm-3) * var(--vr-sm-ratio));
-	--vr-sm-5: calc(var(--vr-sm-4) * var(--vr-sm-ratio));
-	--vr-sm-6: calc(var(--vr-sm-5) * var(--vr-sm-ratio));
-	--vr-sm-7: calc(var(--vr-sm-6) * var(--vr-sm-ratio));
+	--gutter-xs: calc(var(--rhythm-base) / var(--rhythm-ratio));
+	--gutter-sm: var(--rhythm-base);
+	--gutter-md: calc(var(--gutter-sm) * var(--rhythm-ratio));
+	--gutter-lg: calc(var(--gutter-md) * var(--rhythm-ratio));
+	--gutter-xl: calc(var(--gutter-lg) * var(--rhythm-ratio));
 
-	--vr-md-base: 1.6;
-	--vr-md-ratio: 1.38;
-	--vr-md-1: calc(var(--vr-md-base) * 1rem);
-	--vr-md-2: calc(var(--vr-md-1) * var(--vr-md-ratio));
-	--vr-md-3: calc(var(--vr-md-2) * var(--vr-md-ratio));
-	--vr-md-4: calc(var(--vr-md-3) * var(--vr-md-ratio));
-	--vr-md-5: calc(var(--vr-md-4) * var(--vr-md-ratio));
-	--vr-md-6: calc(var(--vr-md-5) * var(--vr-md-ratio));
-	--vr-md-7: calc(var(--vr-md-6) * var(--vr-md-ratio));
+	/* TODO: Refactor text size calc. */
+	--text-sm-base: 1.4;
+	--text-sm-ratio: 1.25;
+	--text-sm-1: calc(var(--text-sm-base) * 1rem);
+	--text-sm-2: calc(var(--text-sm-1) * var(--text-sm-ratio));
+	--text-sm-3: calc(var(--text-sm-2) * var(--text-sm-ratio));
+	--text-sm-4: calc(var(--text-sm-3) * var(--text-sm-ratio));
+	--text-sm-5: calc(var(--text-sm-4) * var(--text-sm-ratio));
+	--text-sm-6: calc(var(--text-sm-5) * var(--text-sm-ratio));
+	--text-sm-7: calc(var(--text-sm-6) * var(--text-sm-ratio));
 
-	--vr-lg-base: 1.6;
-	--vr-lg-ratio: 1.44;
-	--vr-lg-1: calc(var(--vr-lg-base) * 1rem);
-	--vr-lg-2: calc(var(--vr-lg-1) * var(--vr-lg-ratio));
-	--vr-lg-3: calc(var(--vr-lg-2) * var(--vr-lg-ratio));
-	--vr-lg-4: calc(var(--vr-lg-3) * var(--vr-lg-ratio));
-	--vr-lg-5: calc(var(--vr-lg-4) * var(--vr-lg-ratio));
-	--vr-lg-6: calc(var(--vr-lg-5) * var(--vr-lg-ratio));
-	--vr-lg-7: calc(var(--vr-lg-6) * var(--vr-lg-ratio));
+	--text-md-base: 1.6;
+	--text-md-ratio: 1.38;
+	--text-md-1: calc(var(--text-md-base) * 1rem);
+	--text-md-2: calc(var(--text-md-1) * var(--text-md-ratio));
+	--text-md-3: calc(var(--text-md-2) * var(--text-md-ratio));
+	--text-md-4: calc(var(--text-md-3) * var(--text-md-ratio));
+	--text-md-5: calc(var(--text-md-4) * var(--text-md-ratio));
+	--text-md-6: calc(var(--text-md-5) * var(--text-md-ratio));
+	--text-md-7: calc(var(--text-md-6) * var(--text-md-ratio));
+
+	--text-lg-base: 1.6;
+	--text-lg-ratio: 1.44;
+	--text-lg-1: calc(var(--text-lg-base) * 1rem);
+	--text-lg-2: calc(var(--text-lg-1) * var(--text-lg-ratio));
+	--text-lg-3: calc(var(--text-lg-2) * var(--text-lg-ratio));
+	--text-lg-4: calc(var(--text-lg-3) * var(--text-lg-ratio));
+	--text-lg-5: calc(var(--text-lg-4) * var(--text-lg-ratio));
+	--text-lg-6: calc(var(--text-lg-5) * var(--text-lg-ratio));
+	--text-lg-7: calc(var(--text-lg-6) * var(--text-lg-ratio));
+
+	--theme-light {
+		background-color: color(var(--color-background) l(-10%));
+		color: var(--color-foreground);
+	};
+
+	--theme-dark: {
+		background-color: var(--color-foreground);
+		color: color(var(--color-background) l(-40%));
+	};
+
+	--theme-primary: {
+		background-color: var(--color-primary);
+		color: var(--color-background);
+	};
+
+	--theme-secondary: {
+		background-color: var(--color-secondary);
+		color: var(--color-foreground);
+	};
 }

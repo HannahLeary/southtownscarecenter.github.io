@@ -1,0 +1,15 @@
+@import './config/media.css';
+@import './config/vars.css';
+
+.toc li {
+	margin-top: 0.6em;
+}
+
+.toc ul ul {
+	padding-left: 1.6em;
+	font-size: 0.9em;
+}
+
+.toc > ul ~ ul {
+	display: none;
+}

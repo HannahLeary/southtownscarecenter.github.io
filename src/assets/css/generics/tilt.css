@@ -1,0 +1,86 @@
+:root {
+	--tilt: {
+		& {
+			transform: skewY(calc(var(--rhythm-angle) * -1deg));
+			transform-origin: left top;
+		}
+
+		&_top {
+			padding-top: 16rem;
+		}
+
+		&-bd {
+			padding-bottom: calc(var(--rhythm-angle) * 1.8%);
+
+			transform: skewY(calc(var(--rhythm-angle) * 1deg));
+			transform-origin: left top;
+		}
+
+		&-bg {
+			box-sizing: content-box;
+			position: absolute;
+			left: 50%;
+			bottom: 0;
+			height: 100%;
+			width: 100%;
+			overflow: hidden;
+			z-index: -1;
+
+			background-size: cover;
+			background-position: center center;
+
+			transform: translateX(-50%);
+		}
+
+		&-bg::after {
+			content: '';
+			box-sizing: content-box;
+			position: absolute;
+			left: 0;
+			bottom: 0;
+			padding-bottom: calc(var(--rhythm-angle) * 1.8%);
+			height: 100%;
+			width: 100%;
+
+			background: inherit;
+			image-rendering: pixelated;
+			image-rendering: crisp-edges;
+
+			transform: skewY(calc(var(--rhythm-angle) * 1deg));
+			transform-origin: left top;
+		}
+
+		&-bg_top {
+			padding-bottom: calc(var(--rhythm-angle) * 1.8%);
+			width: 100.5vw;
+		}
+
+		&-bg_top::after {
+			padding-bottom: 0;
+		}
+	};
+}
+
+.tilt { @apply --tilt; }
+
+@media (--small) {
+	.bpSm-tilt { @apply --tilt; }
+}
+
+@media (--medium) {
+	.bpMd-tilt { @apply --tilt; }
+
+	.tilt_top,
+	.bpMd-tilt_top {
+		padding-top: 24rem;
+	}
+}
+
+@media (--large) {
+	.bpLg-tilt { @apply --tilt; }
+
+	.tilt_top,
+	.bpLg-tilt_top {
+		padding-top: 28rem;
+	}
+}

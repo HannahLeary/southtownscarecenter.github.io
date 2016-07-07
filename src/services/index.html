@@ -2,16 +2,33 @@
 title: Services
 canonical: /services
 ---
-{{#extend "layout/main"}}
+{{#extend "layouts/main"}}
 	{{#content "body"}}
-		<div class="hero">
-			<div class="hero-hd">
-				<h1 class="hdg hdg_1 m-hdg_inv">{{title}}</h1>
-			</div>
-			<div class="hero-bg hero-bg_top"
-				style="background-image: url(/assets/media/images/2016/hero/hero-beach.jpg); opacity: 0.8;"
-				role="presentation">
-			</div>
-		</div>
+		<article class="belt">
+			<header class="tilt tilt_top">
+				<h1 class="hdg hdg_1 hdg_inv">{{title}}</h1>
+				<div class="tilt-bg tilt-bg_top"
+					style="background-image: url('/assets/media/images/2016/hero/hero-beach.jpg');">
+				</div>
+			</header>
+
+			<p>While the Southtowns Care Center has not yet opened to help meet local needs, the <a class="link" href="http://www.716pregnant.com" rel="external">Northtown Pregnancy Center</a>'s compassionate support is just a phone call or short drive away.</p>
+
+			<nav>
+				<a href="http://www.716pregnant.com" rel="external">Get Support</a>
+			</nav>
+
+			<ul>
+				<li>Pregnancy Information</li>
+				<li>STD / STI Information</li>
+				<li>Post-Abortion Recovery</li>
+				<li>Lab-Quality Pregnancy Tests</li>
+				<li>Community Referrals</li>
+				<li>Medical Referrals</li>
+				<li>Material Aid</li>
+				<li>Mentoring</li>
+				<li>Parenting Support</li>
+			</ul>
+		</article>
 	{{/content}}
 {{/extend}}

@@ -2,68 +2,53 @@
 title: Run for Life
 canonical: /events/run-for-life
 ---
-{{#extend "layout/main"}}
+{{#extend "layouts/main"}}
 	{{#content "body"}}
-		<div class="u-vrLg">
-			<div class="hero hero_lg">
-				<div class="hero-hd">
-					<h1 class="hdg hdg_1 m-hdg_inv">{{title}}</h1>
-				</div>
-
-				<div class="hero-bd u-vrSm">
-					<div class="box box_inv">
-						<div>
-							<span class="txt-accent txt-nobr">July 16</span> at
-							<span class="txt-accent txt-nobr">9:00am</span> at
-							<span class="txt-accent txt-nobr">Life Church</span>
-						</div>
+		<article class="belt">
+			<header class="tilt tilt_top">
+				<div class="bpMd-spread bpMd-spread_btm | bpLg-spread bpLg-spread_btm">
+					<div class="bpMd-u-rhythmR bpLg-u-rhythmR">
+						<h1 class="hdg hdg_1 hdg_inv">{{title}}</h1>
 					</div>
-					<div>
-						<a class="btn" href="http://www.runforlifewny.com/#!registration/ckqh" rel="external">Pre-register</a>
-					</div>
-				</div>
+					<div class="u-rhythmDrop">
+						<p class="u-rhythmA u-themePrimary">
+							<span class="text-hdg text-nobr">July 16</span> at
+							<span class="text-hdg text-nobr">9:00am</span> at
+							<span class="text-hdg text-nobr">Life Church</span>
+						</p>
 
-				<div class="hero-bg hero-bg_top"
-					style="background-image: url(/assets/media/images/2016/run-for-life/hero-runners.jpg); opacity: 0.8;"
-					role="presentation">
-				</div>
-			</div>
-
-			<div class="grid">
-				<div class="grid-col_1of4"></div>
-				<div class="grid-col_3of5 u-vr">
-					<div class="semantic">
-						<p><a class="txt-accent" href="http://www.runforlifewny.com/">Run For Life WNY 5k Run &amp; Walk</a> is dedicated to raising funds to benefit organizations in WNY who help women choose life for their unborn child. Past beneficiaries have included Son Rays Ministries, 40 Days for Life, and LifeSavers. Through the use of sponsorships to cover expenses, runners can be assured that 100% of their registration dollar is given to the beneficiaries.</p>
-						<p>This year all registration monies will be donated to the Southtowns Care Center. The event features a USATF sanctioned and certified 3.1 mile route on which we welcome both runners and walkers. Strollers are permitted. Families are welcome and encouraged to join in this fun event!</p>
-					</div>
-
-					<a class="btn" href="http://www.runforlifewny.com" rel="external">Official Website</a>
-					<a class="btn" href="http://www.runforlifewny.com/#!registration/ckqh" rel="external">Register</a>
-				</div>
-			</div>
-
-			<div class="grid">
-				<div class="grid-col_1of4"></div>
-				<div class="grid-col_3of5 u-vr">
-					<div class="grid bpSm-m-grid_rev">
-						<div class="grid-col_1of2 u-vr">
-							<div class="aspect aspect_block bpSm-aspect_block_16x9">
-								<iframe class="aspect-bd" height="400" width="400"
-									src="https://www.google.com/maps/embed/v1/place?key={{site.mapsToken}}&zoom=10&q=Life+Church,West+Seneca+NY" allowfullscreen>
-								</iframe>
-							</div>
-						</div>
-						<div class="grid-col_1of2 u-vr">
-							<h2 class="hdg hdg_4">Life Church</h2>
-							<p>Life Church's mission is to help reach every man, woman, and child with a demonstration of Christ and His kingdom.</p>
-							<address class="txt-accent">
-								4928 Seneca Street<br/>
-								West Seneca, NY 14224
-							</address>
-						</div>
+						<nav>
+							<a class="btn" href="http://www.runforlifewny.com" rel="external">Official Website</a>
+							<a class="btn" href="http://www.runforlifewny.com/#!registration/ckqh" rel="external">Register</a>
+						</nav>
 					</div>
 				</div>
-			</div>
-		</div>
+
+				<div class="tilt-bg tilt-bg_top"
+					style="background-image: url('/assets/media/images/2016/run-for-life/hero.jpg');">
+				</div>
+			</header>
+
+			<p><a href="http://www.runforlifewny.com/">Run For Life WNY 5k Run &amp; Walk</a> is dedicated to raising funds to benefit organizations in WNY who help women choose life for their unborn child. Past beneficiaries have included Son Rays Ministries, 40 Days for Life, and LifeSavers. Through the use of sponsorships to cover expenses, runners can be assured that 100% of their registration dollar is given to the beneficiaries.</p>
+			<p>This year all registration monies will be donated to the Southtowns Care Center. The event features a USATF sanctioned and certified 3.1 mile route on which we welcome both runners and walkers. Strollers are permitted. Families are welcome and encouraged to join in this fun event!</p>
+
+			<section>
+				<h2>
+					Location
+					<small>Life Church</small>
+				</h2>
+
+				<p>Life Church's mission is to help reach every man, woman, and child with a demonstration of Christ and His kingdom.</p>
+
+				<address class="text-hdg">
+					4928 Seneca Street<br/>
+					West Seneca, NY 14224
+				</address>
+
+				<iframe height="200" width="300"
+					src="https://www.google.com/maps/embed/v1/place?key={{site.mapsToken}}&zoom=10&q=Life+Church,West+Seneca+NY" allowfullscreen>
+				</iframe>
+			</section>
+		</article>
 	{{/content}}
 {{/extend}}

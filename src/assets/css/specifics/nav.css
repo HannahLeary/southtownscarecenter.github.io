@@ -1,0 +1,46 @@
+.nav {
+	display: flex;
+	position: relative;
+	z-index: 1;
+
+	background-color: var(--color-background);
+	font-size: 0.875em;
+}
+
+.nav > * {
+	flex: 1 1 auto;
+	height: var(--gutter-lg);
+
+	line-height: var(--gutter-lg);
+	text-align: center;
+}
+
+.nav-btn {
+	@apply --theme-primary;
+}
+
+@media (--medium), (--large) {
+	.nav {
+		display: block;
+		position: absolute;
+		top: var(--gutter-md);
+		right: 0;
+
+		background-color: transparent;
+		color: var(--color-background);
+		font-size: 1em;
+	}
+
+	.nav > * {
+		display: inline-block;
+		margin: 0;
+	}
+
+	.nav > * + * {
+		margin-left: var(--gutter-xs);
+	}
+
+	.nav-btn {
+		padding: 0 var(--gutter-sm);
+	}
+}

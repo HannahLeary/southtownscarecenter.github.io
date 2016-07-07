@@ -1,0 +1,6 @@
+@custom-media --x-small (width < 400px);
+@custom-media --small (width < 640px);
+@custom-media --gt-small (width >= 640px);
+@custom-media --medium (width >= 640px) and (width <= 1200px);
+@custom-media --lt-large (width <= 1200px);
+@custom-media --large (width > 1200px);

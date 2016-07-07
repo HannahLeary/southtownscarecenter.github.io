@@ -1,0 +1,33 @@
+:root {
+	--theme: {
+		&Light {
+			@apply --theme-light;
+		}
+
+		&Dark {
+			@apply --theme-dark;
+		}
+
+		&Primary {
+			@apply --theme-primary;
+		}
+
+		&Secondary {
+			@apply --theme-secondary;
+		}
+	};
+}
+
+.u-theme { @apply --theme; }
+
+@media (--small) {
+	.bpSm-u-theme { @apply --theme; }
+}
+
+@media (--medium) {
+	.bpMd-u-theme { @apply --theme; }
+}
+
+@media (--large) {
+	.bpLg-u-theme { @apply --theme; }
+}

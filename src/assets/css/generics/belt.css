@@ -1,0 +1,28 @@
+:root {
+	--belt: {
+		position: relative;
+		margin: 0 auto;
+		max-width: 1200px;
+		width: calc(100% - calc(var(--gutter-sm) * 2));
+	};
+}
+
+.belt { @apply --belt; }
+
+@media (--medium) {
+	.bpMd-belt { @apply --belt; }
+
+	.belt,
+	.bpMd-belt {
+		width: calc(100% - calc(var(--gutter-md) * 2));
+	}
+}
+
+@media (--large) {
+	.bpLg-belt { @apply --belt; }
+
+	.belt,
+	.bpLg-belt {
+		width: calc(100% - calc(var(--gutter-md) * 2));
+	}
+}
