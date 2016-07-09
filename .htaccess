@@ -1,0 +1,9 @@
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+
+	RewriteRule ^donate(/|/index.html)?$ https://southtownscarecenter.givingfuel.com/donate [R=302]
+	RewriteRule ^light-the-night(/|/index.html)?$ /events/light-the-night [R=302]
+
+	RewriteCond %{REQUEST_FILENAME} !-f
+	RewriteRule ^(.*[^/])$ /$1 [L,R=301]
+</IfModule>
