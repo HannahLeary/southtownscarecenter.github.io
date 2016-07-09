@@ -1,0 +1,39 @@
+:root {
+	--spread: {
+		& {
+			display: flex;
+			align-items: flex-start;
+			justify-content: space-between;
+		}
+
+		&_rgt {
+			justify-content: flex-end;
+		}
+
+		&_top {
+			align-items: flex-start;
+		}
+
+		&_mid {
+			align-items: center;
+		}
+
+		&_btm {
+			align-items: flex-end;
+		}
+	};
+}
+
+.spread { @apply --spread; }
+
+@media (--small) {
+	.small-spread { @apply --spread; }
+}
+
+@media (--medium) {
+	.medium-spread { @apply --spread; }
+}
+
+@media (--large) {
+	.large-spread { @apply --spread; }
+}

@@ -1,0 +1,431 @@
+/* https://github.com/apticknor/quarantine.css */
+
+.semantic {
+	/*
+	 Clearfix
+
+	 * Always clear unknown content as it may contain a float
+	========================================================================== */
+	&::before,
+	&::after {
+		content: ' ';
+		display: table;
+	}
+
+	&::after {
+		clear: both;
+	}
+
+	/*
+	 Baseline
+
+	 1. Set the container to inherit basic styles from it's parent
+	 2. Make sure long words line break appropriately
+	 3. Remove excess margin from the first and last child and use !important to override inheritance from ancestors
+	========================================================================== */
+	& {
+		color: inherit; /* 1 */
+		font-family: inherit;  /* 1 */
+		font-weight: normal;
+		font-size: 1.6rem;
+		line-height: 1.6;
+		word-wrap: break-word; /* 2 */
+	}
+
+	& > *:first-child {
+		margin-top: 0 !important; /* 3 */
+	}
+
+	& > *:last-child {
+		margin-bottom: 0 !important; /* 3 */
+	}
+
+	/*
+	 Embedded Content & Media
+
+	 * All media set to max-width 100% to prevent it from overflowing the container
+	 1. !important to override inheritance from ancestors
+	 2. If a piece of media does not have a container, add margin below it to keep the flow intact
+	========================================================================== */
+	& img,
+	& iframe,
+	& embed,
+	& object,
+	& video,
+	& audio,
+	& canvas,
+	& picture {
+		height: auto;
+		max-width: 100% !important; /* 1 */
+		width: auto;
+	}
+
+	/* 2 */
+	& > img,
+	& > iframe,
+	& > embed,
+	& > object,
+	& > video,
+	& > audio,
+	& > canvas,
+	& > picture {
+		display: inline-block;
+		margin-bottom: var(--gutter-sm);
+	}
+
+	/*
+	 Anchors
+	========================================================================== */
+	& a {
+		text-decoration: underline;
+	}
+
+	& a:focus,
+	& a:hover {
+		color: var(--color-primary);
+	}
+
+	/*
+	 Paragraphs
+	========================================================================== */
+	& p {
+		margin-bottom: var(--gutter-sm);
+	}
+
+	/*
+	 Headings
+
+	 1. Take advantage of margin collapsing to create greater space above a heading
+	 2. Reduce line-height as headings are much larger than body copy
+	 3. Headings should stay the same color as intended and not inherit link styles and use !important to override inheritance from ancestors
+	========================================================================== */
+	& h1,
+	& h2,
+	& h3,
+	& h4,
+	& h5,
+	& h6 {
+		margin-top: calc(var(--rhythm-ratio) * 0.5em); /* 1 */
+		margin-bottom: calc(var(--rhythm-ratio) * 0.25em); /* 1 */
+		font-family: var(--font-heading);
+		line-height: 1; /* 2 */
+	}
+
+	& h1 {
+		font-size: 4.8rem;
+	}
+
+	& h2 {
+		font-size: 4rem;
+	}
+
+	& h3 {
+		font-size: 3.2rem;
+	}
+
+	& h4 {
+		font-size: 2.4rem;
+	}
+
+	& h5 {
+		font-size: 1.6rem;
+	}
+
+	& h1 a,
+	& h2 a,
+	& h3 a,
+	& h4 a,
+	& h5 a,
+	& h6 a {
+		color: inherit !important; /* 3 */
+		text-decoration: none !important; /* 3 */
+	}
+
+	/*
+	 Blockquote
+
+	 1. Push content away from the horizontal rule more than the normal spacing
+	 2. Border inherits color from text color
+	 3. Remove bottom margin from last item inside a blockquote
+	========================================================================== */
+	& blockquote {
+		box-sizing: border-box;
+		margin-top: var(--gutter-sm); /* 1 */
+		margin-bottom: var(--gutter-sm); /* 1 */
+		border-left: 5px solid; /* 2 */
+		padding: 1rem 2rem;
+		font-family: inherit;
+		font-size: 1.3125rem;
+		font-style: italic;
+	}
+
+	& blockquote > *:last-child {
+		margin-bottom: 0; /* 3 */
+	}
+
+	/*
+	 Address
+
+	 1. Mimic browser default text style - italics
+	========================================================================== */
+	& address {
+		margin-bottom: var(--gutter-sm);
+		font-style: italic; /* 1 */
+	}
+
+	/*
+	 Horizontal Rule
+
+	 1. Push content away from the horizontal rule than the normal spacing
+	 2. Set an explicit 1px height for the horizontal rule
+	 3. Remove borders for maximum browser support
+	 4. Set the color of the horizontal rule as both color and background-color for maximum browser support
+	 5. Reduce font-size and line-height to keep height from exceeeding 1px
+	========================================================================== */
+	& hr {
+		margin-top: var(--gutter-sm); /* 1 */
+		margin-bottom: var(--gutter-sm); /* 1 */
+		height: 1px; /* 2 */
+		border: none; /* 3 */
+		background: #aaaaaa; /* 4 */
+		color: #aaaaaa; /* 4 */
+		line-height: 1px; /* 5 */
+		font-size: 1px; /* 5 */
+	}
+
+	/*
+	 Inline Text
+
+	 * Mimics browsers as close as possible while maintaining cross browser consistency
+	 * Includes some invalid legacy elements as they may be added by older WYSIWYG editors
+	========================================================================== */
+	& strong,
+	& b {
+		font-weight: bold;
+	}
+
+	& em,
+	& i {
+		font-style: italic;
+	}
+
+	& del,
+	& strike,
+	& s {
+		text-decoration: line-through;
+	}
+
+	& u,
+	& ins {
+		text-decoration: underline;
+	}
+
+	& sup {
+		vertical-align: super;
+		font-size: smaller;
+	}
+
+	& sub {
+		vertical-align: sub;
+		font-size: smaller;
+	}
+
+	& big {
+		font-size: larger;
+	}
+
+	& small {
+		font-size: smaller;
+		opacity: 0.8;
+	}
+
+	& abbr,
+	& acronym {
+		border-bottom: 1px dotted;
+	}
+
+	& cite,
+	& dfn {
+		font-style: italic;
+	}
+
+	& q {
+		font-style: italic;
+	}
+
+	& q::before {
+		content: open-quote;
+	}
+
+	& q::after {
+		content: close-quote;
+	}
+
+	& q:lang(en) {
+		quotes: '\201C' '\201D' '\2018' '\2019';
+	}
+
+	& bdo,
+	& bdi {
+		direction: rtl;
+	}
+
+	& blink {
+		text-decoration: blink;
+	}
+
+	/*
+	 Lists
+	 1. Indent lists and leave room for the list item mark
+	 2. Nested lists have no bottom margin
+	 3. Second level nested lists
+	 4. Third level nested lists
+	========================================================================== */
+	& ul,
+	& ol,
+	& dl {
+		margin-bottom: var(--gutter-sm);
+	}
+
+	& ul {
+		list-style-type: disc;
+	}
+
+	& ol {
+		list-style-type: decimal;
+	}
+
+	& dt {
+		font-weight: bold;
+	}
+
+	& li,
+	& dd {
+		margin-left: var(--gutter-md); /* 1 */
+	}
+
+	/* 2 */
+	& ul ul,
+	& ul ol,
+	& ul dl,
+	& ol ul,
+	& ol ol,
+	& ol dl,
+	& dl ul,
+	& dl ol,
+	& dl dl {
+		margin-bottom: 0;
+	}
+
+	/* 3 */
+	& ol ul,
+	& ul ul {
+		list-style-type: circle;
+	}
+
+	/* 4 */
+	& ol ol ul,
+	& ol ul ul,
+	& ul ol ul,
+	& ul ul ul {
+		list-style-type: square;
+	}
+
+
+	/*
+	 Tables
+	 1. Table should never overflow their parent container and will always use 100% of the container and use !important to override inheritance from ancestors
+	 2. Push content away from the horizontal rule more than the normal spacing
+	========================================================================== */
+	& table {
+		width: 100% !important; /* 1 */
+		margin-bottom: var(--gutter-sm);  /* 2 */
+		border-spacing: 0;
+		border-collapse: collapse;
+	}
+
+	& caption {
+		font-size: smaller;
+		padding: 10px 12px;
+		text-align: center;
+	}
+
+	& tr {
+		vertical-align: middle;
+	}
+
+	& tbody {
+		vertical-align: middle;
+	}
+
+	& thead {
+		vertical-align: middle;
+	}
+
+	& tfoot {
+		vertical-align: middle;
+	}
+
+	& td {
+		vertical-align: inherit;
+		text-align: left;
+		padding: 4px 12px;
+		border: 1px solid #666666;
+	}
+
+	& th {
+		vertical-align: inherit;
+		text-align: left;
+		padding: 8px 12px;
+		border: 1px solid #666666;
+		background-color: transparent;
+	}
+
+	/*
+	 Computer Output
+
+	 1. Push content away from the horizontal rule more than the normal spacing
+	 2. `code` styles get reset when `code` is nested inside `pre`
+	========================================================================== */
+	& pre {
+		margin-top: var(--gutter-sm); /* 1 */
+		margin-bottom: var(--gutter-sm); /* 1 */
+		padding: 2rem;
+		background-color: #f8f8f8;
+		font-family: monospace;
+		font-size: 14px;
+		border-radius: 2px;
+		white-space: pre-wrap;
+		word-break: break-all;
+	}
+
+	& code {
+		display: inline-block;
+		padding: 2px 6px;
+		background-color: #f8f8f8;
+		font-size: 14px;
+		border-radius: 2px;
+	}
+
+	& pre code {
+		display: block;
+		padding: 0; /* 2 */
+		background-color: transparent; /* 2 */
+		border: none; /* 2 */
+		font-size: inherit; /* 2 */
+		color: inherit; /* 2 */
+		border-radius: 0; /* 2 */
+	}
+
+	& code,
+	& samp,
+	& tt,
+	& kbd,
+	& var {
+		font-family: monospace;
+	}
+
+	& var {
+		font-style: italic;
+	}
+}

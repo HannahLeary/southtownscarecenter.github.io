@@ -1,0 +1,84 @@
+:root {
+	--rhythm: {
+		/* Margins */
+
+		&Xs > * + * {
+			margin-top: var(--gutter-xs);
+		}
+
+		&Sm > * + * {
+			margin-top: var(--gutter-sm);
+		}
+
+		&Md > * + * {
+			margin-top: var(--gutter-md);
+		}
+
+		&Lg > * + * {
+			margin-top: var(--gutter-lg);
+		}
+
+		&Xl > * + * {
+			margin-top: var(--gutter-xl);
+		}
+
+		&Drop {
+			margin-bottom: calc(var(--gutter-md) * -1);
+		}
+
+		&Lift {
+			margin-top: calc(var(--gutter-md) * -1);
+		}
+
+		/* Padding */
+
+		&A {
+			padding: var(--gutter-md);
+		}
+
+		&H {
+			padding-left: var(--gutter-md);
+			padding-right: var(--gutter-md);
+		}
+
+		&V {
+			padding-bottom: var(--gutter-md);
+			padding-top: var(--gutter-md);
+		}
+
+		&T {
+			padding-top: var(--gutter-md);
+		}
+
+		&R {
+			padding-right: var(--gutter-md);
+		}
+
+		&B {
+			padding-bottom: var(--gutter-md);
+		}
+
+		&L {
+			padding-left: var(--gutter-md);
+		}
+	};
+}
+
+.u-rhythm { @apply --rhythm; }
+
+@media (--small) {
+	.small-u-rhythm { @apply --rhythm; }
+
+	.u-rhythmDrop,
+	.small-u-rhythmDrop {
+		margin-bottom: 0;
+	}
+}
+
+@media (--medium) {
+	.medium-u-rhythm { @apply --rhythm; }
+}
+
+@media (--large) {
+	.large-u-rhythm { @apply --rhythm; }
+}

@@ -1,0 +1,33 @@
+:root {
+	--box: {
+		&Xs {
+			padding: var(--gutter-sm);
+		}
+
+		&Sm {
+			padding: var(--gutter-md);
+		}
+
+		&Md {
+			padding: var(--gutter-lg);
+		}
+
+		&Lg {
+			padding: var(--gutter-xl);
+		}
+	};
+}
+
+.box { @apply --box; }
+
+@media (--small) {
+	.small-box { @apply --box; }
+}
+
+@media (--medium) {
+	.medium-box { @apply --box; }
+}
+
+@media (--large) {
+	.large-box { @apply --box; }
+}

@@ -1,0 +1,55 @@
+:root {
+	/**
+	 * Hide visually and from screen readers.
+	 */
+	--hidden: {
+		& {
+			display: none !important;
+		}
+	};
+
+	/**
+	 * Hide only visually, but have it available for screen readers:
+	 * http://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+	 */
+	--visuallyHidden: {
+		& {
+			border: 0;
+			clip: rect(0 0 0 0);
+			height: 1px;
+			margin: -1px;
+			overflow: hidden;
+			padding: 0;
+			position: absolute;
+			width: 1px;
+		}
+	};
+}
+
+.u-hidden { @apply --hidden; }
+.u-visuallyHidden { @apply --visuallyHidden; }
+
+@media (--xsmall) {
+	.bpXs-u-hidden { @apply --hidden; }
+	.bpXs-u-visuallyHidden { @apply --visuallyHidden; }
+}
+
+@media (--small) {
+	.small-u-hidden { @apply --hidden; }
+	.small-u-visuallyHidden { @apply --visuallyHidden; }
+}
+
+@media (--medium) {
+	.medium-u-hidden { @apply --hidden; }
+	.medium-u-visuallyHidden { @apply --visuallyHidden; }
+}
+
+@media (--large) {
+	.large-u-hidden { @apply --hidden; }
+	.large-u-visuallyHidden { @apply --visuallyHidden; }
+}
+
+@media print {
+	.print-u-hidden { @apply --hidden; }
+	.print-u-visuallyHidden { @apply --hidden; }
+}

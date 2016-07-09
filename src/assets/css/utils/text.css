@@ -1,0 +1,18 @@
+.text-hdg {
+	font-family: var(--font-heading);
+	font-size: 2em;
+	line-height: 1;
+}
+
+.text-bold {
+	font-weight: 600;
+}
+
+.text-small {
+	font-size: smaller;
+	opacity: 0.8;
+}
+
+.text-nobr {
+	display: inline-block;
+}

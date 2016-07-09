@@ -1,0 +1,70 @@
+:root {
+	--color-background: hsl(0, 0%, 100%);
+	--color-foreground: hsl(0, 10%, 10%);
+	--color-primary: hsl(333, 83%, 53%);
+	--color-secondary: hsl(123, 90%, 90%);
+
+	--font-body: 'Helvetica Neue', helvetica, arial, sans-serif;
+	--font-heading: gogoia-web, helvetica, arial, sans-serif;
+
+	--rhythm-angle: 9;
+	--rhythm-base: 1.6rem;
+	--rhythm-ratio: 1.6;
+
+	--gutter-xs: calc(var(--rhythm-base) / var(--rhythm-ratio));
+	--gutter-sm: var(--rhythm-base);
+	--gutter-md: calc(var(--gutter-sm) * var(--rhythm-ratio));
+	--gutter-lg: calc(var(--gutter-md) * var(--rhythm-ratio));
+	--gutter-xl: calc(var(--gutter-lg) * var(--rhythm-ratio));
+
+	/* TODO: Refactor text size calc. */
+	--text-sm-base: 1.4;
+	--text-sm-ratio: 1.33;
+	--text-sm-1: calc(var(--text-sm-base) * 1rem);
+	--text-sm-2: calc(var(--text-sm-1) * var(--text-sm-ratio));
+	--text-sm-3: calc(var(--text-sm-2) * var(--text-sm-ratio));
+	--text-sm-4: calc(var(--text-sm-3) * var(--text-sm-ratio));
+	--text-sm-5: calc(var(--text-sm-4) * var(--text-sm-ratio));
+	--text-sm-6: calc(var(--text-sm-5) * var(--text-sm-ratio));
+	--text-sm-7: calc(var(--text-sm-6) * var(--text-sm-ratio));
+
+	--text-md-base: 1.6;
+	--text-md-ratio: 1.38;
+	--text-md-1: calc(var(--text-md-base) * 1rem);
+	--text-md-2: calc(var(--text-md-1) * var(--text-md-ratio));
+	--text-md-3: calc(var(--text-md-2) * var(--text-md-ratio));
+	--text-md-4: calc(var(--text-md-3) * var(--text-md-ratio));
+	--text-md-5: calc(var(--text-md-4) * var(--text-md-ratio));
+	--text-md-6: calc(var(--text-md-5) * var(--text-md-ratio));
+	--text-md-7: calc(var(--text-md-6) * var(--text-md-ratio));
+
+	--text-lg-base: 1.6;
+	--text-lg-ratio: 1.44;
+	--text-lg-1: calc(var(--text-lg-base) * 1rem);
+	--text-lg-2: calc(var(--text-lg-1) * var(--text-lg-ratio));
+	--text-lg-3: calc(var(--text-lg-2) * var(--text-lg-ratio));
+	--text-lg-4: calc(var(--text-lg-3) * var(--text-lg-ratio));
+	--text-lg-5: calc(var(--text-lg-4) * var(--text-lg-ratio));
+	--text-lg-6: calc(var(--text-lg-5) * var(--text-lg-ratio));
+	--text-lg-7: calc(var(--text-lg-6) * var(--text-lg-ratio));
+
+	--theme-light {
+		background-color: color(var(--color-background) l(-10%));
+		color: var(--color-foreground);
+	};
+
+	--theme-dark: {
+		background-color: var(--color-foreground);
+		color: color(var(--color-background) l(-40%));
+	};
+
+	--theme-primary: {
+		background-color: var(--color-primary);
+		color: var(--color-background);
+	};
+
+	--theme-secondary: {
+		background-color: var(--color-secondary);
+		color: var(--color-foreground);
+	};
+}

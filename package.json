@@ -1,0 +1,30 @@
+{
+  "name": "southtownscarecenter.github.io",
+  "version": "3.0.0",
+  "description": "",
+  "repository": "southtownscarecenter/southtownscarecenter.github.io",
+  "homepage": "http://southcc.org",
+  "author": {
+    "name": "Shannon Moeller",
+    "email": "me@shannonmoeller.com",
+    "url": "http://shannonmoeller.com"
+  },
+  "private": true,
+  "main": false,
+  "dependencies": {
+    "reset-css": "^2.0.2011012603",
+    "svg4everybody": "^2.0.3"
+  },
+  "devDependencies": {
+    "highlight.js": "^9.5.0",
+    "whim": "^4.0.0"
+  },
+  "scripts": {
+    "make": "whim make",
+    "start": "whim make server -mv",
+    "test": "whim lint"
+  },
+  "engines": {
+    "node": ">= 0.12.0"
+  }
+}

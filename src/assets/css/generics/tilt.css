@@ -1,0 +1,96 @@
+:root {
+	--tilt: {
+		& {
+			transform: skewY(calc(var(--rhythm-angle) * -1deg));
+			transform-origin: left top;
+		}
+
+		&_top {
+			margin-top: calc(var(--rhythm-angle) * 1.7%) !important;
+		}
+
+		&_topSm {
+			margin-top: calc(var(--rhythm-angle) * 0.8%) !important;
+		}
+
+		&_hero {
+			padding-top: 16rem;
+		}
+
+		&-bd {
+			padding-bottom: calc(var(--rhythm-angle) * 1.7%);
+
+			transform: skewY(calc(var(--rhythm-angle) * 1deg));
+			transform-origin: left top;
+		}
+
+		&-bg {
+			box-sizing: content-box;
+			position: absolute;
+			left: 50%;
+			bottom: 0;
+			height: 100%;
+			width: 100%;
+			overflow: hidden;
+			z-index: -1;
+
+			background-size: cover;
+			background-position: center center;
+
+			transform: translateX(-50%);
+		}
+
+		&-bg::after {
+			content: '';
+			box-sizing: content-box;
+			position: absolute;
+			left: 0;
+			bottom: 0;
+			padding-bottom: calc(var(--rhythm-angle) * 1.8%);
+			height: 100%;
+			width: 100%;
+
+			background: inherit;
+
+			transform: skewY(calc(var(--rhythm-angle) * 1deg));
+			transform-origin: left top;
+		}
+
+		&-bg_drop {
+			background-position: center 25%;
+		}
+
+		&-bg_hero {
+			padding-bottom: calc(var(--rhythm-angle) * 1.8%);
+			width: 100.5vw;
+		}
+
+		&-bg_hero::after {
+			padding-bottom: 0;
+		}
+	};
+}
+
+.tilt { @apply --tilt; }
+
+@media (--small) {
+	.small-tilt { @apply --tilt; }
+}
+
+@media (--medium) {
+	.medium-tilt { @apply --tilt; }
+
+	.tilt_hero,
+	.medium-tilt_hero {
+		padding-top: 26rem;
+	}
+}
+
+@media (--large) {
+	.large-tilt { @apply --tilt; }
+
+	.tilt_hero,
+	.large-tilt_hero {
+		padding-top: 28rem;
+	}
+}

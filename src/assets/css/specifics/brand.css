@@ -1,0 +1,47 @@
+.brand {
+	@apply --theme-primary;
+
+	display: block;
+	position: absolute;
+	top: var(--gutter-lg);
+	z-index: 1;
+	padding: var(--gutter-md) 1rem 1.6rem;
+	width: 9rem;
+
+	transform: skewY(calc(var(--rhythm-angle) * -1deg));
+	transform-origin: left top;
+
+	transition: background-color 0.25s;
+	will-change: background-color;
+}
+
+.brand:focus,
+.brand:hover {
+	background-color: color(var(--color-primary) l(-9%));
+}
+
+.brand-bd {
+	display: block;
+	padding-bottom: calc(var(--rhythm-angle) * 2%);
+
+	transform: skewY(calc(var(--rhythm-angle) * 1deg));
+	transform-origin: left top;
+}
+
+@media (--medium), (--large) {
+	.brand {
+		top: 0;
+		padding: var(--gutter-md) 1.3rem 2rem;
+		width: 13rem;
+	}
+}
+
+@media print {
+	.brand {
+		padding: 0;
+		width: 8rem;
+
+		background: transparent;
+		color: var(--color-foreground);
+	}
+}
