@@ -20,6 +20,7 @@
     "whim": "^4.0.0"
   },
   "scripts": {
+    "deploy-staging": "git subtree push --prefix dist origin master",
     "make": "whim make",
     "start": "whim make server -mv",
     "test": "whim lint"
