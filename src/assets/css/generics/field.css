@@ -1,0 +1,21 @@
+.field {
+	display: flex;
+	overflow: hidden;
+
+	border: 1px solid color(var(--color-foreground) a(0.1));
+}
+
+.field > * {
+	border: 0;
+	font: inherit;
+	line-height: 1;
+}
+
+.field-txt {
+	flex: 1 1 auto;
+	padding: 1rem 1rem;
+	min-width: 0;
+
+	background-color: var(--color-background);
+	color: var(--color-foreground);
+}

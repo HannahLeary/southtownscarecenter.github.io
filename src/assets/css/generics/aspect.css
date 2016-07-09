@@ -3,6 +3,7 @@
 		& {
 			position: relative;
 			overflow: hidden;
+
 			background-position: center;
 			background-repeat: no-repeat;
 			background-size: cover;
@@ -80,13 +81,13 @@
 .aspect { @apply --aspect; }
 
 @media (--small) {
-	.bpSm-aspect { @apply --aspect; }
+	.small-aspect { @apply --aspect; }
 }
 
 @media (--medium) {
-	.bpMd-aspect { @apply --aspect; }
+	.medium-aspect { @apply --aspect; }
 }
 
 @media (--large) {
-	.bpLg-aspect { @apply --aspect; }
+	.large-aspect { @apply --aspect; }
 }

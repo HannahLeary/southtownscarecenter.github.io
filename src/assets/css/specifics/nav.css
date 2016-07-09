@@ -17,6 +17,14 @@
 
 .nav-btn {
 	@apply --theme-primary;
+
+	transition: background-color 0.25s;
+	will-change: background-color;
+}
+
+.nav-btn:focus,
+.nav-btn:hover {
+	background-color: color(var(--color-primary) l(-9%));
 }
 
 @media (--medium), (--large) {
@@ -36,11 +44,19 @@
 		margin: 0;
 	}
 
+	.nav-btn {
+		padding: 0 var(--gutter-sm);
+	}
+}
+
+@media (--medium) {
 	.nav > * + * {
 		margin-left: var(--gutter-xs);
 	}
+}
 
-	.nav-btn {
-		padding: 0 var(--gutter-sm);
+@media (--large) {
+	.nav > * + * {
+		margin-left: var(--gutter-sm);
 	}
 }

@@ -1,0 +1,12 @@
+.meter {
+	display: flex;
+	align-items: flex-end;
+
+	background: color(var(--color-background) l(-20%));
+}
+
+.meter-bd {
+	@apply --theme-primary;
+
+	padding: calc(var(--gutter-xs) / var(--rhythm-ratio)) var(--gutter-sm);
+}

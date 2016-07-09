@@ -1,0 +1,21 @@
+:root {
+	--flex: {
+		& {
+			display: flex;
+		}
+	}
+}
+
+.u-flex { @apply --flex; }
+
+@media (--small) {
+	.small-u-flex { @apply --flex; }
+}
+
+@media (--medium) {
+	.medium-u-flex { @apply --flex; }
+}
+
+@media (--large) {
+	.large-u-flex { @apply --flex; }
+}

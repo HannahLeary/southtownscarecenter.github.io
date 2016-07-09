@@ -67,13 +67,18 @@
 .u-rhythm { @apply --rhythm; }
 
 @media (--small) {
-	.bpSm-u-rhythm { @apply --rhythm; }
+	.small-u-rhythm { @apply --rhythm; }
+
+	.u-rhythmDrop,
+	.small-u-rhythmDrop {
+		margin-bottom: 0;
+	}
 }
 
 @media (--medium) {
-	.bpMd-u-rhythm { @apply --rhythm; }
+	.medium-u-rhythm { @apply --rhythm; }
 }
 
 @media (--large) {
-	.bpLg-u-rhythm { @apply --rhythm; }
+	.large-u-rhythm { @apply --rhythm; }
 }

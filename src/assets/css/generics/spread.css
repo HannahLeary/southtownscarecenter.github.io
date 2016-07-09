@@ -6,6 +6,10 @@
 			justify-content: space-between;
 		}
 
+		&_rgt {
+			justify-content: flex-end;
+		}
+
 		&_top {
 			align-items: flex-start;
 		}
@@ -23,13 +27,13 @@
 .spread { @apply --spread; }
 
 @media (--small) {
-	.bpSm-spread { @apply --spread; }
+	.small-spread { @apply --spread; }
 }
 
 @media (--medium) {
-	.bpMd-spread { @apply --spread; }
+	.medium-spread { @apply --spread; }
 }
 
 @media (--large) {
-	.bpLg-spread { @apply --spread; }
+	.large-spread { @apply --spread; }
 }

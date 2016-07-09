@@ -10,19 +10,23 @@
 .belt { @apply --belt; }
 
 @media (--medium) {
-	.bpMd-belt { @apply --belt; }
+	.medium-belt {
+		@apply --belt;
+	}
 
 	.belt,
-	.bpMd-belt {
+	.medium-belt {
 		width: calc(100% - calc(var(--gutter-md) * 2));
 	}
 }
 
 @media (--large) {
-	.bpLg-belt { @apply --belt; }
+	.large-belt {
+		@apply --belt;
+	}
 
 	.belt,
-	.bpLg-belt {
-		width: calc(100% - calc(var(--gutter-md) * 2));
+	.large-belt {
+		width: calc(100% - calc(var(--gutter-lg) * 2));
 	}
 }

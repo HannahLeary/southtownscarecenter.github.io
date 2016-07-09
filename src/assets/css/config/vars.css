@@ -19,7 +19,7 @@
 
 	/* TODO: Refactor text size calc. */
 	--text-sm-base: 1.4;
-	--text-sm-ratio: 1.25;
+	--text-sm-ratio: 1.33;
 	--text-sm-1: calc(var(--text-sm-base) * 1rem);
 	--text-sm-2: calc(var(--text-sm-1) * var(--text-sm-ratio));
 	--text-sm-3: calc(var(--text-sm-2) * var(--text-sm-ratio));

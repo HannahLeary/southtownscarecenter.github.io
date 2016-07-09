@@ -8,6 +8,11 @@
 	font-weight: 600;
 }
 
+.text-small {
+	font-size: smaller;
+	opacity: 0.8;
+}
+
 .text-nobr {
 	display: inline-block;
 }

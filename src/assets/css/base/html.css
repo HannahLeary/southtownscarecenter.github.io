@@ -20,12 +20,13 @@ a {
 }
 
 button,
-input[type='password'],
-input[type='text'],
 select,
-textarea {
+textarea,
+[type='password'],
+[type='text'] {
 	appearance: none;
 	display: inline-block;
+	margin: 0;
 	padding: 0;
 
 	background: transparent;

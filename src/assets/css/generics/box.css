@@ -21,13 +21,13 @@
 .box { @apply --box; }
 
 @media (--small) {
-	.bpSm-box { @apply --box; }
+	.small-box { @apply --box; }
 }
 
 @media (--medium) {
-	.bpMd-box { @apply --box; }
+	.medium-box { @apply --box; }
 }
 
 @media (--large) {
-	.bpLg-box { @apply --box; }
+	.large-box { @apply --box; }
 }

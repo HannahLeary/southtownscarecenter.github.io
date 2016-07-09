@@ -6,13 +6,17 @@
 	<meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1" />
 
 	<title>{{#if title}}{{title}} | {{/if}}{{site.title}}</title>
-	<meta name="description" content="Late? Free pregnancy tests and confidential counseling." />
+	<meta name="description" content="[Coming soon] Late? Free pregnancy tests and confidential counseling. 716-508-0660" />
 
 	<link rel="home" href="{{site.canonical}}" />
 	<link rel="author" href="{{site.canonical}}/humans.txt" />
 	<link rel="canonical" href="{{site.canonical}}{{canonical}}" />
-	<link rel="icon" href="/assets/media/images/favicon.ico?v={{package.version}}" />
-	<link rel="apple-touch-icon" href="/assets/media/images/apple-touch-icon.png?v={{package.version}}" />
+
+	<link rel="icon" type="image/png" href="/assets/media/images/favicon.png?v={{package.version}}" />
+	<link rel="icon" type="image/x-icon" href="/assets/media/images/favicon.ico?v={{package.version}}" />
+	<link rel="apple-touch-icon" href="/assets/media/images/favicon.png?v={{package.version}}" />
+    <meta name="msapplication-TileImage" content="/assets/media/images/favicon.png?v={{package.version}}" />
+    <meta name="msapplication-TileColor" content="#eb247d" />
 
 	{{#block "styles"}}
 		<link rel="stylesheet" href="/assets/css/index.css?v={{package.version}}" />
@@ -20,9 +24,10 @@
 </head>
 <body class="site">
 	<a class="skip" href="#main">skip to main content</a>
+	<img class="u-visuallyHidden" src="/assets/media/images/favicon.png?v={{package.version}}" aria-hidden="true" />
 
 	<header class="site-hd">
-		<div class="bpMd-belt | bpLg-belt">
+		<div class="medium-belt | large-belt">
 			<a class="brand" href="/">
 				<div class="brand-bd">
 					<div class="aspect aspect_block">
@@ -73,84 +78,75 @@
 	</main>
 
 	<footer class="site-ft">
-		<div class="bpMd-belt | bpLg-belt">
+		<div class="belt">
 			<h1 class="u-visuallyHidden">Site Footer</h1>
 
-			<div class="bpSm-u-rhythmMd | bpMd-grid bpMd-grid_gutter bpMd-grid_rev | bpLg-grid bpLg-grid_gutter bpLg-grid_rev">
-				<div class="u-rhythmLg | bpMd-grid-col1of3 | bpLg-grid-col1of3">
-					<section class="u-rhythmSm">
-						<h2 class="hdg hdg_5">Newsletter</h2>
+			<div class="small-u-rhythmMd | medium-grid medium-grid_gutter medium-grid_rev | large-grid large-grid_gutter large-grid_rev">
+				<div class="medium-grid-col_1of2 | large-grid-col_2of3">
+					<div class="small-u-rhythmMd | medium-u-rhythmMd | large-grid large-grid_gutter large-grid_rev">
+						<div class="u-rhythmMd | large-grid-col_1of2">
+							<section class="u-rhythmSm">
+								<h2 class="hdg hdg_5">Newsletter</h2>
 
-						<!-- MailChimp -->
-						<form method="post" target="_blank"
-							action="https://southtownscarecenter.us11.list-manage.com/subscribe/post?u=8be344fbab5e57293149465af&amp;id=5b0bf161ed">
+								{{{embed 'vendor/mailchimp'}}}
+							</section>
 
-							<!-- for humans -->
-							<div class="field">
-								<label class="u-visuallyHidden" for="field-mailchimp-email">Email Address</label>
-								<input class="field-txt" type="text" id="field-mailchimp-email" name="EMAIL" value="" placeholder="email address" required />
-								<button class="btn" type="submit" name="subscribe" value="Subscribe">Subscribe</button>
-							</div>
+							<section class="u-rhythmSm">
+								<h2 class="hdg hdg_5">Share</h2>
 
-							<!-- for bots -->
-							<div class="u-visuallyHidden">
-								<input type="text" name="b_8be344fbab5e57293149465af_5b0bf161ed" value="" tabindex="-1" />
-							</div>
-						</form>
-					</section>
+								<!-- AddThis -->
+								<div class="addthis_sharing_toolbox"></div>
+							</section>
+						</div>
 
-					<section class="u-rhythmSm">
-						<h2 class="hdg hdg_5">Share</h2>
+						<section class="u-rhythmSm | large-grid-col_1of2">
+							<h2 class="hdg hdg_5">Contact Information</h2>
 
-						<!-- AddThis -->
-						<div class="addthis_sharing_toolbox"></div>
-					</section>
+							<address itemscope itemtype="https://schema.org/Organization">
+								<div itemprop="copyrightHolder provider sourceOrganization">
+									<div itemprop="name">
+										<a itemprop="url" href="{{site.canonical}}">
+											Southtowns Care Center, Inc.
+										</a>
+									</div>
+									<div itemprop="address">
+										<div itemscope itemtype="https://schema.org/PostalAddress">
+											<span itemprop="postOfficeBoxNumber">P.O. Box 892</span>,
+											<span itemprop="addressLocality">Hamburg</span>,
+											<span itemprop="addressRegion">NY</span>
+											<span itemprop="postalCode">14075</span>
+										</div>
+									</div>
+									<div itemprop="telephone">
+										<a href="tel:+17165080660" rel="nofollow">(716) 508-0660</a>
+									</div>
+									<div itemprop="email">
+										<a href="mailto:info@southcc.org" rel="nofollow">info@southcc.org</a>
+									</div>
+									<div itemprop="twitter">
+										<a href="https://twitter.com/southtownscc" rel="external">@southtownscc</a>
+									</div>
+								</div>
+							</address>
+						</section>
+					</div>
 				</div>
 
-				<section class="u-rhythmSm | bpMd-grid-col1of3 | bpLg-grid-col1of3">
-					<h2 class="hdg hdg_5">Contact Information</h2>
+				<div class="medium-grid-col_1of2 | large-grid-col_1of3">
+					<section class="u-rhythmSm">
+						<h2 class="hdg hdg_5">
+							<svg height="50" width="168">
+								<title>Disclaimer</title>
+								<use xlink:href="/assets/svg/sprites.svg?v={{package.version}}#logo-wide"></use>
+							</svg>
+						</h2>
 
-					<address itemscope itemtype="https://schema.org/Organization">
-						<div itemprop="copyrightHolder provider sourceOrganization">
-							<div itemprop="name">
-								<a itemprop="url" href="{{site.canonical}}">
-									Southtowns Care Center, Inc.
-								</a>
-							</div>
-							<div itemprop="address">
-								<div itemscope itemtype="https://schema.org/PostalAddress">
-									<span itemprop="postOfficeBoxNumber">P.O. Box 892</span>,
-									<span itemprop="addressLocality">Hamburg</span>,
-									<span itemprop="addressRegion">NY</span>
-									<span itemprop="postalCode">14075</span>
-								</div>
-							</div>
-							<div itemprop="telephone">
-								<a href="tel:+17165080660" rel="nofollow">(716) 508-0660</a>
-							</div>
-							<div itemprop="email">
-								<a href="mailto:info@southcc.org" rel="nofollow">info@southcc.org</a>
-							</div>
-							<div itemprop="twitter">
-								<a href="https://twitter.com/southtownscc" rel="external">@southtownscc</a>
-							</div>
-						</div>
-					</address>
-				</section>
+						<p>Southtowns Care Center will provide free pregnancy verification and confirmation via a laboratory-quality urine test. We are not an abortion clinic and we do not refer for abortions.</p>
+						<p>We believe that everyone should have access to the services and information we provide. All of our services are free, confidential, and offered regardless of martial status, age, race, or religion. Some services are gender specific. The services provided by SCC are not substitutes for prenatal care or professional counseling.</p>
 
-				<section class="u-rhythmSm | bpMd-grid-col1of3 | bpLg-grid-col1of3">
-					<h2 class="hdg hdg_5">
-						<svg height="50" width="168">
-							<title>Disclaimer</title>
-							<use xlink:href="/assets/svg/sprites.svg?v={{package.version}}#logo-wide"></use>
-						</svg>
-					</h2>
-
-					<p>Southtowns Care Center will provide free pregnancy verification and confirmation via a laboratory quality urine test. We are not an abortion clinic and we do not refer for abortions.</p>
-					<p>Because we believe that everyone should have access to the services and information we provide, all of our services are free and confidential. Services are offered to you whether you are single or married, regardless of age, race, or religion. The services provided by SCC are not substitutes for prenatal care or professional counseling.</p>
-
-					<p>&copy; Southtowns Care Center, Inc. All rights reserved.</p>
-				</section>
+						<p>&copy; Southtowns Care Center, Inc. All rights reserved.</p>
+					</section>
+				</div>
 			</div>
 		</div>
 	</footer>

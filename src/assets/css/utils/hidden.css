@@ -35,21 +35,21 @@
 }
 
 @media (--small) {
-	.bpSm-u-hidden { @apply --hidden; }
-	.bpSm-u-visuallyHidden { @apply --visuallyHidden; }
+	.small-u-hidden { @apply --hidden; }
+	.small-u-visuallyHidden { @apply --visuallyHidden; }
 }
 
 @media (--medium) {
-	.bpMd-u-hidden { @apply --hidden; }
-	.bpMd-u-visuallyHidden { @apply --visuallyHidden; }
+	.medium-u-hidden { @apply --hidden; }
+	.medium-u-visuallyHidden { @apply --visuallyHidden; }
 }
 
 @media (--large) {
-	.bpLg-u-hidden { @apply --hidden; }
-	.bpLg-u-visuallyHidden { @apply --visuallyHidden; }
+	.large-u-hidden { @apply --hidden; }
+	.large-u-visuallyHidden { @apply --visuallyHidden; }
 }
 
 @media print {
-	.bpPr-u-hidden { @apply --hidden; }
-	.bpPr-u-visuallyHidden { @apply --hidden; }
+	.print-u-hidden { @apply --hidden; }
+	.print-u-visuallyHidden { @apply --hidden; }
 }

@@ -21,13 +21,13 @@
 .u-theme { @apply --theme; }
 
 @media (--small) {
-	.bpSm-u-theme { @apply --theme; }
+	.small-u-theme { @apply --theme; }
 }
 
 @media (--medium) {
-	.bpMd-u-theme { @apply --theme; }
+	.medium-u-theme { @apply --theme; }
 }
 
 @media (--large) {
-	.bpLg-u-theme { @apply --theme; }
+	.large-u-theme { @apply --theme; }
 }

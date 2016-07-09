@@ -22,9 +22,15 @@
 
 	flex: none;
 	font-size: var(--text-sm-1);
-	margin-top: var(--gutter-xl);
+	margin-top: var(--gutter-lg);
 	padding-top: var(--gutter-lg);
 	padding-bottom: var(--gutter-xl);
+}
+
+@media (--medium), (--large) {
+	.site-ft {
+		margin-top: var(--gutter-xl);
+	}
 }
 
 @media print {
