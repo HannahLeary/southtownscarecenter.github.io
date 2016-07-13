@@ -16,8 +16,7 @@
     "svg4everybody": "^2.0.3"
   },
   "devDependencies": {
-    "highlight.js": "^9.5.0",
-    "whim": "^4.0.0"
+    "whim": "^4.1.0"
   },
   "scripts": {
     "deploy-staging": "git subtree push --prefix dist origin master",
