@@ -2,6 +2,9 @@
 title: Southtowns Care Center
 timezone: UTC
 collections:
+  bios:
+    title: Bios
+    output: true
   posts:
     title: Posts
     output: true
