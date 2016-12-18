@@ -16,11 +16,14 @@ defaults:
     path: ''
     type: bios
   values:
-    colors: ["red", "green", "blue"]
-    layout: "project"
+    colors:
+    - red
+    - green
+    - blue
+    layout: project
     map:
-      latitude:
-      longitude:
+      latitude: 
+      longitude: 
 - scope:
     path: ''
     type: posts
